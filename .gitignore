@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Training artifacts
+checkpoints/
+*.pt
+*.pth
+
+# Logs
+logs/
+
+# Datasets that may become large later
+data/raw/
+data/processed/
+
+# OS
+.DS_Store
+Thumbs.db
