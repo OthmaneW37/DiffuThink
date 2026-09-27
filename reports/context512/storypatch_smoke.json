@@ -1,0 +1,24 @@
+{
+  "local_gpu": {
+    "checkpoint": 16000,
+    "replacements": [
+      "sad",
+      "very worried",
+      "worried"
+    ],
+    "unchanged_context_verified": true,
+    "invalid_selection_status": 400
+  },
+  "docker_cpu": {
+    "checkpoint": 16000,
+    "replacements": [
+      "very sad",
+      "sad"
+    ],
+    "unchanged_context_verified": true,
+    "invalid_selection_status": 400
+  },
+  "docker_build_verified": true,
+  "docker_image_id": "sha256:c18e13427c99f9fcb5981c3613a088b6954e9e5748dc5413c6a6a161fc933a93",
+  "docker_user_id": "1000"
+}

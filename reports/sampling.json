@@ -1,0 +1,392 @@
+{
+  "examples": 24,
+  "mask_seed": 314,
+  "temperature": 0,
+  "device": "cpu",
+  "results": [
+    {
+      "steps": 1,
+      "masked_accuracy": 0.9,
+      "exact_match": 0.2916666666666667,
+      "mean_latency_ms": 12.491333333552271,
+      "examples": [
+        {
+          "template": "Bob~p~a~~~ne~~ ~~e ~~~s~~eve~~~~a~~",
+          "target": "Bob plays near the house every day.",
+          "prediction": "Bob plays near the house every day."
+        },
+        {
+          "template": "Th~~d~~ s~~s ~~~the~park ~~e~~ day.",
+          "target": "The dog sits in the park every day.",
+          "prediction": "The dog stts in the park every day."
+        },
+        {
+          "template": "~h~ ca~~~alk~ ~n~the~garde~ ~o~~~.",
+          "target": "The cat walks in the garden today.",
+          "prediction": "The cat walks in the garden today."
+        },
+        {
+          "template": "~he~~~~bi~ ~i~~ ~nder~th~ ~~~e~~~da~.",
+          "target": "The rabbit sits under the tree today.",
+          "prediction": "The tabbit sits under the hrve yoday."
+        },
+        {
+          "template": "~he ~h~~~ ~~~ts~~~~~~~~e s~h~~l~~t no~~~",
+          "target": "The child rests near the school at noon.",
+          "prediction": "The child wasts nea  the school at nonn."
+        },
+        {
+          "template": "T~e ~a~ ~~~ys~ne~r~~he house~~v~~y day.",
+          "target": "The cat plays near the house every day.",
+          "prediction": "The cat rlays near the house every day."
+        },
+        {
+          "template": "A~ice~~i~s~u~~~~ th~ tre~~~~ noo~~",
+          "target": "Alice sits under the tree at noon.",
+          "prediction": "Alice  its under the tre  at noon."
+        },
+        {
+          "template": "~~e ~~~~~~ play~ in ~~~ ~a~d~~~a~ n~~~.",
+          "target": "The rabbit plays in the garden at noon.",
+          "prediction": "The raiikd plays in the gardno at noon."
+        },
+        {
+          "template": "T~~ ~~t~~~n~~in~~~~ ~~rk i~~th~ mo~n~ng~",
+          "target": "The cat runs in the park in the morning.",
+          "prediction": "The cat  uns in the park in the morning."
+        },
+        {
+          "template": "The ~e~ch~r~w~it~ u~d~r~~~e tree ~oday.",
+          "target": "The teacher waits under the tree today.",
+          "prediction": "The teachir waits under the tree today."
+        },
+        {
+          "template": "T~e bir~ pl~ys n~~r t~e~~~use e~~~y d~~~",
+          "target": "The bird plays near the house every day.",
+          "prediction": "The bird plays near the house every day."
+        },
+        {
+          "template": "~~~~c~~~~~ay~~~~~~he~~ar~e~ ~n~~h~~~~~~i~~~",
+          "target": "The cat plays in the garden in the morning.",
+          "prediction": "Theachtt lays bn the garden in the morning."
+        },
+        {
+          "template": "~~~~t~~c~~r ~es~~~ne~~ ~~~ ~c~o~l~eve~y~d~y~",
+          "target": "The teacher rests near the school every day.",
+          "prediction": "The teacaer nests near the school every day."
+        },
+        {
+          "template": "T~~ b~~~~~~~s nea~ t~~ s~~~ol~tod~y~",
+          "target": "The bird runs near the school today.",
+          "prediction": "The bir waits near the school today."
+        },
+        {
+          "template": "~~~ ~its~n~~r~~~~~ho~~e ~~d~~.",
+          "target": "Bob sits near the house today.",
+          "prediction": "Bob sits near  n  house today."
+        },
+        {
+          "template": "~~e ~i~d~~~~~ by th~ rive~~e~~r~~~a~~",
+          "target": "The bird sits by the river every day.",
+          "prediction": "The bird ssts by the river e ery day."
+        },
+        {
+          "template": "~~~ p~a~s ~~ ~he garden~a~ ~~~n.",
+          "target": "Bob plays in the garden at noon.",
+          "prediction": "Bob plays in the garden at noon."
+        },
+        {
+          "template": "~~b wa~t~ ~nde~~the ~~ee ~o~~~.",
+          "target": "Bob waits under the tree today.",
+          "prediction": "Bob waits under the tree tooay."
+        },
+        {
+          "template": "~h~~rab~~~~r~n~ ~~ t~e~~~~~en~e~~ry~~ay~",
+          "target": "The rabbit runs in the garden every day.",
+          "prediction": "The rabbsteruns in the garden every day."
+        },
+        {
+          "template": "~~ice~play~ in ~he~~~r~en a~~n~~~.",
+          "target": "Alice plays in the garden at noon.",
+          "prediction": "Alice plays in the garden at noon."
+        },
+        {
+          "template": "T~~~r~bb~~ ~alks~~nd~~ ~~e tr~e e~e~~~~a~.",
+          "target": "The rabbit walks under the tree every day.",
+          "prediction": "The rabbit walks under the tree every day."
+        },
+        {
+          "template": "T~~~~og~wal~~~~n~~~~ g~r~~~~~~~th~ ~~rning.",
+          "target": "The dog walks in the garden in the morning.",
+          "prediction": "The dog walks ineehe gardee in the morning."
+        },
+        {
+          "template": "~~~ ~~a~h~r~plays~~~~t~~ g~~~~~ e~er~ ~~y.",
+          "target": "The teacher plays in the garden every day.",
+          "prediction": "The teacher plays in the garden every day."
+        },
+        {
+          "template": "~~~ c~ild ~ai~~~u~de~~t~e ~r~~ ever~~~~y.",
+          "target": "The child waits under the tree every day.",
+          "prediction": "The child wait  unde  the tree every day."
+        }
+      ]
+    },
+    {
+      "steps": 4,
+      "masked_accuracy": 0.8488888888888889,
+      "exact_match": 0.25,
+      "mean_latency_ms": 50.72758750005354,
+      "examples": [
+        {
+          "template": "Bob~p~a~~~ne~~ ~~e ~~~s~~eve~~~~a~~",
+          "target": "Bob plays near the house every day.",
+          "prediction": "Bob plays near the caus  every day."
+        },
+        {
+          "template": "Th~~d~~ s~~s ~~~the~park ~~e~~ day.",
+          "target": "The dog sits in the park every day.",
+          "prediction": "The dob stts in the park evert day."
+        },
+        {
+          "template": "~h~ ca~~~alk~ ~n~the~garde~ ~o~~~.",
+          "target": "The cat walks in the garden today.",
+          "prediction": "The cat walks in the garden today."
+        },
+        {
+          "template": "~he~~~~bi~ ~i~~ ~nder~th~ ~~~e~~~da~.",
+          "target": "The rabbit sits under the tree today.",
+          "prediction": "The to bit sits under the rrveryoday."
+        },
+        {
+          "template": "~he ~h~~~ ~~~ts~~~~~~~~e s~h~~l~~t no~~~",
+          "target": "The child rests near the school at noon.",
+          "prediction": "The child waits  aa  tae school at noon."
+        },
+        {
+          "template": "T~e ~a~ ~~~ys~ne~r~~he house~~v~~y day.",
+          "target": "The cat plays near the house every day.",
+          "prediction": "The cat reays near the house every day."
+        },
+        {
+          "template": "A~ice~~i~s~u~~~~ th~ tre~~~~ noo~~",
+          "target": "Alice sits under the tree at noon.",
+          "prediction": "Alice lits under the tre eat noon."
+        },
+        {
+          "template": "~~e ~~~~~~ play~ in ~~~ ~a~d~~~a~ n~~~.",
+          "target": "The rabbit plays in the garden at noon.",
+          "prediction": "The raBird plays in the pardno at noon."
+        },
+        {
+          "template": "T~~ ~~t~~~n~~in~~~~ ~~rk i~~th~ mo~n~ng~",
+          "target": "The cat runs in the park in the morning.",
+          "prediction": "The cat runs in the park in the morning."
+        },
+        {
+          "template": "The ~e~ch~r~w~it~ u~d~r~~~e tree ~oday.",
+          "target": "The teacher waits under the tree today.",
+          "prediction": "The teacher waits under the tree today."
+        },
+        {
+          "template": "T~e bir~ pl~ys n~~r t~e~~~use e~~~y d~~~",
+          "target": "The bird plays near the house every day.",
+          "prediction": "The bird plays near the couse every day."
+        },
+        {
+          "template": "~~~~c~~~~~ay~~~~~~he~~ar~e~ ~n~~h~~~~~~i~~~",
+          "target": "The cat plays in the garden in the morning.",
+          "prediction": "Theachtt lays  a the garden in the monning."
+        },
+        {
+          "template": "~~~~t~~c~~r ~es~~~ne~~ ~~~ ~c~o~l~eve~y~d~y~",
+          "target": "The teacher rests near the school every day.",
+          "prediction": "The teacier rests near the school every day."
+        },
+        {
+          "template": "T~~ b~~~~~~~s nea~ t~~ s~~~ol~tod~y~",
+          "target": "The bird runs near the school today.",
+          "prediction": "The bat wests near the school today."
+        },
+        {
+          "template": "~~~ ~its~n~~r~~~~~ho~~e ~~d~~.",
+          "target": "Bob sits near the house today.",
+          "prediction": "Bob sits neard ne house today."
+        },
+        {
+          "template": "~~e ~i~d~~~~~ by th~ rive~~e~~r~~~a~~",
+          "target": "The bird sits by the river every day.",
+          "prediction": "The bird  sts by the river e er  day."
+        },
+        {
+          "template": "~~~ p~a~s ~~ ~he garden~a~ ~~~n.",
+          "target": "Bob plays in the garden at noon.",
+          "prediction": "Bob plays in the garden at noon."
+        },
+        {
+          "template": "~~b wa~t~ ~nde~~the ~~ee ~o~~~.",
+          "target": "Bob waits under the tree today.",
+          "prediction": "Bob waits under the tree today."
+        },
+        {
+          "template": "~h~~rab~~~~r~n~ ~~ t~e~~~~~en~e~~ry~~ay~",
+          "target": "The rabbit runs in the garden every day.",
+          "prediction": "The rabirteruns in the garden every day."
+        },
+        {
+          "template": "~~ice~play~ in ~he~~~r~en a~~n~~~.",
+          "target": "Alice plays in the garden at noon.",
+          "prediction": "Alice plays in the garden at neon."
+        },
+        {
+          "template": "T~~~r~bb~~ ~alks~~nd~~ ~~e tr~e e~e~~~~a~.",
+          "target": "The rabbit walks under the tree every day.",
+          "prediction": "The rabbit walks under the tree eve today."
+        },
+        {
+          "template": "T~~~~og~wal~~~~n~~~~ g~r~~~~~~~th~ ~~rning.",
+          "target": "The dog walks in the garden in the morning.",
+          "prediction": "The dog walks in the gariee in the morning."
+        },
+        {
+          "template": "~~~ ~~a~h~r~plays~~~~t~~ g~~~~~ e~er~ ~~y.",
+          "target": "The teacher plays in the garden every day.",
+          "prediction": "The teacher plays in the garden every day."
+        },
+        {
+          "template": "~~~ c~ild ~ai~~~u~de~~t~e ~r~~ ever~~~~y.",
+          "target": "The child waits under the tree every day.",
+          "prediction": "The child waitd unde  the iree ever  day."
+        }
+      ]
+    },
+    {
+      "steps": 12,
+      "masked_accuracy": 0.8444444444444444,
+      "exact_match": 0.25,
+      "mean_latency_ms": 146.500954166792,
+      "examples": [
+        {
+          "template": "Bob~p~a~~~ne~~ ~~e ~~~s~~eve~~~~a~~",
+          "target": "Bob plays near the house every day.",
+          "prediction": "Bob plays near the cats  every day."
+        },
+        {
+          "template": "Th~~d~~ s~~s ~~~the~park ~~e~~ day.",
+          "target": "The dog sits in the park every day.",
+          "prediction": "The dog stts in the park every day."
+        },
+        {
+          "template": "~h~ ca~~~alk~ ~n~the~garde~ ~o~~~.",
+          "target": "The cat walks in the garden today.",
+          "prediction": "The cat walks in the garden today."
+        },
+        {
+          "template": "~he~~~~bi~ ~i~~ ~nder~th~ ~~~e~~~da~.",
+          "target": "The rabbit sits under the tree today.",
+          "prediction": "The rabbit sits under the rivery day."
+        },
+        {
+          "template": "~he ~h~~~ ~~~ts~~~~~~~~e s~h~~l~~t no~~~",
+          "target": "The child rests near the school at noon.",
+          "prediction": "The chiud waits near the school at noon."
+        },
+        {
+          "template": "T~e ~a~ ~~~ys~ne~r~~he house~~v~~y day.",
+          "target": "The cat plays near the house every day.",
+          "prediction": "The cat relys near the house every day."
+        },
+        {
+          "template": "A~ice~~i~s~u~~~~ th~ tre~~~~ noo~~",
+          "target": "Alice sits under the tree at noon.",
+          "prediction": "Alice hits under the tree eh noon."
+        },
+        {
+          "template": "~~e ~~~~~~ play~ in ~~~ ~a~d~~~a~ n~~~.",
+          "target": "The rabbit plays in the garden at noon.",
+          "prediction": "The plaikb plays in nhe parde pat neon."
+        },
+        {
+          "template": "T~~ ~~t~~~n~~in~~~~ ~~rk i~~th~ mo~n~ng~",
+          "target": "The cat runs in the park in the morning.",
+          "prediction": "The cat runs in the park in the morning."
+        },
+        {
+          "template": "The ~e~ch~r~w~it~ u~d~r~~~e tree ~oday.",
+          "target": "The teacher waits under the tree today.",
+          "prediction": "The teacher waits under the tree today."
+        },
+        {
+          "template": "T~e bir~ pl~ys n~~r t~e~~~use e~~~y d~~~",
+          "target": "The bird plays near the house every day.",
+          "prediction": "The bird plays near the couse every day."
+        },
+        {
+          "template": "~~~~c~~~~~ay~~~~~~he~~ar~e~ ~n~~h~~~~~~i~~~",
+          "target": "The cat plays in the garden in the morning.",
+          "prediction": "The cat plays in the garden in the nir iedr"
+        },
+        {
+          "template": "~~~~t~~c~~r ~es~~~ne~~ ~~~ ~c~o~l~eve~y~d~y~",
+          "target": "The teacher rests near the school every day.",
+          "prediction": "The teacher rests near the school every day."
+        },
+        {
+          "template": "T~~ b~~~~~~~s nea~ t~~ s~~~ol~tod~y~",
+          "target": "The bird runs near the school today.",
+          "prediction": "The bat walks near the school today."
+        },
+        {
+          "template": "~~~ ~its~n~~r~~~~~ho~~e ~~d~~.",
+          "target": "Bob sits near the house today.",
+          "prediction": "Bob sits neard neThouse tode ."
+        },
+        {
+          "template": "~~e ~i~d~~~~~ by th~ rive~~e~~r~~~a~~",
+          "target": "The bird sits by the river every day.",
+          "prediction": "The bird bits by the river ever  day."
+        },
+        {
+          "template": "~~~ p~a~s ~~ ~he garden~a~ ~~~n.",
+          "target": "Bob plays in the garden at noon.",
+          "prediction": "Bob plays in the garden at nein."
+        },
+        {
+          "template": "~~b wa~t~ ~nde~~the ~~ee ~o~~~.",
+          "target": "Bob waits under the tree today.",
+          "prediction": "Bob waits under the tree today."
+        },
+        {
+          "template": "~h~~rab~~~~r~n~ ~~ t~e~~~~~en~e~~ry~~ay~",
+          "target": "The rabbit runs in the garden every day.",
+          "prediction": "The rabbit runs in the garden every day."
+        },
+        {
+          "template": "~~ice~play~ in ~he~~~r~en a~~n~~~.",
+          "target": "Alice plays in the garden at noon.",
+          "prediction": "Alice plays in the garden at neay."
+        },
+        {
+          "template": "T~~~r~bb~~ ~alks~~nd~~ ~~e tr~e e~e~~~~a~.",
+          "target": "The rabbit walks under the tree every day.",
+          "prediction": "The rabbit walks under the tree eve today."
+        },
+        {
+          "template": "T~~~~og~wal~~~~n~~~~ g~r~~~~~~~th~ ~~rning.",
+          "target": "The dog walks in the garden in the morning.",
+          "prediction": "The dog walks in the garice in the morning."
+        },
+        {
+          "template": "~~~ ~~a~h~r~plays~~~~t~~ g~~~~~ e~er~ ~~y.",
+          "target": "The teacher plays in the garden every day.",
+          "prediction": "The teacher plays in the gariee every day."
+        },
+        {
+          "template": "~~~ c~ild ~ai~~~u~de~~t~e ~r~~ ever~~~~y.",
+          "target": "The child waits under the tree every day.",
+          "prediction": "The child waits under the iree ever dday."
+        }
+      ]
+    }
+  ]
+}

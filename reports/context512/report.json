@@ -1,0 +1,232 @@
+{
+  "settings": {
+    "source": "runs/stories-hybrid/best",
+    "data": "data/processed/stories-512",
+    "output": "runs/stories-512",
+    "device": "cuda",
+    "steps": 16000,
+    "batch_size": 32,
+    "lr": 0.00015,
+    "warmup": 400,
+    "eval_every": 1000,
+    "eval_samples": 256,
+    "seed": 45,
+    "expand_data": true,
+    "denoise_every": 10
+  },
+  "best": {
+    "step": 16000,
+    "validation_loss": 1.4868489469753141,
+    "parameters": 13439680,
+    "seen_tokens": 108397864,
+    "pretrained_weights": false,
+    "manifest": {
+      "dataset": "roneneldan/TinyStories",
+      "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+      "license": "cdla-sharing-1.0",
+      "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+      "synthetic": true,
+      "selection": "First unique documents in pinned source order; alternating validation/test documents",
+      "tokenizer_train_documents": 50000,
+      "vocab_size": 8192,
+      "max_length": 512,
+      "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+      "splits": {
+        "train": {
+          "documents": 500000,
+          "windows": 514199,
+          "text_tokens": 107857284,
+          "complete_story_windows": 485910,
+          "documents_sha256": "b4876f6394b78ca3560848f22195b8e125c2872621c857148b77f93e5264cc16",
+          "array_sha256": "b1fde06202d29af0d1146276d8be1bb4e5ebac1e7d767f6d58a8ca43a1aa16f1"
+        },
+        "validation": {
+          "documents": 1000,
+          "windows": 1008,
+          "text_tokens": 187038,
+          "complete_story_windows": 992,
+          "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+          "array_sha256": "92d568c80995bf436d18ab320b4644c96eed757f47a263270be4303f566fd703"
+        },
+        "test": {
+          "documents": 1000,
+          "windows": 1012,
+          "text_tokens": 188300,
+          "complete_story_windows": 988,
+          "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+          "array_sha256": "fb581db76905e21e777b1746b2c3ca5d3cb2c8b5462e15910c8b4e6d644250c9"
+        }
+      },
+      "tokenizer_source": "data/processed/stories-v2/tokenizer.json"
+    },
+    "previous_phase": {
+      "step": 16000,
+      "validation_loss": 1.6551510605712965,
+      "parameters": 13337280,
+      "seen_tokens": 71702281,
+      "pretrained_weights": false,
+      "manifest": {
+        "dataset": "roneneldan/TinyStories",
+        "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+        "license": "cdla-sharing-1.0",
+        "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+        "synthetic": true,
+        "selection": "First unique documents in pinned source order; alternating validation/test documents",
+        "tokenizer_train_documents": 50000,
+        "vocab_size": 8192,
+        "max_length": 192,
+        "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+        "splits": {
+          "train": {
+            "documents": 100000,
+            "windows": 152676,
+            "text_tokens": 21134655,
+            "documents_sha256": "1f43bc4e6c3bcee6d06c21e44568d80c3f9071e778db95df29270383d8f5a8fc",
+            "array_sha256": "165b1190d164fcc930f6e659a0e21eda68ac90d702ef47d97559f8b36468a483"
+          },
+          "validation": {
+            "documents": 1000,
+            "windows": 1396,
+            "text_tokens": 187038,
+            "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+            "array_sha256": "21d533d2d9a67bffea750e8a6fe896ae669c54370c7a500bbaf031bccf8836cd"
+          },
+          "test": {
+            "documents": 1000,
+            "windows": 1380,
+            "text_tokens": 188300,
+            "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+            "array_sha256": "6fe4b8906954e63f2acd6b9caa3774b171fdeb95f3b08ff11e68c7079af6d51c"
+          }
+        }
+      },
+      "previous_phase": {
+        "step": 6000,
+        "validation_loss": 2.704374563029266,
+        "parameters": 13337280,
+        "seen_tokens": 26848211,
+        "pretrained_weights": false,
+        "manifest": {
+          "dataset": "roneneldan/TinyStories",
+          "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+          "license": "cdla-sharing-1.0",
+          "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+          "synthetic": true,
+          "selection": "First unique documents in pinned source order; alternating validation/test documents",
+          "tokenizer_train_documents": 50000,
+          "vocab_size": 8192,
+          "max_length": 192,
+          "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+          "splits": {
+            "train": {
+              "documents": 100000,
+              "windows": 152676,
+              "text_tokens": 21134655,
+              "documents_sha256": "1f43bc4e6c3bcee6d06c21e44568d80c3f9071e778db95df29270383d8f5a8fc",
+              "array_sha256": "165b1190d164fcc930f6e659a0e21eda68ac90d702ef47d97559f8b36468a483"
+            },
+            "validation": {
+              "documents": 1000,
+              "windows": 1396,
+              "text_tokens": 187038,
+              "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+              "array_sha256": "21d533d2d9a67bffea750e8a6fe896ae669c54370c7a500bbaf031bccf8836cd"
+            },
+            "test": {
+              "documents": 1000,
+              "windows": 1380,
+              "text_tokens": 188300,
+              "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+              "array_sha256": "6fe4b8906954e63f2acd6b9caa3774b171fdeb95f3b08ff11e68c7079af6d51c"
+            }
+          }
+        },
+        "previous_phase": {
+          "step": 6000,
+          "validation_loss": 2.923163155717678,
+          "parameters": 13337280,
+          "seen_tokens": 26875972,
+          "pretrained_weights": false,
+          "manifest": {
+            "dataset": "roneneldan/TinyStories",
+            "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+            "license": "cdla-sharing-1.0",
+            "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+            "synthetic": true,
+            "selection": "First unique documents in pinned source order; alternating validation/test documents",
+            "tokenizer_train_documents": 50000,
+            "vocab_size": 8192,
+            "max_length": 192,
+            "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+            "splits": {
+              "train": {
+                "documents": 100000,
+                "windows": 152676,
+                "text_tokens": 21134655,
+                "documents_sha256": "1f43bc4e6c3bcee6d06c21e44568d80c3f9071e778db95df29270383d8f5a8fc",
+                "array_sha256": "165b1190d164fcc930f6e659a0e21eda68ac90d702ef47d97559f8b36468a483"
+              },
+              "validation": {
+                "documents": 1000,
+                "windows": 1396,
+                "text_tokens": 187038,
+                "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+                "array_sha256": "21d533d2d9a67bffea750e8a6fe896ae669c54370c7a500bbaf031bccf8836cd"
+              },
+              "test": {
+                "documents": 1000,
+                "windows": 1380,
+                "text_tokens": 188300,
+                "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+                "array_sha256": "6fe4b8906954e63f2acd6b9caa3774b171fdeb95f3b08ff11e68c7079af6d51c"
+              }
+            }
+          }
+        }
+      },
+      "continuation_mode": "autoregressive",
+      "objective": "90% causal batches, 10% denoising batches"
+    },
+    "continuation_mode": "autoregressive",
+    "objective": "Denoising every 10 updates (0 = causal only)",
+    "context_extension": true
+  },
+  "seen_tokens": 108397864,
+  "seconds": 2200.244743299976,
+  "causal_test": {
+    "nll": 1.6797631259921437,
+    "perplexity": 5.364285160891616,
+    "accuracy": 0.5919065855516482,
+    "tokens": 95831
+  },
+  "denoising_test": [
+    {
+      "mask_rate": 0.15,
+      "targets": 14170,
+      "cross_entropy": 1.3539077349590767,
+      "accuracy": 0.6939308398023994,
+      "top5_accuracy": 0.8779110797459422,
+      "unigram_cross_entropy": 5.952231276464361,
+      "unigram_accuracy": 0.07035991531404376
+    },
+    {
+      "mask_rate": 0.5,
+      "targets": 47775,
+      "cross_entropy": 2.348098250568256,
+      "accuracy": 0.513636839351125,
+      "top5_accuracy": 0.738712715855573,
+      "unigram_cross_entropy": 5.967858951874019,
+      "unigram_accuracy": 0.06894819466248038
+    },
+    {
+      "mask_rate": 0.85,
+      "targets": 81323,
+      "cross_entropy": 4.232688195216721,
+      "accuracy": 0.239317290311474,
+      "top5_accuracy": 0.4463804827662531,
+      "unigram_cross_entropy": 5.975747264909297,
+      "unigram_accuracy": 0.06958670978689915
+    }
+  ],
+  "timing_note": "Recovered from final optimizer checkpoint; corrected reporting-only loop-variable shadowing. Model weights and evaluations unchanged."
+}

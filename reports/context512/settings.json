@@ -1,0 +1,15 @@
+{
+  "source": "runs/stories-hybrid/best",
+  "data": "data/processed/stories-512",
+  "output": "runs/stories-512",
+  "device": "cuda",
+  "steps": 16000,
+  "batch_size": 32,
+  "lr": 0.00015,
+  "warmup": 400,
+  "eval_every": 1000,
+  "eval_samples": 256,
+  "seed": 45,
+  "expand_data": true,
+  "denoise_every": 10
+}

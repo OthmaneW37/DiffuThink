@@ -24,3 +24,11 @@ data/processed/
 # OS
 .DS_Store
 Thumbs.db
+
+# Reproducible local runs (curated results live in reports/)
+runs/
+*.egg-info/
+build/
+dist/
+artifacts/
+*.safetensors

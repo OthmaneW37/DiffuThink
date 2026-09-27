@@ -1,0 +1,195 @@
+{
+  "task": "Held-out byte reconstruction on deduplicated line splits",
+  "config": {
+    "width": 64,
+    "heads": 4,
+    "layers": 2,
+    "max_length": 64
+  },
+  "parameters": 180800,
+  "device": "cpu",
+  "torch": "2.13.0+rocm10.0.0",
+  "python": "3.12.10",
+  "data": {
+    "sha256": "75674aefc13a626acc8d02e9596dfd315f25790a4b87b60d3fcd7d87a54ee511",
+    "split_seed": 42,
+    "counts": {
+      "test": 115,
+      "validation": 115,
+      "train": 922
+    },
+    "split_hashes": {
+      "test": "8581c4b730a9634e4c94d4661965dd016191efce8dd34c16a9d8dd9fd7d5372a",
+      "validation": "48d399b6d68e33fd7db89c953fa72f4e2508366e5171ff5b57a92d5b77a7ef3d",
+      "train": "658d6947490db12a419d7416ce9411e9fe892475bf117e55c87d140272e7387e"
+    }
+  },
+  "training": {
+    "seed": 42,
+    "steps": 600,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "threads": 4,
+    "best_step": 600,
+    "seconds": 171.94203810000909
+  },
+  "initial_validation": [
+    {
+      "mask_rate": 0.25,
+      "masked_bytes": 1078,
+      "cross_entropy": 5.736024081596417,
+      "accuracy": 0.0,
+      "unigram_cross_entropy": 2.8268622856635552,
+      "unigram_accuracy": 0.18645640074211503
+    },
+    {
+      "mask_rate": 0.5,
+      "masked_bytes": 2198,
+      "cross_entropy": 5.732950253959565,
+      "accuracy": 0.0,
+      "unigram_cross_entropy": 2.833555074037477,
+      "unigram_accuracy": 0.18289353958143767
+    },
+    {
+      "mask_rate": 0.75,
+      "masked_bytes": 3318,
+      "cross_entropy": 5.704780123332957,
+      "accuracy": 0.0,
+      "unigram_cross_entropy": 2.8481464443471216,
+      "unigram_accuracy": 0.17902350813743217
+    },
+    {
+      "mask_rate": 1.0,
+      "masked_bytes": 4370,
+      "cross_entropy": 5.717451194221968,
+      "accuracy": 0.0,
+      "unigram_cross_entropy": 2.852901530320366,
+      "unigram_accuracy": 0.17734553775743708
+    }
+  ],
+  "final_validation": [
+    {
+      "mask_rate": 0.25,
+      "masked_bytes": 1078,
+      "cross_entropy": 0.1262684275356427,
+      "accuracy": 0.9675324675324676,
+      "unigram_cross_entropy": 2.8268622856635552,
+      "unigram_accuracy": 0.18645640074211503
+    },
+    {
+      "mask_rate": 0.5,
+      "masked_bytes": 2198,
+      "cross_entropy": 0.33379602822745463,
+      "accuracy": 0.8939945404913557,
+      "unigram_cross_entropy": 2.833555074037477,
+      "unigram_accuracy": 0.18289353958143767
+    },
+    {
+      "mask_rate": 0.75,
+      "masked_bytes": 3318,
+      "cross_entropy": 0.918349769045029,
+      "accuracy": 0.6977094635322484,
+      "unigram_cross_entropy": 2.8481464443471216,
+      "unigram_accuracy": 0.17902350813743217
+    },
+    {
+      "mask_rate": 1.0,
+      "masked_bytes": 4370,
+      "cross_entropy": 2.867165432369136,
+      "accuracy": 0.17734553775743708,
+      "unigram_cross_entropy": 2.852901530320366,
+      "unigram_accuracy": 0.17734553775743708
+    }
+  ],
+  "test": [
+    {
+      "mask_rate": 0.25,
+      "masked_bytes": 1072,
+      "cross_entropy": 0.13653039220553725,
+      "accuracy": 0.9617537313432836,
+      "unigram_cross_entropy": 2.840717315673828,
+      "unigram_accuracy": 0.1707089552238806
+    },
+    {
+      "mask_rate": 0.5,
+      "masked_bytes": 2165,
+      "cross_entropy": 0.3255300825792978,
+      "accuracy": 0.8909930715935335,
+      "unigram_cross_entropy": 2.8473051498448325,
+      "unigram_accuracy": 0.17829099307159355
+    },
+    {
+      "mask_rate": 0.75,
+      "masked_bytes": 3299,
+      "cross_entropy": 0.8902525911912227,
+      "accuracy": 0.6971809639284632,
+      "unigram_cross_entropy": 2.847035056788042,
+      "unigram_accuracy": 0.17793270688087298
+    },
+    {
+      "mask_rate": 1.0,
+      "masked_bytes": 4354,
+      "cross_entropy": 2.8688706068144953,
+      "accuracy": 0.17638952687184198,
+      "unigram_cross_entropy": 2.8539719728356827,
+      "unigram_accuracy": 0.17638952687184198
+    }
+  ],
+  "history": [
+    {
+      "step": 1,
+      "train_loss": 5.761042594909668,
+      "validation_loss": 5.4242171007757625,
+      "gradient_norm": 2.6484644412994385,
+      "seconds": 3.3186381999985315
+    },
+    {
+      "step": 100,
+      "train_loss": 2.343644380569458,
+      "validation_loss": 2.3667294397267677,
+      "gradient_norm": 0.620166540145874,
+      "seconds": 27.995284500007983
+    },
+    {
+      "step": 200,
+      "train_loss": 1.630616307258606,
+      "validation_loss": 1.6715877845855038,
+      "gradient_norm": 1.5059709548950195,
+      "seconds": 56.81212620000588
+    },
+    {
+      "step": 300,
+      "train_loss": 1.159139633178711,
+      "validation_loss": 1.3579640302365616,
+      "gradient_norm": 1.4691050052642822,
+      "seconds": 85.01149969999096
+    },
+    {
+      "step": 400,
+      "train_loss": 1.2440268993377686,
+      "validation_loss": 1.2082546944872647,
+      "gradient_norm": 2.107321262359619,
+      "seconds": 114.43606929999078
+    },
+    {
+      "step": 500,
+      "train_loss": 0.9310764670372009,
+      "validation_loss": 1.1285312268112848,
+      "gradient_norm": 1.4328234195709229,
+      "seconds": 141.9728754000098
+    },
+    {
+      "step": 600,
+      "train_loss": 0.6930209994316101,
+      "validation_loss": 1.0613949142943155,
+      "gradient_norm": 1.4988285303115845,
+      "seconds": 171.91133689999697
+    }
+  ],
+  "limitations": [
+    "Synthetic grammar; same grammar shared across splits",
+    "Fixed length byte infilling; no EOS or chat instruction training",
+    "Masked reconstruction CE is not autoregressive perplexity",
+    "Unigram is a weak baseline; no claim against pretrained LMs"
+  ]
+}

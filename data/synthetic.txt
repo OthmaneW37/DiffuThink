@@ -1,0 +1,1152 @@
+The cat rests in the garden today.
+The cat rests in the garden at noon.
+The cat rests in the garden every day.
+The cat rests in the garden in the morning.
+The cat rests near the house today.
+The cat rests near the house at noon.
+The cat rests near the house every day.
+The cat rests near the house in the morning.
+The cat rests by the river today.
+The cat rests by the river at noon.
+The cat rests by the river every day.
+The cat rests by the river in the morning.
+The cat rests under the tree today.
+The cat rests under the tree at noon.
+The cat rests under the tree every day.
+The cat rests under the tree in the morning.
+The cat rests in the park today.
+The cat rests in the park at noon.
+The cat rests in the park every day.
+The cat rests in the park in the morning.
+The cat rests near the school today.
+The cat rests near the school at noon.
+The cat rests near the school every day.
+The cat rests near the school in the morning.
+The cat plays in the garden today.
+The cat plays in the garden at noon.
+The cat plays in the garden every day.
+The cat plays in the garden in the morning.
+The cat plays near the house today.
+The cat plays near the house at noon.
+The cat plays near the house every day.
+The cat plays near the house in the morning.
+The cat plays by the river today.
+The cat plays by the river at noon.
+The cat plays by the river every day.
+The cat plays by the river in the morning.
+The cat plays under the tree today.
+The cat plays under the tree at noon.
+The cat plays under the tree every day.
+The cat plays under the tree in the morning.
+The cat plays in the park today.
+The cat plays in the park at noon.
+The cat plays in the park every day.
+The cat plays in the park in the morning.
+The cat plays near the school today.
+The cat plays near the school at noon.
+The cat plays near the school every day.
+The cat plays near the school in the morning.
+The cat waits in the garden today.
+The cat waits in the garden at noon.
+The cat waits in the garden every day.
+The cat waits in the garden in the morning.
+The cat waits near the house today.
+The cat waits near the house at noon.
+The cat waits near the house every day.
+The cat waits near the house in the morning.
+The cat waits by the river today.
+The cat waits by the river at noon.
+The cat waits by the river every day.
+The cat waits by the river in the morning.
+The cat waits under the tree today.
+The cat waits under the tree at noon.
+The cat waits under the tree every day.
+The cat waits under the tree in the morning.
+The cat waits in the park today.
+The cat waits in the park at noon.
+The cat waits in the park every day.
+The cat waits in the park in the morning.
+The cat waits near the school today.
+The cat waits near the school at noon.
+The cat waits near the school every day.
+The cat waits near the school in the morning.
+The cat walks in the garden today.
+The cat walks in the garden at noon.
+The cat walks in the garden every day.
+The cat walks in the garden in the morning.
+The cat walks near the house today.
+The cat walks near the house at noon.
+The cat walks near the house every day.
+The cat walks near the house in the morning.
+The cat walks by the river today.
+The cat walks by the river at noon.
+The cat walks by the river every day.
+The cat walks by the river in the morning.
+The cat walks under the tree today.
+The cat walks under the tree at noon.
+The cat walks under the tree every day.
+The cat walks under the tree in the morning.
+The cat walks in the park today.
+The cat walks in the park at noon.
+The cat walks in the park every day.
+The cat walks in the park in the morning.
+The cat walks near the school today.
+The cat walks near the school at noon.
+The cat walks near the school every day.
+The cat walks near the school in the morning.
+The cat sits in the garden today.
+The cat sits in the garden at noon.
+The cat sits in the garden every day.
+The cat sits in the garden in the morning.
+The cat sits near the house today.
+The cat sits near the house at noon.
+The cat sits near the house every day.
+The cat sits near the house in the morning.
+The cat sits by the river today.
+The cat sits by the river at noon.
+The cat sits by the river every day.
+The cat sits by the river in the morning.
+The cat sits under the tree today.
+The cat sits under the tree at noon.
+The cat sits under the tree every day.
+The cat sits under the tree in the morning.
+The cat sits in the park today.
+The cat sits in the park at noon.
+The cat sits in the park every day.
+The cat sits in the park in the morning.
+The cat sits near the school today.
+The cat sits near the school at noon.
+The cat sits near the school every day.
+The cat sits near the school in the morning.
+The cat runs in the garden today.
+The cat runs in the garden at noon.
+The cat runs in the garden every day.
+The cat runs in the garden in the morning.
+The cat runs near the house today.
+The cat runs near the house at noon.
+The cat runs near the house every day.
+The cat runs near the house in the morning.
+The cat runs by the river today.
+The cat runs by the river at noon.
+The cat runs by the river every day.
+The cat runs by the river in the morning.
+The cat runs under the tree today.
+The cat runs under the tree at noon.
+The cat runs under the tree every day.
+The cat runs under the tree in the morning.
+The cat runs in the park today.
+The cat runs in the park at noon.
+The cat runs in the park every day.
+The cat runs in the park in the morning.
+The cat runs near the school today.
+The cat runs near the school at noon.
+The cat runs near the school every day.
+The cat runs near the school in the morning.
+The dog rests in the garden today.
+The dog rests in the garden at noon.
+The dog rests in the garden every day.
+The dog rests in the garden in the morning.
+The dog rests near the house today.
+The dog rests near the house at noon.
+The dog rests near the house every day.
+The dog rests near the house in the morning.
+The dog rests by the river today.
+The dog rests by the river at noon.
+The dog rests by the river every day.
+The dog rests by the river in the morning.
+The dog rests under the tree today.
+The dog rests under the tree at noon.
+The dog rests under the tree every day.
+The dog rests under the tree in the morning.
+The dog rests in the park today.
+The dog rests in the park at noon.
+The dog rests in the park every day.
+The dog rests in the park in the morning.
+The dog rests near the school today.
+The dog rests near the school at noon.
+The dog rests near the school every day.
+The dog rests near the school in the morning.
+The dog plays in the garden today.
+The dog plays in the garden at noon.
+The dog plays in the garden every day.
+The dog plays in the garden in the morning.
+The dog plays near the house today.
+The dog plays near the house at noon.
+The dog plays near the house every day.
+The dog plays near the house in the morning.
+The dog plays by the river today.
+The dog plays by the river at noon.
+The dog plays by the river every day.
+The dog plays by the river in the morning.
+The dog plays under the tree today.
+The dog plays under the tree at noon.
+The dog plays under the tree every day.
+The dog plays under the tree in the morning.
+The dog plays in the park today.
+The dog plays in the park at noon.
+The dog plays in the park every day.
+The dog plays in the park in the morning.
+The dog plays near the school today.
+The dog plays near the school at noon.
+The dog plays near the school every day.
+The dog plays near the school in the morning.
+The dog waits in the garden today.
+The dog waits in the garden at noon.
+The dog waits in the garden every day.
+The dog waits in the garden in the morning.
+The dog waits near the house today.
+The dog waits near the house at noon.
+The dog waits near the house every day.
+The dog waits near the house in the morning.
+The dog waits by the river today.
+The dog waits by the river at noon.
+The dog waits by the river every day.
+The dog waits by the river in the morning.
+The dog waits under the tree today.
+The dog waits under the tree at noon.
+The dog waits under the tree every day.
+The dog waits under the tree in the morning.
+The dog waits in the park today.
+The dog waits in the park at noon.
+The dog waits in the park every day.
+The dog waits in the park in the morning.
+The dog waits near the school today.
+The dog waits near the school at noon.
+The dog waits near the school every day.
+The dog waits near the school in the morning.
+The dog walks in the garden today.
+The dog walks in the garden at noon.
+The dog walks in the garden every day.
+The dog walks in the garden in the morning.
+The dog walks near the house today.
+The dog walks near the house at noon.
+The dog walks near the house every day.
+The dog walks near the house in the morning.
+The dog walks by the river today.
+The dog walks by the river at noon.
+The dog walks by the river every day.
+The dog walks by the river in the morning.
+The dog walks under the tree today.
+The dog walks under the tree at noon.
+The dog walks under the tree every day.
+The dog walks under the tree in the morning.
+The dog walks in the park today.
+The dog walks in the park at noon.
+The dog walks in the park every day.
+The dog walks in the park in the morning.
+The dog walks near the school today.
+The dog walks near the school at noon.
+The dog walks near the school every day.
+The dog walks near the school in the morning.
+The dog sits in the garden today.
+The dog sits in the garden at noon.
+The dog sits in the garden every day.
+The dog sits in the garden in the morning.
+The dog sits near the house today.
+The dog sits near the house at noon.
+The dog sits near the house every day.
+The dog sits near the house in the morning.
+The dog sits by the river today.
+The dog sits by the river at noon.
+The dog sits by the river every day.
+The dog sits by the river in the morning.
+The dog sits under the tree today.
+The dog sits under the tree at noon.
+The dog sits under the tree every day.
+The dog sits under the tree in the morning.
+The dog sits in the park today.
+The dog sits in the park at noon.
+The dog sits in the park every day.
+The dog sits in the park in the morning.
+The dog sits near the school today.
+The dog sits near the school at noon.
+The dog sits near the school every day.
+The dog sits near the school in the morning.
+The dog runs in the garden today.
+The dog runs in the garden at noon.
+The dog runs in the garden every day.
+The dog runs in the garden in the morning.
+The dog runs near the house today.
+The dog runs near the house at noon.
+The dog runs near the house every day.
+The dog runs near the house in the morning.
+The dog runs by the river today.
+The dog runs by the river at noon.
+The dog runs by the river every day.
+The dog runs by the river in the morning.
+The dog runs under the tree today.
+The dog runs under the tree at noon.
+The dog runs under the tree every day.
+The dog runs under the tree in the morning.
+The dog runs in the park today.
+The dog runs in the park at noon.
+The dog runs in the park every day.
+The dog runs in the park in the morning.
+The dog runs near the school today.
+The dog runs near the school at noon.
+The dog runs near the school every day.
+The dog runs near the school in the morning.
+The bird rests in the garden today.
+The bird rests in the garden at noon.
+The bird rests in the garden every day.
+The bird rests in the garden in the morning.
+The bird rests near the house today.
+The bird rests near the house at noon.
+The bird rests near the house every day.
+The bird rests near the house in the morning.
+The bird rests by the river today.
+The bird rests by the river at noon.
+The bird rests by the river every day.
+The bird rests by the river in the morning.
+The bird rests under the tree today.
+The bird rests under the tree at noon.
+The bird rests under the tree every day.
+The bird rests under the tree in the morning.
+The bird rests in the park today.
+The bird rests in the park at noon.
+The bird rests in the park every day.
+The bird rests in the park in the morning.
+The bird rests near the school today.
+The bird rests near the school at noon.
+The bird rests near the school every day.
+The bird rests near the school in the morning.
+The bird plays in the garden today.
+The bird plays in the garden at noon.
+The bird plays in the garden every day.
+The bird plays in the garden in the morning.
+The bird plays near the house today.
+The bird plays near the house at noon.
+The bird plays near the house every day.
+The bird plays near the house in the morning.
+The bird plays by the river today.
+The bird plays by the river at noon.
+The bird plays by the river every day.
+The bird plays by the river in the morning.
+The bird plays under the tree today.
+The bird plays under the tree at noon.
+The bird plays under the tree every day.
+The bird plays under the tree in the morning.
+The bird plays in the park today.
+The bird plays in the park at noon.
+The bird plays in the park every day.
+The bird plays in the park in the morning.
+The bird plays near the school today.
+The bird plays near the school at noon.
+The bird plays near the school every day.
+The bird plays near the school in the morning.
+The bird waits in the garden today.
+The bird waits in the garden at noon.
+The bird waits in the garden every day.
+The bird waits in the garden in the morning.
+The bird waits near the house today.
+The bird waits near the house at noon.
+The bird waits near the house every day.
+The bird waits near the house in the morning.
+The bird waits by the river today.
+The bird waits by the river at noon.
+The bird waits by the river every day.
+The bird waits by the river in the morning.
+The bird waits under the tree today.
+The bird waits under the tree at noon.
+The bird waits under the tree every day.
+The bird waits under the tree in the morning.
+The bird waits in the park today.
+The bird waits in the park at noon.
+The bird waits in the park every day.
+The bird waits in the park in the morning.
+The bird waits near the school today.
+The bird waits near the school at noon.
+The bird waits near the school every day.
+The bird waits near the school in the morning.
+The bird walks in the garden today.
+The bird walks in the garden at noon.
+The bird walks in the garden every day.
+The bird walks in the garden in the morning.
+The bird walks near the house today.
+The bird walks near the house at noon.
+The bird walks near the house every day.
+The bird walks near the house in the morning.
+The bird walks by the river today.
+The bird walks by the river at noon.
+The bird walks by the river every day.
+The bird walks by the river in the morning.
+The bird walks under the tree today.
+The bird walks under the tree at noon.
+The bird walks under the tree every day.
+The bird walks under the tree in the morning.
+The bird walks in the park today.
+The bird walks in the park at noon.
+The bird walks in the park every day.
+The bird walks in the park in the morning.
+The bird walks near the school today.
+The bird walks near the school at noon.
+The bird walks near the school every day.
+The bird walks near the school in the morning.
+The bird sits in the garden today.
+The bird sits in the garden at noon.
+The bird sits in the garden every day.
+The bird sits in the garden in the morning.
+The bird sits near the house today.
+The bird sits near the house at noon.
+The bird sits near the house every day.
+The bird sits near the house in the morning.
+The bird sits by the river today.
+The bird sits by the river at noon.
+The bird sits by the river every day.
+The bird sits by the river in the morning.
+The bird sits under the tree today.
+The bird sits under the tree at noon.
+The bird sits under the tree every day.
+The bird sits under the tree in the morning.
+The bird sits in the park today.
+The bird sits in the park at noon.
+The bird sits in the park every day.
+The bird sits in the park in the morning.
+The bird sits near the school today.
+The bird sits near the school at noon.
+The bird sits near the school every day.
+The bird sits near the school in the morning.
+The bird runs in the garden today.
+The bird runs in the garden at noon.
+The bird runs in the garden every day.
+The bird runs in the garden in the morning.
+The bird runs near the house today.
+The bird runs near the house at noon.
+The bird runs near the house every day.
+The bird runs near the house in the morning.
+The bird runs by the river today.
+The bird runs by the river at noon.
+The bird runs by the river every day.
+The bird runs by the river in the morning.
+The bird runs under the tree today.
+The bird runs under the tree at noon.
+The bird runs under the tree every day.
+The bird runs under the tree in the morning.
+The bird runs in the park today.
+The bird runs in the park at noon.
+The bird runs in the park every day.
+The bird runs in the park in the morning.
+The bird runs near the school today.
+The bird runs near the school at noon.
+The bird runs near the school every day.
+The bird runs near the school in the morning.
+The rabbit rests in the garden today.
+The rabbit rests in the garden at noon.
+The rabbit rests in the garden every day.
+The rabbit rests in the garden in the morning.
+The rabbit rests near the house today.
+The rabbit rests near the house at noon.
+The rabbit rests near the house every day.
+The rabbit rests near the house in the morning.
+The rabbit rests by the river today.
+The rabbit rests by the river at noon.
+The rabbit rests by the river every day.
+The rabbit rests by the river in the morning.
+The rabbit rests under the tree today.
+The rabbit rests under the tree at noon.
+The rabbit rests under the tree every day.
+The rabbit rests under the tree in the morning.
+The rabbit rests in the park today.
+The rabbit rests in the park at noon.
+The rabbit rests in the park every day.
+The rabbit rests in the park in the morning.
+The rabbit rests near the school today.
+The rabbit rests near the school at noon.
+The rabbit rests near the school every day.
+The rabbit rests near the school in the morning.
+The rabbit plays in the garden today.
+The rabbit plays in the garden at noon.
+The rabbit plays in the garden every day.
+The rabbit plays in the garden in the morning.
+The rabbit plays near the house today.
+The rabbit plays near the house at noon.
+The rabbit plays near the house every day.
+The rabbit plays near the house in the morning.
+The rabbit plays by the river today.
+The rabbit plays by the river at noon.
+The rabbit plays by the river every day.
+The rabbit plays by the river in the morning.
+The rabbit plays under the tree today.
+The rabbit plays under the tree at noon.
+The rabbit plays under the tree every day.
+The rabbit plays under the tree in the morning.
+The rabbit plays in the park today.
+The rabbit plays in the park at noon.
+The rabbit plays in the park every day.
+The rabbit plays in the park in the morning.
+The rabbit plays near the school today.
+The rabbit plays near the school at noon.
+The rabbit plays near the school every day.
+The rabbit plays near the school in the morning.
+The rabbit waits in the garden today.
+The rabbit waits in the garden at noon.
+The rabbit waits in the garden every day.
+The rabbit waits in the garden in the morning.
+The rabbit waits near the house today.
+The rabbit waits near the house at noon.
+The rabbit waits near the house every day.
+The rabbit waits near the house in the morning.
+The rabbit waits by the river today.
+The rabbit waits by the river at noon.
+The rabbit waits by the river every day.
+The rabbit waits by the river in the morning.
+The rabbit waits under the tree today.
+The rabbit waits under the tree at noon.
+The rabbit waits under the tree every day.
+The rabbit waits under the tree in the morning.
+The rabbit waits in the park today.
+The rabbit waits in the park at noon.
+The rabbit waits in the park every day.
+The rabbit waits in the park in the morning.
+The rabbit waits near the school today.
+The rabbit waits near the school at noon.
+The rabbit waits near the school every day.
+The rabbit waits near the school in the morning.
+The rabbit walks in the garden today.
+The rabbit walks in the garden at noon.
+The rabbit walks in the garden every day.
+The rabbit walks in the garden in the morning.
+The rabbit walks near the house today.
+The rabbit walks near the house at noon.
+The rabbit walks near the house every day.
+The rabbit walks near the house in the morning.
+The rabbit walks by the river today.
+The rabbit walks by the river at noon.
+The rabbit walks by the river every day.
+The rabbit walks by the river in the morning.
+The rabbit walks under the tree today.
+The rabbit walks under the tree at noon.
+The rabbit walks under the tree every day.
+The rabbit walks under the tree in the morning.
+The rabbit walks in the park today.
+The rabbit walks in the park at noon.
+The rabbit walks in the park every day.
+The rabbit walks in the park in the morning.
+The rabbit walks near the school today.
+The rabbit walks near the school at noon.
+The rabbit walks near the school every day.
+The rabbit walks near the school in the morning.
+The rabbit sits in the garden today.
+The rabbit sits in the garden at noon.
+The rabbit sits in the garden every day.
+The rabbit sits in the garden in the morning.
+The rabbit sits near the house today.
+The rabbit sits near the house at noon.
+The rabbit sits near the house every day.
+The rabbit sits near the house in the morning.
+The rabbit sits by the river today.
+The rabbit sits by the river at noon.
+The rabbit sits by the river every day.
+The rabbit sits by the river in the morning.
+The rabbit sits under the tree today.
+The rabbit sits under the tree at noon.
+The rabbit sits under the tree every day.
+The rabbit sits under the tree in the morning.
+The rabbit sits in the park today.
+The rabbit sits in the park at noon.
+The rabbit sits in the park every day.
+The rabbit sits in the park in the morning.
+The rabbit sits near the school today.
+The rabbit sits near the school at noon.
+The rabbit sits near the school every day.
+The rabbit sits near the school in the morning.
+The rabbit runs in the garden today.
+The rabbit runs in the garden at noon.
+The rabbit runs in the garden every day.
+The rabbit runs in the garden in the morning.
+The rabbit runs near the house today.
+The rabbit runs near the house at noon.
+The rabbit runs near the house every day.
+The rabbit runs near the house in the morning.
+The rabbit runs by the river today.
+The rabbit runs by the river at noon.
+The rabbit runs by the river every day.
+The rabbit runs by the river in the morning.
+The rabbit runs under the tree today.
+The rabbit runs under the tree at noon.
+The rabbit runs under the tree every day.
+The rabbit runs under the tree in the morning.
+The rabbit runs in the park today.
+The rabbit runs in the park at noon.
+The rabbit runs in the park every day.
+The rabbit runs in the park in the morning.
+The rabbit runs near the school today.
+The rabbit runs near the school at noon.
+The rabbit runs near the school every day.
+The rabbit runs near the school in the morning.
+The child rests in the garden today.
+The child rests in the garden at noon.
+The child rests in the garden every day.
+The child rests in the garden in the morning.
+The child rests near the house today.
+The child rests near the house at noon.
+The child rests near the house every day.
+The child rests near the house in the morning.
+The child rests by the river today.
+The child rests by the river at noon.
+The child rests by the river every day.
+The child rests by the river in the morning.
+The child rests under the tree today.
+The child rests under the tree at noon.
+The child rests under the tree every day.
+The child rests under the tree in the morning.
+The child rests in the park today.
+The child rests in the park at noon.
+The child rests in the park every day.
+The child rests in the park in the morning.
+The child rests near the school today.
+The child rests near the school at noon.
+The child rests near the school every day.
+The child rests near the school in the morning.
+The child plays in the garden today.
+The child plays in the garden at noon.
+The child plays in the garden every day.
+The child plays in the garden in the morning.
+The child plays near the house today.
+The child plays near the house at noon.
+The child plays near the house every day.
+The child plays near the house in the morning.
+The child plays by the river today.
+The child plays by the river at noon.
+The child plays by the river every day.
+The child plays by the river in the morning.
+The child plays under the tree today.
+The child plays under the tree at noon.
+The child plays under the tree every day.
+The child plays under the tree in the morning.
+The child plays in the park today.
+The child plays in the park at noon.
+The child plays in the park every day.
+The child plays in the park in the morning.
+The child plays near the school today.
+The child plays near the school at noon.
+The child plays near the school every day.
+The child plays near the school in the morning.
+The child waits in the garden today.
+The child waits in the garden at noon.
+The child waits in the garden every day.
+The child waits in the garden in the morning.
+The child waits near the house today.
+The child waits near the house at noon.
+The child waits near the house every day.
+The child waits near the house in the morning.
+The child waits by the river today.
+The child waits by the river at noon.
+The child waits by the river every day.
+The child waits by the river in the morning.
+The child waits under the tree today.
+The child waits under the tree at noon.
+The child waits under the tree every day.
+The child waits under the tree in the morning.
+The child waits in the park today.
+The child waits in the park at noon.
+The child waits in the park every day.
+The child waits in the park in the morning.
+The child waits near the school today.
+The child waits near the school at noon.
+The child waits near the school every day.
+The child waits near the school in the morning.
+The child walks in the garden today.
+The child walks in the garden at noon.
+The child walks in the garden every day.
+The child walks in the garden in the morning.
+The child walks near the house today.
+The child walks near the house at noon.
+The child walks near the house every day.
+The child walks near the house in the morning.
+The child walks by the river today.
+The child walks by the river at noon.
+The child walks by the river every day.
+The child walks by the river in the morning.
+The child walks under the tree today.
+The child walks under the tree at noon.
+The child walks under the tree every day.
+The child walks under the tree in the morning.
+The child walks in the park today.
+The child walks in the park at noon.
+The child walks in the park every day.
+The child walks in the park in the morning.
+The child walks near the school today.
+The child walks near the school at noon.
+The child walks near the school every day.
+The child walks near the school in the morning.
+The child sits in the garden today.
+The child sits in the garden at noon.
+The child sits in the garden every day.
+The child sits in the garden in the morning.
+The child sits near the house today.
+The child sits near the house at noon.
+The child sits near the house every day.
+The child sits near the house in the morning.
+The child sits by the river today.
+The child sits by the river at noon.
+The child sits by the river every day.
+The child sits by the river in the morning.
+The child sits under the tree today.
+The child sits under the tree at noon.
+The child sits under the tree every day.
+The child sits under the tree in the morning.
+The child sits in the park today.
+The child sits in the park at noon.
+The child sits in the park every day.
+The child sits in the park in the morning.
+The child sits near the school today.
+The child sits near the school at noon.
+The child sits near the school every day.
+The child sits near the school in the morning.
+The child runs in the garden today.
+The child runs in the garden at noon.
+The child runs in the garden every day.
+The child runs in the garden in the morning.
+The child runs near the house today.
+The child runs near the house at noon.
+The child runs near the house every day.
+The child runs near the house in the morning.
+The child runs by the river today.
+The child runs by the river at noon.
+The child runs by the river every day.
+The child runs by the river in the morning.
+The child runs under the tree today.
+The child runs under the tree at noon.
+The child runs under the tree every day.
+The child runs under the tree in the morning.
+The child runs in the park today.
+The child runs in the park at noon.
+The child runs in the park every day.
+The child runs in the park in the morning.
+The child runs near the school today.
+The child runs near the school at noon.
+The child runs near the school every day.
+The child runs near the school in the morning.
+Alice rests in the garden today.
+Alice rests in the garden at noon.
+Alice rests in the garden every day.
+Alice rests in the garden in the morning.
+Alice rests near the house today.
+Alice rests near the house at noon.
+Alice rests near the house every day.
+Alice rests near the house in the morning.
+Alice rests by the river today.
+Alice rests by the river at noon.
+Alice rests by the river every day.
+Alice rests by the river in the morning.
+Alice rests under the tree today.
+Alice rests under the tree at noon.
+Alice rests under the tree every day.
+Alice rests under the tree in the morning.
+Alice rests in the park today.
+Alice rests in the park at noon.
+Alice rests in the park every day.
+Alice rests in the park in the morning.
+Alice rests near the school today.
+Alice rests near the school at noon.
+Alice rests near the school every day.
+Alice rests near the school in the morning.
+Alice plays in the garden today.
+Alice plays in the garden at noon.
+Alice plays in the garden every day.
+Alice plays in the garden in the morning.
+Alice plays near the house today.
+Alice plays near the house at noon.
+Alice plays near the house every day.
+Alice plays near the house in the morning.
+Alice plays by the river today.
+Alice plays by the river at noon.
+Alice plays by the river every day.
+Alice plays by the river in the morning.
+Alice plays under the tree today.
+Alice plays under the tree at noon.
+Alice plays under the tree every day.
+Alice plays under the tree in the morning.
+Alice plays in the park today.
+Alice plays in the park at noon.
+Alice plays in the park every day.
+Alice plays in the park in the morning.
+Alice plays near the school today.
+Alice plays near the school at noon.
+Alice plays near the school every day.
+Alice plays near the school in the morning.
+Alice waits in the garden today.
+Alice waits in the garden at noon.
+Alice waits in the garden every day.
+Alice waits in the garden in the morning.
+Alice waits near the house today.
+Alice waits near the house at noon.
+Alice waits near the house every day.
+Alice waits near the house in the morning.
+Alice waits by the river today.
+Alice waits by the river at noon.
+Alice waits by the river every day.
+Alice waits by the river in the morning.
+Alice waits under the tree today.
+Alice waits under the tree at noon.
+Alice waits under the tree every day.
+Alice waits under the tree in the morning.
+Alice waits in the park today.
+Alice waits in the park at noon.
+Alice waits in the park every day.
+Alice waits in the park in the morning.
+Alice waits near the school today.
+Alice waits near the school at noon.
+Alice waits near the school every day.
+Alice waits near the school in the morning.
+Alice walks in the garden today.
+Alice walks in the garden at noon.
+Alice walks in the garden every day.
+Alice walks in the garden in the morning.
+Alice walks near the house today.
+Alice walks near the house at noon.
+Alice walks near the house every day.
+Alice walks near the house in the morning.
+Alice walks by the river today.
+Alice walks by the river at noon.
+Alice walks by the river every day.
+Alice walks by the river in the morning.
+Alice walks under the tree today.
+Alice walks under the tree at noon.
+Alice walks under the tree every day.
+Alice walks under the tree in the morning.
+Alice walks in the park today.
+Alice walks in the park at noon.
+Alice walks in the park every day.
+Alice walks in the park in the morning.
+Alice walks near the school today.
+Alice walks near the school at noon.
+Alice walks near the school every day.
+Alice walks near the school in the morning.
+Alice sits in the garden today.
+Alice sits in the garden at noon.
+Alice sits in the garden every day.
+Alice sits in the garden in the morning.
+Alice sits near the house today.
+Alice sits near the house at noon.
+Alice sits near the house every day.
+Alice sits near the house in the morning.
+Alice sits by the river today.
+Alice sits by the river at noon.
+Alice sits by the river every day.
+Alice sits by the river in the morning.
+Alice sits under the tree today.
+Alice sits under the tree at noon.
+Alice sits under the tree every day.
+Alice sits under the tree in the morning.
+Alice sits in the park today.
+Alice sits in the park at noon.
+Alice sits in the park every day.
+Alice sits in the park in the morning.
+Alice sits near the school today.
+Alice sits near the school at noon.
+Alice sits near the school every day.
+Alice sits near the school in the morning.
+Alice runs in the garden today.
+Alice runs in the garden at noon.
+Alice runs in the garden every day.
+Alice runs in the garden in the morning.
+Alice runs near the house today.
+Alice runs near the house at noon.
+Alice runs near the house every day.
+Alice runs near the house in the morning.
+Alice runs by the river today.
+Alice runs by the river at noon.
+Alice runs by the river every day.
+Alice runs by the river in the morning.
+Alice runs under the tree today.
+Alice runs under the tree at noon.
+Alice runs under the tree every day.
+Alice runs under the tree in the morning.
+Alice runs in the park today.
+Alice runs in the park at noon.
+Alice runs in the park every day.
+Alice runs in the park in the morning.
+Alice runs near the school today.
+Alice runs near the school at noon.
+Alice runs near the school every day.
+Alice runs near the school in the morning.
+Bob rests in the garden today.
+Bob rests in the garden at noon.
+Bob rests in the garden every day.
+Bob rests in the garden in the morning.
+Bob rests near the house today.
+Bob rests near the house at noon.
+Bob rests near the house every day.
+Bob rests near the house in the morning.
+Bob rests by the river today.
+Bob rests by the river at noon.
+Bob rests by the river every day.
+Bob rests by the river in the morning.
+Bob rests under the tree today.
+Bob rests under the tree at noon.
+Bob rests under the tree every day.
+Bob rests under the tree in the morning.
+Bob rests in the park today.
+Bob rests in the park at noon.
+Bob rests in the park every day.
+Bob rests in the park in the morning.
+Bob rests near the school today.
+Bob rests near the school at noon.
+Bob rests near the school every day.
+Bob rests near the school in the morning.
+Bob plays in the garden today.
+Bob plays in the garden at noon.
+Bob plays in the garden every day.
+Bob plays in the garden in the morning.
+Bob plays near the house today.
+Bob plays near the house at noon.
+Bob plays near the house every day.
+Bob plays near the house in the morning.
+Bob plays by the river today.
+Bob plays by the river at noon.
+Bob plays by the river every day.
+Bob plays by the river in the morning.
+Bob plays under the tree today.
+Bob plays under the tree at noon.
+Bob plays under the tree every day.
+Bob plays under the tree in the morning.
+Bob plays in the park today.
+Bob plays in the park at noon.
+Bob plays in the park every day.
+Bob plays in the park in the morning.
+Bob plays near the school today.
+Bob plays near the school at noon.
+Bob plays near the school every day.
+Bob plays near the school in the morning.
+Bob waits in the garden today.
+Bob waits in the garden at noon.
+Bob waits in the garden every day.
+Bob waits in the garden in the morning.
+Bob waits near the house today.
+Bob waits near the house at noon.
+Bob waits near the house every day.
+Bob waits near the house in the morning.
+Bob waits by the river today.
+Bob waits by the river at noon.
+Bob waits by the river every day.
+Bob waits by the river in the morning.
+Bob waits under the tree today.
+Bob waits under the tree at noon.
+Bob waits under the tree every day.
+Bob waits under the tree in the morning.
+Bob waits in the park today.
+Bob waits in the park at noon.
+Bob waits in the park every day.
+Bob waits in the park in the morning.
+Bob waits near the school today.
+Bob waits near the school at noon.
+Bob waits near the school every day.
+Bob waits near the school in the morning.
+Bob walks in the garden today.
+Bob walks in the garden at noon.
+Bob walks in the garden every day.
+Bob walks in the garden in the morning.
+Bob walks near the house today.
+Bob walks near the house at noon.
+Bob walks near the house every day.
+Bob walks near the house in the morning.
+Bob walks by the river today.
+Bob walks by the river at noon.
+Bob walks by the river every day.
+Bob walks by the river in the morning.
+Bob walks under the tree today.
+Bob walks under the tree at noon.
+Bob walks under the tree every day.
+Bob walks under the tree in the morning.
+Bob walks in the park today.
+Bob walks in the park at noon.
+Bob walks in the park every day.
+Bob walks in the park in the morning.
+Bob walks near the school today.
+Bob walks near the school at noon.
+Bob walks near the school every day.
+Bob walks near the school in the morning.
+Bob sits in the garden today.
+Bob sits in the garden at noon.
+Bob sits in the garden every day.
+Bob sits in the garden in the morning.
+Bob sits near the house today.
+Bob sits near the house at noon.
+Bob sits near the house every day.
+Bob sits near the house in the morning.
+Bob sits by the river today.
+Bob sits by the river at noon.
+Bob sits by the river every day.
+Bob sits by the river in the morning.
+Bob sits under the tree today.
+Bob sits under the tree at noon.
+Bob sits under the tree every day.
+Bob sits under the tree in the morning.
+Bob sits in the park today.
+Bob sits in the park at noon.
+Bob sits in the park every day.
+Bob sits in the park in the morning.
+Bob sits near the school today.
+Bob sits near the school at noon.
+Bob sits near the school every day.
+Bob sits near the school in the morning.
+Bob runs in the garden today.
+Bob runs in the garden at noon.
+Bob runs in the garden every day.
+Bob runs in the garden in the morning.
+Bob runs near the house today.
+Bob runs near the house at noon.
+Bob runs near the house every day.
+Bob runs near the house in the morning.
+Bob runs by the river today.
+Bob runs by the river at noon.
+Bob runs by the river every day.
+Bob runs by the river in the morning.
+Bob runs under the tree today.
+Bob runs under the tree at noon.
+Bob runs under the tree every day.
+Bob runs under the tree in the morning.
+Bob runs in the park today.
+Bob runs in the park at noon.
+Bob runs in the park every day.
+Bob runs in the park in the morning.
+Bob runs near the school today.
+Bob runs near the school at noon.
+Bob runs near the school every day.
+Bob runs near the school in the morning.
+The teacher rests in the garden today.
+The teacher rests in the garden at noon.
+The teacher rests in the garden every day.
+The teacher rests in the garden in the morning.
+The teacher rests near the house today.
+The teacher rests near the house at noon.
+The teacher rests near the house every day.
+The teacher rests near the house in the morning.
+The teacher rests by the river today.
+The teacher rests by the river at noon.
+The teacher rests by the river every day.
+The teacher rests by the river in the morning.
+The teacher rests under the tree today.
+The teacher rests under the tree at noon.
+The teacher rests under the tree every day.
+The teacher rests under the tree in the morning.
+The teacher rests in the park today.
+The teacher rests in the park at noon.
+The teacher rests in the park every day.
+The teacher rests in the park in the morning.
+The teacher rests near the school today.
+The teacher rests near the school at noon.
+The teacher rests near the school every day.
+The teacher rests near the school in the morning.
+The teacher plays in the garden today.
+The teacher plays in the garden at noon.
+The teacher plays in the garden every day.
+The teacher plays in the garden in the morning.
+The teacher plays near the house today.
+The teacher plays near the house at noon.
+The teacher plays near the house every day.
+The teacher plays near the house in the morning.
+The teacher plays by the river today.
+The teacher plays by the river at noon.
+The teacher plays by the river every day.
+The teacher plays by the river in the morning.
+The teacher plays under the tree today.
+The teacher plays under the tree at noon.
+The teacher plays under the tree every day.
+The teacher plays under the tree in the morning.
+The teacher plays in the park today.
+The teacher plays in the park at noon.
+The teacher plays in the park every day.
+The teacher plays in the park in the morning.
+The teacher plays near the school today.
+The teacher plays near the school at noon.
+The teacher plays near the school every day.
+The teacher plays near the school in the morning.
+The teacher waits in the garden today.
+The teacher waits in the garden at noon.
+The teacher waits in the garden every day.
+The teacher waits in the garden in the morning.
+The teacher waits near the house today.
+The teacher waits near the house at noon.
+The teacher waits near the house every day.
+The teacher waits near the house in the morning.
+The teacher waits by the river today.
+The teacher waits by the river at noon.
+The teacher waits by the river every day.
+The teacher waits by the river in the morning.
+The teacher waits under the tree today.
+The teacher waits under the tree at noon.
+The teacher waits under the tree every day.
+The teacher waits under the tree in the morning.
+The teacher waits in the park today.
+The teacher waits in the park at noon.
+The teacher waits in the park every day.
+The teacher waits in the park in the morning.
+The teacher waits near the school today.
+The teacher waits near the school at noon.
+The teacher waits near the school every day.
+The teacher waits near the school in the morning.
+The teacher walks in the garden today.
+The teacher walks in the garden at noon.
+The teacher walks in the garden every day.
+The teacher walks in the garden in the morning.
+The teacher walks near the house today.
+The teacher walks near the house at noon.
+The teacher walks near the house every day.
+The teacher walks near the house in the morning.
+The teacher walks by the river today.
+The teacher walks by the river at noon.
+The teacher walks by the river every day.
+The teacher walks by the river in the morning.
+The teacher walks under the tree today.
+The teacher walks under the tree at noon.
+The teacher walks under the tree every day.
+The teacher walks under the tree in the morning.
+The teacher walks in the park today.
+The teacher walks in the park at noon.
+The teacher walks in the park every day.
+The teacher walks in the park in the morning.
+The teacher walks near the school today.
+The teacher walks near the school at noon.
+The teacher walks near the school every day.
+The teacher walks near the school in the morning.
+The teacher sits in the garden today.
+The teacher sits in the garden at noon.
+The teacher sits in the garden every day.
+The teacher sits in the garden in the morning.
+The teacher sits near the house today.
+The teacher sits near the house at noon.
+The teacher sits near the house every day.
+The teacher sits near the house in the morning.
+The teacher sits by the river today.
+The teacher sits by the river at noon.
+The teacher sits by the river every day.
+The teacher sits by the river in the morning.
+The teacher sits under the tree today.
+The teacher sits under the tree at noon.
+The teacher sits under the tree every day.
+The teacher sits under the tree in the morning.
+The teacher sits in the park today.
+The teacher sits in the park at noon.
+The teacher sits in the park every day.
+The teacher sits in the park in the morning.
+The teacher sits near the school today.
+The teacher sits near the school at noon.
+The teacher sits near the school every day.
+The teacher sits near the school in the morning.
+The teacher runs in the garden today.
+The teacher runs in the garden at noon.
+The teacher runs in the garden every day.
+The teacher runs in the garden in the morning.
+The teacher runs near the house today.
+The teacher runs near the house at noon.
+The teacher runs near the house every day.
+The teacher runs near the house in the morning.
+The teacher runs by the river today.
+The teacher runs by the river at noon.
+The teacher runs by the river every day.
+The teacher runs by the river in the morning.
+The teacher runs under the tree today.
+The teacher runs under the tree at noon.
+The teacher runs under the tree every day.
+The teacher runs under the tree in the morning.
+The teacher runs in the park today.
+The teacher runs in the park at noon.
+The teacher runs in the park every day.
+The teacher runs in the park in the morning.
+The teacher runs near the school today.
+The teacher runs near the school at noon.
+The teacher runs near the school every day.
+The teacher runs near the school in the morning.

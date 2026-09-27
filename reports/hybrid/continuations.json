@@ -1,0 +1,263 @@
+{
+  "seed": 42,
+  "temperature": 0.5,
+  "max_new_tokens": 96,
+  "before_mode": "blockwise diffusion",
+  "after_mode": "autoregressive, top_p=.9, repetition_penalty=1.12, no_repeat_ngram=4",
+  "after_raw_mode": "autoregressive, same top-p, without repetition penalties",
+  "limitations": "Diagnostic prompts, including user failure; not a blinded human evaluation. Seeds are not comparable random streams across algorithms.",
+  "examples": [
+    {
+      "prompt": "One day a man was under a tree and ",
+      "before": {
+        "text": "One day a man was under a tree and \nThe man was so happy that he had such the best day ever.",
+        "generated_tokens": 15,
+        "latency_ms": 7465.0768999999855,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "One day a man was under a tree and he saw a big tree. He wanted to climb the tree and see what was on the other side. He was very persistent and he kept climbing until he reached the top.\nThe man was so happy when he saw the tree. He wanted to climb it and see what was on top. He climbed higher and higher until he reached the top. He was so proud of himself and he smiled when he saw the whole town.\nThe man was so proud of himself for climbing",
+        "generated_tokens": 96,
+        "latency_ms": 1492.2655999835115,
+        "repeated_trigram_fraction": 0.23404255319148937
+      },
+      "after": {
+        "text": "One day a man was under a tree and he saw a big tree. He wanted to climb the tree and see what was on top. So he started to climb up the tree. The tree was very tall and it was very high. \nThe man was very happy when he reached the top. He looked down and saw a beautiful view. He could see the world from up there. It was so pretty and bright. He wanted it all to himself.\nSo he climbed higher and higher until he was at the",
+        "generated_tokens": 96,
+        "latency_ms": 919.0316000021994,
+        "repeated_trigram_fraction": 0.010638297872340385
+      }
+    },
+    {
+      "prompt": "Once upon a time, a little girl found",
+      "before": {
+        "text": "Once upon a time, a little girl found a new puppy. She was so happy and she had a new friend.",
+        "generated_tokens": 15,
+        "latency_ms": 154.85160000389442,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "Once upon a time, a little girl found a big, red ball. She wanted to play with it, but it was too high up. She asked her mom for help, but she said she was too small.\nThe little girl felt sad and wanted to help her mom. She went to her mom and asked for help. Her mom said, \"Don't worry, we can fix the ball.\"\nSo, the little girl and her mom got some tape and started to fix the ball. They fixed the ball",
+        "generated_tokens": 96,
+        "latency_ms": 973.3915999822784,
+        "repeated_trigram_fraction": 0.010638297872340385
+      },
+      "after": {
+        "text": "Once upon a time, a little girl found a big, red ball. She wanted to play with it, but she was too small to reach it. So, she asked her mom for help.\n\"Mommy, can you help me reach the ball?\" she said.\nHer mom smiled and said, \"Of course, sweetie. I will take you to the park.\"\nThe little girl was so happy. She ran to the park and saw a big slide. She climbed up the ladder and slid down. It",
+        "generated_tokens": 96,
+        "latency_ms": 942.7508999942802,
+        "repeated_trigram_fraction": 0.010638297872340385
+      }
+    },
+    {
+      "prompt": "Tom opened the door and saw",
+      "before": {
+        "text": "Tom opened the door and saw the yellow dress. He was happy and happy. He was so happy.",
+        "generated_tokens": 15,
+        "latency_ms": 151.10799999092706,
+        "repeated_trigram_fraction": 0.07692307692307687
+      },
+      "after_raw": {
+        "text": "Tom opened the door and saw a big box. It was a gift from his grandma. It was a present from her grandma. She was very happy and hugged Tom and thanked her.\n\"Thank you, Tom. You are very brave and kind. I am glad you like your gift. You are very kind and generous. You make me happy and proud. You are my best friend too.\"\nTom smiled and hugged his grandma. He felt proud and happy. He hugged his grandma and said, \"",
+        "generated_tokens": 96,
+        "latency_ms": 951.3110000116285,
+        "repeated_trigram_fraction": 0.07446808510638303
+      },
+      "after": {
+        "text": "Tom opened the door and saw a big box. It was full of toys, books, and toys. Tom wanted to play with it, but he did not know how. He wondered if his mom or dad would be angry if they came home.\nHe asked his mom and dad, but they did not answer. They were busy talking on the phone. Tom felt sad and bored. He wanted to play more. He thought of a game to hide in the box. He put his toy car under the",
+        "generated_tokens": 96,
+        "latency_ms": 975.7443000271451,
+        "repeated_trigram_fraction": 0.010638297872340385
+      }
+    },
+    {
+      "prompt": "The woman stood on the balcony and",
+      "before": {
+        "text": "The woman stood on the balcony and went back to the park. She was so happy to see her family.",
+        "generated_tokens": 15,
+        "latency_ms": 155.90969999902882,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "The woman stood on the balcony and said, \"I'm so glad you're here. I'm glad you're safe.\"\nThe woman smiled and said, \"Thank you for being so kind. I'm glad I could help.\"\nThe woman smiled back and said, \"You're welcome. I'm glad you're safe. You're my hero.\"\nThe woman smiled back and said, \"Thank you. I'm glad I could help.\"\nThe woman smiled back and said, \"You're welcome",
+        "generated_tokens": 96,
+        "latency_ms": 957.7402000140864,
+        "repeated_trigram_fraction": 0.44680851063829785
+      },
+      "after": {
+        "text": "The woman stood on the balcony and said, \"I'm so glad you're here. I'm going to help you.\"\nThe woman smiled and said, “That's wonderful! Let's go and get some ice cream.” \nSo they went to the store and bought some ice cream. The woman was so happy and thanked the woman for her kindness. She ran back home with a big smile on her face.",
+        "generated_tokens": 78,
+        "latency_ms": 807.1770000096876,
+        "repeated_trigram_fraction": 0.013157894736842146
+      }
+    },
+    {
+      "prompt": "A small bird was afraid to fly. One day,",
+      "before": {
+        "text": "A small bird was afraid to fly. One day, the bird was very sad and wanted to be careful with the bird again.",
+        "generated_tokens": 15,
+        "latency_ms": 154.94279999984428,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "A small bird was afraid to fly. One day, the bird saw a small bird with a broken wing. The bird was sad and scared. The bird tried to fly away, but the bird was too scared.\nThe bird saw a big tree and thought to itself, \"I will never fly like that bird.\" So, the bird flew to the tree and tried to get the bird. But the bird was too fast and flew away.\nThe bird was very sad. It wanted to fly again, but it could not.",
+        "generated_tokens": 96,
+        "latency_ms": 936.8029999895953,
+        "repeated_trigram_fraction": 0.06382978723404253
+      },
+      "after": {
+        "text": "A small bird was afraid to fly. One day, the bird saw a little bird flying in the sky. The bird had a bright idea.\n\"Let's fly away,\" said the bird.\nThe bird flew away and the bird flew away.\n\"Don't be scared,\" said the small bird. \"I will help you.\"\nSo the bird flew back to its nest. It was safe and sound, but it was still scared.\nThe next day, the small bird saw a big tree. The bird was",
+        "generated_tokens": 96,
+        "latency_ms": 994.6088999859057,
+        "repeated_trigram_fraction": 0.08510638297872342
+      }
+    },
+    {
+      "prompt": "Lily lost her red ball. She looked under the bed and",
+      "before": {
+        "text": "Lily lost her red ball. She looked under the bed and ran away. She was happy. She was happy. She was happy.",
+        "generated_tokens": 15,
+        "latency_ms": 159.19529998791404,
+        "repeated_trigram_fraction": 0.5384615384615384
+      },
+      "after_raw": {
+        "text": "Lily lost her red ball. She looked under the bed and behind the door, but she could not find it. She was very sad and scared. She wished she had never gone to the park.\nThen she heard a voice. It was her mom. She said, \"Lily, I'm sorry. I lost your ball. I'm sorry I lost it. I wanted to play with it. Can you help me find it?\"\nLily looked around and saw her mom's face. She had an idea. She said, \"",
+        "generated_tokens": 96,
+        "latency_ms": 966.6562000056729,
+        "repeated_trigram_fraction": 0.04255319148936165
+      },
+      "after": {
+        "text": "Lily lost her red ball. She looked under the bed and behind the door, but she could not find it. She was very sad and scared.\nShe cried and cried. She wanted to hug her teddy bear, but he did not know how. She wished she had never seen his blue ball.",
+        "generated_tokens": 49,
+        "latency_ms": 476.6259999887552,
+        "repeated_trigram_fraction": 0.0
+      }
+    },
+    {
+      "prompt": "The rain stopped, so the children",
+      "before": {
+        "text": "The rain stopped, so the children were so happy. They watched the sun in the sun in the sky.",
+        "generated_tokens": 15,
+        "latency_ms": 157.1537999843713,
+        "repeated_trigram_fraction": 0.15384615384615385
+      },
+      "after_raw": {
+        "text": "The rain stopped, so the children went outside to play in the rain. They ran around and laughed. They had so much fun, and the rain was so much fun!\nSuddenly, the rain stopped and the children ran back inside. They were so happy and the rain was over. They ran outside and played in the rain.\nThe rain was so much fun! The children ran around and laughed, and laughed and smiled. They ran around in the rain, laughing and having fun.\nThe rain had",
+        "generated_tokens": 96,
+        "latency_ms": 947.3252999887336,
+        "repeated_trigram_fraction": 0.18085106382978722
+      },
+      "after": {
+        "text": "The rain stopped, so the children went outside to play in the park. They saw a big tree and decided to climb it. The sky was blue and the wind was blowing. \nWhen they reached the top of the tree, they looked up and saw that the ground was full of leaves. The children were amazed by the soft leaves and the bright sun. \nThe children smiled and decided to keep going. They went around the tree every day, until one day a big storm came. It was very",
+        "generated_tokens": 96,
+        "latency_ms": 916.4941000053659,
+        "repeated_trigram_fraction": 0.021276595744680882
+      }
+    },
+    {
+      "prompt": "A boy wanted to help his mother, but",
+      "before": {
+        "text": "A boy wanted to help his mother, but he didn't want to help his mom and he could be sad again.",
+        "generated_tokens": 15,
+        "latency_ms": 152.31069998117164,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "A boy wanted to help his mother, but she was too busy. She looked around and saw a big box. She wanted to open it, so she asked her mother if she could. Her mother said yes, and the boy was so excited. He opened the box and found a toy car. He was so happy! He hugged the toy car and thanked his mother. She was so happy to have helped him. She hugged the toy car and ran to show her friends. They all had a great time playing with the",
+        "generated_tokens": 96,
+        "latency_ms": 935.1273000065703,
+        "repeated_trigram_fraction": 0.04255319148936165
+      },
+      "after": {
+        "text": "A boy wanted to help his mother, but she was too busy. She decided to take a walk and asked him to get her help. He had been walking for a long time and he felt very happy.\nThe boy's mother said it was ok to help him, so they went together. The boy was so excited to be able to help his mom.\nThey walked around the park and the boy looked around. He saw a big tree with a hole in it. He thought it would be fun to climb up",
+        "generated_tokens": 96,
+        "latency_ms": 937.3456999892369,
+        "repeated_trigram_fraction": 0.0
+      }
+    },
+    {
+      "prompt": "The dog saw a cat near the river. It",
+      "before": {
+        "text": "The dog saw a cat near the river. It was so happy and it wanted to play with the dog in the park.",
+        "generated_tokens": 15,
+        "latency_ms": 154.65119999134913,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "The dog saw a cat near the river. It was a small, furry cat. The dog was very scared and ran away. The cat was happy that it had found a new friend.",
+        "generated_tokens": 28,
+        "latency_ms": 277.29159998125397,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after": {
+        "text": "The dog saw a cat near the river. It was very sad and angry. The cat wanted to help the cat, so it ran to get her mom.\n\"Mom, I'm sorry!\" said the cat. \"I want to help the mouse.\"\n\"Don't worry,\" said Mom. \"We can fix it together. We can take it to the vet.\"\nThe cat was happy and thanked Mom. They worked together to fix the cat's fur. After a few days, the cat was able to get",
+        "generated_tokens": 96,
+        "latency_ms": 921.6340999992099,
+        "repeated_trigram_fraction": 0.010638297872340385
+      }
+    },
+    {
+      "prompt": "Anna opened the box. Inside, she found",
+      "before": {
+        "text": "Anna opened the box. Inside, she found a new toy box. She was happy. She had a new friend.",
+        "generated_tokens": 15,
+        "latency_ms": 149.3911999859847,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "Anna opened the box. Inside, she found a big, round ball. She was so happy! She picked up the ball and played with it all day.\nAnna and her mom watched as the ball rolled and rolled. It rolled and rolled until it reached the other side of the room. It was so much fun!\nAnna and her mom watched the ball go and forth. They laughed and smiled as it rolled around. They had a lot of fun.\nAt the end of the day, Anna and her mom",
+        "generated_tokens": 96,
+        "latency_ms": 940.5278999765869,
+        "repeated_trigram_fraction": 0.06382978723404253
+      },
+      "after": {
+        "text": "Anna opened the box. Inside, she found a big, round, green leaf. She was very happy and decided to share it with her friends. They all laughed and played together in the garden.\nBut then Anna noticed something strange. There was a big, scary spider! It had sharp teeth and claws and claws. It was scared of Anna's finger and wanted to run away. Anna ran after it, but she could not reach it. She screamed for help, but no one heard her.\nThe spider saw",
+        "generated_tokens": 96,
+        "latency_ms": 877.4664000084158,
+        "repeated_trigram_fraction": 0.010638297872340385
+      }
+    },
+    {
+      "prompt": "Ben was sad because his friend",
+      "before": {
+        "text": "Ben was sad because his friend was sad. He knew that he was able to play with his friends.",
+        "generated_tokens": 15,
+        "latency_ms": 152.08300002268516,
+        "repeated_trigram_fraction": 0.0
+      },
+      "after_raw": {
+        "text": "Ben was sad because his friend was sick. His friend was sick and he had to go to the doctor. The doctor said he needed a doctor and he needed a doctor. He had a big bag of medicine and a bandage.\n\"Don't worry, Ben. I have a doctor. He will help you feel better soon. He will be fine soon.\"\nBen did not want to be sick. He wanted to play with his toys and his mom. He did not like the doctor. He wanted",
+        "generated_tokens": 96,
+        "latency_ms": 943.4062000073027,
+        "repeated_trigram_fraction": 0.08510638297872342
+      },
+      "after": {
+        "text": "Ben was sad because his friend Tom was not. He had a big box of toys in his room. He did not like to share his toys with Tom. He wanted to be nice and share his toys.\nHe went to his room and opened the box. He saw many toys inside. He saw cars, dolls, balls, and books. He liked cars and trucks, but he did not want to share his toy with him. He said, \"This is my car. You can have it back",
+        "generated_tokens": 96,
+        "latency_ms": 895.7097999809776,
+        "repeated_trigram_fraction": 0.03191489361702127
+      }
+    },
+    {
+      "prompt": "The old man planted a tree. Every morning,",
+      "before": {
+        "text": "The old man planted a tree. Every morning, the little boy and the little boy would always be careful with the tree.",
+        "generated_tokens": 15,
+        "latency_ms": 152.43030001875013,
+        "repeated_trigram_fraction": 0.07692307692307687
+      },
+      "after_raw": {
+        "text": "The old man planted a tree. Every morning, he would look for the perfect spot to rest. He would look for a spot to rest and soon he found a big tree. He was so happy! He had a spot to rest and he felt so comfortable. He lay down and closed his eyes. He was ready to rest.\nThe old man lay down in the tree and closed his eyes. He was so content and happy to rest. He felt so peaceful and cozy. He closed his eyes and fell asleep.\n",
+        "generated_tokens": 96,
+        "latency_ms": 926.538800005801,
+        "repeated_trigram_fraction": 0.17021276595744683
+      },
+      "after": {
+        "text": "The old man planted a tree. Every morning, he would look for something special. He was very happy and content.\nOne day, he heard a loud noise. It was a big bird. The old man was scared and ran away.\nHe saw a big tree. He thought it was a good place to hide. So he decided to find another way to get the bird.\nHe looked around and found a big tree with lots of leaves. He was so happy! He grabbed the leaves and started to climb.",
+        "generated_tokens": 96,
+        "latency_ms": 881.9250999949872,
+        "repeated_trigram_fraction": 0.03191489361702127
+      }
+    }
+  ]
+}

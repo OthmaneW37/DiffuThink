@@ -1,0 +1,1012 @@
+{
+  "protocol": {
+    "common_test_array_sha256": "6fe4b8906954e63f2acd6b9caa3774b171fdeb95f3b08ff11e68c7079af6d51c",
+    "common_test_windows": 1380,
+    "temperature": 0.5,
+    "max_new_tokens": 160,
+    "finish_sentence_tokens": 0,
+    "seeds": [
+      42,
+      7
+    ],
+    "prompt_count": 24,
+    "device": "cuda",
+    "before_weights_sha256": "b1d785547d3c70e1934dd2bcbc611df2eeb7a74e7770e11249cc1117c9fd353b",
+    "latency_note": "Timings are not a speed benchmark; other GPU work may run concurrently.",
+    "note": "First prompt is a known diagnostic. Other prompts fixed before inspecting new weights. All raw samples retained. No blind human coherence assessment."
+  },
+  "likelihood": {
+    "before": {
+      "nll": 1.9748900541778096,
+      "perplexity": 7.20582735965293,
+      "accuracy": 0.5464289487585843,
+      "tokens": 189300
+    },
+    "after": {
+      "nll": 1.816034210898293,
+      "perplexity": 6.147430630710921,
+      "accuracy": 0.5680718436344426,
+      "tokens": 189300
+    }
+  },
+  "summary": {
+    "before": {
+      "mean_repeated_trigram_fraction": 0.019254481213555146,
+      "eos_rate": 0.8333333333333334,
+      "punctuated_ending_rate": 0.8958333333333334,
+      "mean_generated_tokens": 105.25
+    },
+    "after": {
+      "mean_repeated_trigram_fraction": 0.02687818541702335,
+      "eos_rate": 0.7291666666666666,
+      "punctuated_ending_rate": 0.75,
+      "mean_generated_tokens": 128.52083333333334
+    }
+  },
+  "weights": {
+    "before": "b1d785547d3c70e1934dd2bcbc611df2eeb7a74e7770e11249cc1117c9fd353b",
+    "after": "4a498ee7c247e3a4422aa59f06ac1948e7bfae009b6bd12e2ca1dee18dcca5f4"
+  },
+  "examples": [
+    {
+      "prompt": "One day a man was under a tree and ",
+      "seed": 42,
+      "before": {
+        "text": "One day a man was under a tree and he saw a big tree. He wanted to climb the tree and see what was on top. So he started to climb up the tree. The tree was very tall and it was very high. \nThe man was very happy when he reached the top. He looked down and saw a beautiful view. He could see the world from up there. It was so pretty and bright. He wanted it all to himself.\nSo he climbed higher and higher until he was at the top. Then he started to slide down again. He went up, down, down, and then slid down. He had so much fun! \nHe went back down the tree and looked up at the sky. It was a beautiful day. He knew he would never forget this day.",
+        "stop_reason": "eos",
+        "generated_tokens": 155,
+        "latency_ms": 2325.4280999826733,
+        "repeated_trigram_fraction": 0.039215686274509776,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "One day a man was under a tree and he saw something shiny in the ground. He bent down to pick it up and found a shiny metal coin. He put it in his pocket and ran home with it.\nWhen he got home, he showed his mom the coin. She said it was very special and she said it was special. The man was so happy that he wanted to keep it forever.\nThe next day, the man went outside to look for more shiny things. He found a big tree with lots of leaves. He picked some and put them in his pocket.\nThe man kept looking until he found something even better - a shiny metal thing! He was so excited that he ran back inside to show his mom. She smiled and said it was the most beautiful thing he had ever seen.",
+        "stop_reason": "eos",
+        "generated_tokens": 155,
+        "latency_ms": 1715.404700000363,
+        "repeated_trigram_fraction": 0.0326797385620915,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "One day a man was under a tree and ",
+      "seed": 7,
+      "before": {
+        "text": "One day a man was under a tree and he was very tired. He had been playing all day and his friends were running away. He looked around and saw that the tree was very big. He decided to take a break and take a nap.\nThe man went to the tree and sat down. He sat down and closed his eyes. Suddenly, he heard a loud noise. It was a big truck coming towards him! The man was scared and ran away as fast as he could.\nHe ran and ran until he found a big tree. He opened it and saw the tree had fallen down. He was very sad and he started to cry. His friends came over and they told him not to worry. They said that it was okay and that they would get him a new home soon. \nThe man was so happy!",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1581.7976999969687,
+        "repeated_trigram_fraction": 0.012658227848101222,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "One day a man was under a tree and he had to carry a big box. He walked and walked until he saw something shiny in the grass. It was a coin! The man was so excited that he picked it up and ran home.\nWhen he got home, he showed his mom the coin. She said it was very pretty and she said it was special. The man was very happy and put the coin in his pocket. \nThe next day, the man went to the park again. He saw a little boy playing with a ball. The boy wanted to play too, so he asked the man if he could play too. The man said yes, so the boy played with the ball.\nThe boy and the boy had lots of fun together. They were very happy and the man was happy to have such a special",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 970.2974000028917,
+        "repeated_trigram_fraction": 0.025316455696202556,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Mia put her blue cup on the table. When she came back,",
+      "seed": 42,
+      "before": {
+        "text": "Mia put her blue cup on the table. When she came back, it was soft and smooth. She smiled and said, \"Thank you, Mommy!\"\nMia and her little brother laughed too. They both laughed together. \nThe end.",
+        "stop_reason": "eos",
+        "generated_tokens": 36,
+        "latency_ms": 360.13220000313595,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Mia put her blue cup on the table. When she came back, it was broken! She looked around and saw that the cup was broken. Mia was sad.\n\"I'm sorry,\" said Mia. \"My cup is broken.\"\nMia's mom heard the noise and came to see what happened. She saw Mia crying and asked her what was wrong. Mia told her about her broken cup.\nMom smiled and said, \"Don't worry, Mia. I can fix it. Let's go find some glue and some tape.\"\nThey went to the store and found some glue. Mom put the pieces back together and soon the cup was fixed. Mia was happy again. She hugged her mom and said, “Thank you for helping me fix my cup!”",
+        "stop_reason": "eos",
+        "generated_tokens": 141,
+        "latency_ms": 857.2580999971251,
+        "repeated_trigram_fraction": 0.021582733812949617,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Mia put her blue cup on the table. When she came back,",
+      "seed": 7,
+      "before": {
+        "text": "Mia put her blue cup on the table. When she came back, it was wet and slippery. Mia's little brother, Max, saw her. He wanted to play with Mia too.\n\"Can I play with your red cup?\" he asked.\nMia nodded and said, \"Yes, but be careful. It is very heavy.\"\nMax took the yellow cup and put it on the table to make a big mess. The floor was wet and muddy. Mia and Max did not want to play with the blue cup anymore. They wanted to keep playing with it.\nThey decided to give the blue cup to Max. They took turns to pour water on it, and then they had fun. They made a big mess and did not make any more noise.",
+        "stop_reason": "eos",
+        "generated_tokens": 141,
+        "latency_ms": 1417.628600000171,
+        "repeated_trigram_fraction": 0.02877697841726623,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Mia put her blue cup on the table. When she came back, it was very hot. Mia was happy to see her cup was still there. She took a sip and smiled. It was so nice!\nMia's mom saw her drinking the cup and asked what she wanted. Mia said, \"I want to drink my water!\" Her mom laughed and said, \"Okay, but you need to be careful.\"\nMia asked, \"What can I do?\" Her mom said, \"You can pour your water into a cup so it will be nice and cool.\" Mia was very excited and ran to get the cup. She poured the water into her cup and then drank it all up. It was delicious!",
+        "stop_reason": "eos",
+        "generated_tokens": 130,
+        "latency_ms": 798.5562000030768,
+        "repeated_trigram_fraction": 0.0234375,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Sam could not swim. He stood beside the deep pond and",
+      "seed": 42,
+      "before": {
+        "text": "Sam could not swim. He stood beside the deep pond and looked at the water. He was scared, but he wanted to be brave.\n\"Don't be scared,\" Sam said. \"I will protect you.\"\nHe ran to the edge of the pond and gently touched it. It felt soft and smooth. He felt a little bit better.\nThe water was warm and warm. Sam smiled and swam with his mom. He saw many things, like birds and fish. He saw ducks and frogs and butterflies. He saw some birds and some bugs.\n\"Look, mom, I found a fish!\" he said.\nHis mom smiled and hugged him. She was proud of him too. She took him home and gave him a hug.\n\"You are a good helper,\" she said. \"You helped me to be brave and smart",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1596.822899999097,
+        "repeated_trigram_fraction": 0.03797468354430378,
+        "ends_with_punctuation": false
+      },
+      "after": {
+        "text": "Sam could not swim. He stood beside the deep pond and looked out at the sea. The water was so clear that it made Sam feel dizzy. He watched as the waves crashed against the shore.\n\"I'm sorry, Sam,\" said his mom. \"It's okay to be scared sometimes.\"\nSam smiled and hugged his mom. He felt better after that. He decided to go back to playing in the water. \nThe end.",
+        "stop_reason": "eos",
+        "generated_tokens": 79,
+        "latency_ms": 482.78230000141775,
+        "repeated_trigram_fraction": 0.012987012987012991,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Sam could not swim. He stood beside the deep pond and",
+      "seed": 7,
+      "before": {
+        "text": "Sam could not swim. He stood beside the deep pond and looked for something to eat. Then he saw a big, juicy worm. He was so happy that he jumped up and down.\nHe took a bite of the worm and it was so delicious! He ate it all up and felt much better. \nSam decided to go back to his cozy spot in the pond. He was very tired but he had a great time swimming with his friends.",
+        "stop_reason": "eos",
+        "generated_tokens": 80,
+        "latency_ms": 818.5458000225481,
+        "repeated_trigram_fraction": 0.012820512820512775,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Sam could not swim. He stood beside the deep pond and looked around. He saw a frog sitting on a rock. The frog was sitting on a branch. Sam watched it for a while.\n\"Hello, frog,\" he said. \"Can you help me?\"\nThe frog smiled. \"Of course I can. You can sit on my back.\"\nSam climbed up the tree and sat on the rock. He looked at the pond and saw some fish swimming in it. The frog watched Sam and smiled.\n\"Thank you, Sam,\" he said to the frog. \"You are very kind.\"\nThe frog nodded. \"You're welcome, Sam. You're a good friend.\"\nSam smiled back. He was happy to help the frog. He was glad that he could help the frog and the other animals in the pond.",
+        "stop_reason": "eos",
+        "generated_tokens": 159,
+        "latency_ms": 961.5236000026925,
+        "repeated_trigram_fraction": 0.06369426751592355,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The little bird hurt its wing. It could not fly, so",
+      "seed": 42,
+      "before": {
+        "text": "The little bird hurt its wing. It could not fly, so it could not fly. The bird was sad and lonely. It wanted to help the bird, but it didn't know how.\nThen, it saw a big tree. It flew down and saw a big branch. The bird thought, \"I can help you.\" So it flapped its wings and flew down to the branch.\nThe bird flew up and up until it was at the top. Then it opened its mouth and flew away. The bird felt happy and safe again.",
+        "stop_reason": "eos",
+        "generated_tokens": 97,
+        "latency_ms": 1005.1725000084843,
+        "repeated_trigram_fraction": 0.03157894736842104,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The little bird hurt its wing. It could not fly, so it was very sad. The little bird wanted to help, but it couldn't.\nOne day, a kind man saw the bird and said he would help. He took the little bird to the vet's office. The doctor said that the bird needed to rest for a while.\nThe little bird was happy to help. It flew away to find some food. The kind man watched as the little bird flew away. The little boy was so grateful that he could help.\nThe kind man thanked the little bird for helping it. He gave the little bird a big hug and said goodbye. Then, the little bird went back to its home. It was happy to be able to help the little bird.",
+        "stop_reason": "eos",
+        "generated_tokens": 143,
+        "latency_ms": 857.3315999965416,
+        "repeated_trigram_fraction": 0.05673758865248224,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The little bird hurt its wing. It could not fly, so",
+      "seed": 7,
+      "before": {
+        "text": "The little bird hurt its wing. It could not fly, so it couldn't fly anymore. It was sad and lonely.\nOne day, a kind girl saw the bird's hurt wing. She wanted to help it. The kind girl ran to her house and asked for some water. Her mom gave her some water and some water.\nThe kind girl was very happy. She thanked the kind lady and started to clean the bird. After a few days, the bird was able to fly again. It could fly again!\nThe little girl smiled and thanked the kind kind lady. The kind lady said she was glad that the little girl had helped it. They both enjoyed the rest of their day in the park.",
+        "stop_reason": "eos",
+        "generated_tokens": 132,
+        "latency_ms": 1319.446000008611,
+        "repeated_trigram_fraction": 0.023076923076923106,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The little bird hurt its wing. It could not fly, so it couldn't fly anymore.\nBut then one day, the little bird saw a big, red balloon. It wanted to fly away, but it was too scared to fly. So, the little blue bird flew up and grabbed the balloon.\nIt flew higher and higher until it reached its nest. The little blue bird was so happy that it could fly again. It flew around with the balloon in its beak and smiled.\nThe little bird had a new friend. They played together every day, and the little blue duck was never alone again.",
+        "stop_reason": "eos",
+        "generated_tokens": 111,
+        "latency_ms": 668.9496000035433,
+        "repeated_trigram_fraction": 0.02752293577981646,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Lucy gave her last cookie to her brother. Now she",
+      "seed": 42,
+      "before": {
+        "text": "Lucy gave her last cookie to her brother. Now she had a big smile on her face. She was so happy! \nThe two of them hugged each other and smiled. They both knew that the cookie had made their day even more special.",
+        "stop_reason": "eos",
+        "generated_tokens": 39,
+        "latency_ms": 382.70919999922626,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Lucy gave her last cookie to her brother. Now she had a cookie and she was so happy! She ran around the house, looking for more cookies. \nSuddenly, Lucy heard a loud noise. It was coming from outside. She looked out of the window and saw a big, scary monster. The monster was huge and it had sharp teeth. \nLucy was scared. She wanted to run away but she remembered her brother's words. He said \"If you want some cookies, I will give you one.\" Lucy didn't know what that meant, but she knew it was something bad. \nThe monster said \"I will give you some of my cookies if you want\". Lucy was so scared! She ran away as fast as she could. But the monster was gone. \nWhen Lucy came back to her brother's house,",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 969.9812999970163,
+        "repeated_trigram_fraction": 0.03797468354430378,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Lucy gave her last cookie to her brother. Now she",
+      "seed": 7,
+      "before": {
+        "text": "Lucy gave her last cookie to her brother. Now she had a cookie and was very happy. She smiled and hugged him.\n\"Thank you, Lucy,\" said her brother. \"You are the best.\"\nThe two of them hugged and then went off to play. They had lots of fun together, and it was a wonderful day!",
+        "stop_reason": "eos",
+        "generated_tokens": 58,
+        "latency_ms": 604.8930000106338,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Lucy gave her last cookie to her brother. Now she had a cookie and it was sweet. She smiled and said \"Thank you!\"\nHer brother was so happy that he started to laugh. He said \"You're welcome!\"\nLucy smiled back and said \"I'm glad you like the cookie.\" Then she gave him a big hug and they both enjoyed their cookie together.",
+        "stop_reason": "eos",
+        "generated_tokens": 65,
+        "latency_ms": 453.67280000209576,
+        "repeated_trigram_fraction": 0.015873015873015928,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "It was raining outside. The children decided to stay inside and",
+      "seed": 42,
+      "before": {
+        "text": "It was raining outside. The children decided to stay inside and play in the rain. They jumped in puddles and splashed around.\nThe rain was very wet, but the children were happy. They ran around in the mud and laughed. They had so much fun!\nAfter a while, they got out of the mud and went back inside. They hugged each other and said goodbye. Then they went inside and played some more. The rain had made them feel better.",
+        "stop_reason": "eos",
+        "generated_tokens": 82,
+        "latency_ms": 827.0830999827012,
+        "repeated_trigram_fraction": 0.012499999999999956,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "It was raining outside. The children decided to stay inside and play in the rain. They laughed and ran around, playing in the puddles.\nSuddenly, they heard a loud noise. It sounded like someone had gone away! They looked up and saw a big, white dog running towards them. \nThe dog barked loudly and the children were scared. The dog ran away and the children ran back to their house. They hugged each other and promised never to be too wet and wet again.",
+        "stop_reason": "eos",
+        "generated_tokens": 87,
+        "latency_ms": 525.2617000005557,
+        "repeated_trigram_fraction": 0.0117647058823529,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "It was raining outside. The children decided to stay inside and",
+      "seed": 7,
+      "before": {
+        "text": "It was raining outside. The children decided to stay inside and play in the rain. They had a lot of fun playing together, but this time they were careful not to get wet.\nSuddenly, a big storm came and destroyed their house! It was very loud and scary. The children were scared and started to cry. But then, the rain stopped and the rain stopped. The rain stopped and it was gone.\nThe children were so happy that they had been brave enough to play outside. They ran inside and hugged each other. They knew that their house was safe again.",
+        "stop_reason": "eos",
+        "generated_tokens": 105,
+        "latency_ms": 1011.8840999784879,
+        "repeated_trigram_fraction": 0.01941747572815533,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "It was raining outside. The children decided to stay inside and play in the rain. They were having a great time, playing tag and jumping around.\nSuddenly, they heard a loud noise. It was coming from the bushes. It was a big dog! The dog was barking and running towards them.\nThe children were scared, but they knew it was just a dog. They quickly ran away as fast as they could.\nWhen they got back home, they were safe. The rain had gone and the sun was shining again. \nThe children learned that sometimes the best things in life can be dangerous.",
+        "stop_reason": "eos",
+        "generated_tokens": 112,
+        "latency_ms": 672.1722000002046,
+        "repeated_trigram_fraction": 0.018181818181818188,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The old man reached the top of the hill. He sat down to rest and",
+      "seed": 42,
+      "before": {
+        "text": "The old man reached the top of the hill. He sat down to rest and looked around. He saw a little girl playing in the grass. She was laughing and having fun. The old man smiled back at her and said, \"Let's play a game!\"\nThe little girl ran up the hill and started to run around. She laughed and laughed as she ran faster and faster. The old woman watched her and smiled. She had made it all to herself!\nAfter a while, the little girl stopped and looked down at the old man. He was smiling back at her. The old lady smiled back and said, “You are so brave and kind. I'm glad you liked your game.”\nThe old man nodded and said, 'I'm glad you like it!” Then he walked away, still smiling from the little girl.",
+        "stop_reason": "eos",
+        "generated_tokens": 154,
+        "latency_ms": 1088.8581000035629,
+        "repeated_trigram_fraction": 0.046052631578947345,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The old man reached the top of the hill. He sat down to rest and looked around. He saw a big, red ball on the ground. He picked it up and said \"This is so cool!\" \nHe decided to take it home with him. When he got home, he put the ball in his room. He was very happy. \nThe old man went to bed that night feeling happy. He had a wonderful day playing with the ball and taking care of it.",
+        "stop_reason": "eos",
+        "generated_tokens": 83,
+        "latency_ms": 503.91880000097444,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The old man reached the top of the hill. He sat down to rest and",
+      "seed": 7,
+      "before": {
+        "text": "The old man reached the top of the hill. He sat down to rest and looked up at the sky.\n\"It's so beautiful!\" he said.\nHe smiled and said, \"Yes, it is very pretty.\"\nThe old man was happy to be there. He was glad that he could make his life better.",
+        "stop_reason": "eos",
+        "generated_tokens": 51,
+        "latency_ms": 503.8324000197463,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The old man reached the top of the hill. He sat down to rest and looked up at the sky.\n\"What are you doing?\" asked a little girl.\n\"I'm looking for my toy,\" said the old man. \"I'm looking around.\"\nThe little girl smiled. She had never seen anything like it before. \"Can I see it?\" she asked.\nThe old man nodded. He took out his hand and showed her how to hold it. The little girl held onto the old man's hand, and he started to walk slowly.\n\"Be careful,\" said the little girl. \"It's very high.\"\nThe old lady smiled. \"I'll be careful,\" she said. She then reached out to grab the old man, and he pulled her down from the ground.\nThe little boy looked up and saw his toy.",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 981.8070000037551,
+        "repeated_trigram_fraction": 0.08227848101265822,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Ben lost his red hat in the garden. His sister helped him",
+      "seed": 42,
+      "before": {
+        "text": "Ben lost his red hat in the garden. His sister helped him find it and gave it back to him. Ben was very happy and thanked his sister. He learned that it's important to be kind to others and not let them have a bad ending.",
+        "stop_reason": "eos",
+        "generated_tokens": 38,
+        "latency_ms": 432.7943999960553,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Ben lost his red hat in the garden. His sister helped him find it, but he was not happy. He wanted to show her his hat, but he did not know how.\n\"Look, Lily, I found my hat!\" Ben said, holding his blue hat. \"It is so pretty and warm.\"\nLily looked at the hat and saw that it was not a hat. It was a hat with a star on it. She liked it too. She thought it was cool and wanted to keep it.\n\"Ben, don't do that!\" Lily said, feeling sad. \"You are a bad sister. You have your red hat. You can't take my hat.\"\nBut Ben did not listen. He took his blue hat and ran away with it. He left it on the ground and the house.\nLily was very sad",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 930.1354999988689,
+        "repeated_trigram_fraction": 0.01898734177215189,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Ben lost his red hat in the garden. His sister helped him",
+      "seed": 7,
+      "before": {
+        "text": "Ben lost his red hat in the garden. His sister helped him find it. She was very happy to have her hat back.\n\"Look, Ben! I found your hat!\" she said. \"You are a good brother and a good friend.\"\nBen looked at his hat. It was very pretty and soft. He smiled and hugged his sister.\n\"Thank you, Lily! You are a good sister,\" he said.\nThey hugged and laughed. They were happy to have each other and their toys.",
+        "stop_reason": "eos",
+        "generated_tokens": 92,
+        "latency_ms": 937.0058000204153,
+        "repeated_trigram_fraction": 0.033333333333333326,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Ben lost his red hat in the garden. His sister helped him find it and gave it back to him. Ben was happy and said, \"Thank you, sister!\"\nMom smiled and said, “You're welcome, Ben! You are a good brother.”\nBen hugged his sister and said, 'I love you too, Mom'.",
+        "stop_reason": "eos",
+        "generated_tokens": 56,
+        "latency_ms": 321.06519999797456,
+        "repeated_trigram_fraction": 0.03703703703703709,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The box was empty. Lily looked inside and",
+      "seed": 42,
+      "before": {
+        "text": "The box was empty. Lily looked inside and saw a big, round box. She opened the box and saw a picture of her mom.\n\"Mom, can I have this box?\" Lily asked.\n\"Sure, sweetie. You can have it,\" Mom said.\nLily took the box and ran to the box. She wanted to show her mom the box. But when she got there, she saw that the box was empty and not empty. It was too big for her.\n\"Oh no! My box is empty!\" Lily cried.\nMom came into the room and saw the box. It was full of toys. Lily felt bad. She did not want to give up the box.\n\"I'm sorry, Mom. I wanted to see my new toy. Can we play with it now?\" Lily said.",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1586.4154000009876,
+        "repeated_trigram_fraction": 0.05696202531645567,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The box was empty. Lily looked inside and saw something shiny. She said, \"What is this?\"\nHer mom smiled and said, \"It's a magic key. You can use it to unlock things.\"\nLily was excited. She wanted to see what would happen if she opened the box. She asked her mom, \"Can I open it?\"\nHer mother nodded and said, “Yes, you can open it.”\nLily carefully opened the box, and inside she found a beautiful dress. She put it on and felt like a princess. She was so happy! \nBut then something bad happened. The dress started to move and Lily couldn't find it anywhere. She looked all around but couldn't find the key. She tried to get it back but it wouldn't budge.\nHer mom said, \"Don't",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 945.8432999963406,
+        "repeated_trigram_fraction": 0.044303797468354444,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "The box was empty. Lily looked inside and",
+      "seed": 7,
+      "before": {
+        "text": "The box was empty. Lily looked inside and saw something very special. She found a bottle of water! She quickly grabbed it and ran to the box. \nLily put the bottle on her head and ran outside to show her mom. Her mom smiled and said, \"That's amazing! You can have the bottle now.\" \nLily was so happy. She thanked her mom for the special gift. From then on, she always looked forward to going out and try something new.",
+        "stop_reason": "eos",
+        "generated_tokens": 89,
+        "latency_ms": 924.7940999921411,
+        "repeated_trigram_fraction": 0.011494252873563204,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The box was empty. Lily looked inside and saw a little box. She wanted to open it, but it was locked. She tried to open the box, but it wouldn't budge.\nSuddenly, a friendly dog came along. The dog said, \"I can help you. I can help you open the box.\" The dog opened the box and found a key inside. He opened the box with the key.\nLily was so happy! She thanked the dog and gave him a big hug. Then she went back to playing in her room.",
+        "stop_reason": "eos",
+        "generated_tokens": 102,
+        "latency_ms": 599.3184000035399,
+        "repeated_trigram_fraction": 0.040000000000000036,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "A small dog was afraid of the loud thunder. Its owner",
+      "seed": 42,
+      "before": {
+        "text": "A small dog was afraid of the loud thunder. Its owner had a big smile and she had a special pair of shoes. She took them to a park that was filled with lots of fun things to do.\nThe dog was so excited to be in the park. He wanted to explore the park, but his mom said he had to stay away from the loud thunder! The dog was scared, but he was also very curious.\nHe slowly walked towards the street and saw a big tree with lots of leaves. He ran up the tree and found a small box of yarn. He opened it up and saw that it was full of toys! He was so happy and quickly grabbed the yarn and started to play with it.\nThe big dog was so happy that he had found his shoes and he was no longer scared. He played with the yarn for",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1591.1634000076447,
+        "repeated_trigram_fraction": 0.025316455696202556,
+        "ends_with_punctuation": false
+      },
+      "after": {
+        "text": "A small dog was afraid of the loud thunder. Its owner, a kind old man, said to him, \"It's ok, I'm here to help you\". The old man smiled and said, \"I know, but I don't have any answers\". He started to walk away, as if he could find a way to get back home.\nThe old man was very brave and he took the little dog to a big tree. When they got there, the old man saw that the little dog had taken him. The old man said, \"You must never go near the tree again\". \nThe little dog was scared but he wanted to be brave. He slowly walked up to the old man and said, “I'm sorry I didn't know you could do it.” The old man looked at his face and smiled. He said,",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 977.9430999988108,
+        "repeated_trigram_fraction": 0.03797468354430378,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "A small dog was afraid of the loud thunder. Its owner",
+      "seed": 7,
+      "before": {
+        "text": "A small dog was afraid of the loud thunder. Its owner had a plan to make it better, so she decided to take the dog with her. She put on her shoes and ran outside.\nThe dog saw a big tree in the middle of the road. It was very tall, but it seemed like it would be fun to climb it. So she started to climb.\nWhen she reached the top, she looked around. There were lots of people there, and they all looked at her. The dog was so happy!\nThe dog smiled and waved goodbye to the people in the town. She had made a new friend and was very proud of herself for being brave and climbing the tree.",
+        "stop_reason": "eos",
+        "generated_tokens": 129,
+        "latency_ms": 1277.4569999892265,
+        "repeated_trigram_fraction": 0.007874015748031482,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "A small dog was afraid of the loud thunder. Its owner, Sarah, was always very worried about the storm. She wanted to help the dog, but she didn't know how.\nOne day, Sarah's mom asked her, \"What are you doing?\" Sarah replied, \"I'm going to help the storm.\" Her mom smiled and said, \"That's a good idea! Let's go get some ice cream for the storm.\" \nSo Sarah and her mom went to the store and bought some ice cream. When they got home, Sarah was so happy to be able to help the scary storm. She hugged her mom and thanked her for helping her. \nThe storm passed and the sun came out. Sarah's mom said, \"You did a great job! You helped the storm!\" Sarah smiled and felt much better.",
+        "stop_reason": "eos",
+        "generated_tokens": 158,
+        "latency_ms": 948.6888000028557,
+        "repeated_trigram_fraction": 0.04487179487179482,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Tom promised to return the toy before dinner. When the sun went down,",
+      "seed": 42,
+      "before": {
+        "text": "Tom promised to return the toy before dinner. When the sun went down, he was very happy. He smiled and said, \"Thank you for helping me.\"\nThe End.",
+        "stop_reason": "eos",
+        "generated_tokens": 21,
+        "latency_ms": 202.4204000190366,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Tom promised to return the toy before dinner. When the sun went down, he was so happy that he ran outside to play with his friends. He showed them the toy and they all laughed.\nThe next day, Tom and his friends were playing hide and seek. Tom hid behind a big tree in the yard. All of a sudden, he heard a loud noise coming from the bushes. It was a big, scary bear!\nTom quickly ran to his friends and asked them to come out of the bushes. They all said yes, but they had to stay away from the bear. Tom was so scared that he couldn't move. He tried to hide in the bush but it was too late. The bear chased him and he got lost.\nTom never found his toy. His friends were sad, but they knew they had to help him. They searched high",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 965.865300000587,
+        "repeated_trigram_fraction": 0.01898734177215189,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Tom promised to return the toy before dinner. When the sun went down,",
+      "seed": 7,
+      "before": {
+        "text": "Tom promised to return the toy before dinner. When the sun went down, he looked out of his window and saw a beautiful blue sky. He was so happy that he had found the toy and it made him smile.",
+        "stop_reason": "eos",
+        "generated_tokens": 29,
+        "latency_ms": 322.8003999975044,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Tom promised to return the toy before dinner. When the sun went down, he said goodbye to his mom and ran outside. He was so happy to have been able to find the toy!\nHe ran around the garden, looking for something special. Suddenly, he spotted a small box in the grass. He ran over to it and opened it up. Inside was a toy that he had been searching for.\nTom was so excited. He quickly grabbed the toy and hugged it tightly. He knew he would never forget this day.",
+        "stop_reason": "eos",
+        "generated_tokens": 92,
+        "latency_ms": 550.1178999984404,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Anna planted a seed and watered it every day. After a few weeks,",
+      "seed": 42,
+      "before": {
+        "text": "Anna planted a seed and watered it every day. After a few weeks, the seed grew bigger and bigger until it was very small. Anna was so proud of her plant and wanted to show it to everyone.\nOne day, a big storm came and the rain started to fall. The rain was very strong and the sun was very hot. Anna's plant was very upset. She cried and cried. She wished she had listened to her mom and dad.\nAnna ran to her mom, who was in the kitchen. She told her what happened and called the doctor. The doctor came and saw Anna crying. He felt sorry for her and said he would help her. He took Anna to the doctor and fixed her plant. He gave it back to Anna and said she was a very good plant.\nAnna was very happy and thanked the doctor. She hugged her mom",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1599.3901999900118,
+        "repeated_trigram_fraction": 0.01898734177215189,
+        "ends_with_punctuation": false
+      },
+      "after": {
+        "text": "Anna planted a seed and watered it every day. After a few weeks, the seed started to grow and became a beautiful flower. Anna was so happy that she ran around the garden to show her friends.\nOne day, Anna saw a butterfly flying in the sky. She wanted to catch it, but she knew she had to be careful. So she took a deep breath and stepped closer to the butterfly. The butterfly flew away and Anna watched it fly away.\nAnna was so excited that she decided to take a break and see if she could find another flower. She looked around for a flower, but she couldn't find one. Then she noticed something in the grass. It was a beautiful flower!\nAnna picked up the flower and put it in her pocket. She went back to her garden to look for more flowers. After a while, she found a big",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 956.1608000003616,
+        "repeated_trigram_fraction": 0.012658227848101222,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Anna planted a seed and watered it every day. After a few weeks,",
+      "seed": 7,
+      "before": {
+        "text": "Anna planted a seed and watered it every day. After a few weeks, the plant grew bigger and bigger until it became a beautiful flower.\nOne day, Anna's mom asked her to help with the garden. She said, \"Let's make a beautiful flower, so we can grow big and strong.\" \nAnna was excited to help. She worked hard to put the flower in a pot. When they were done, the flower looked very pretty. Anna smiled and said, \"Thank you, mom! I love my flower!\"",
+        "stop_reason": "eos",
+        "generated_tokens": 93,
+        "latency_ms": 935.2069999731611,
+        "repeated_trigram_fraction": 0.02197802197802201,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Anna planted a seed and watered it every day. After a few weeks, the seed began to grow and grew until it was big and beautiful.\nOne day, Anna decided to take a break and rest for a while. She sat down in the grass and closed her eyes. Suddenly, she heard a voice say \"Hello!\"\nAnna opened her eyes and saw an old man standing there with a smile on his face. He said \"Hi, I'm here to help you.\"\nAnna was so excited! She asked the old man if he could help her. The old man smiled and said \"Of course!\"\nSo Anna and the old man worked together to make the seed grow. After some time, they were able to plant it in a new garden.\nAnna thanked the old man and said goodbye. She was so happy that she had been able to help",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 999.2756999999983,
+        "repeated_trigram_fraction": 0.012658227848101222,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "The girl could not reach the shelf. She asked her father to",
+      "seed": 42,
+      "before": {
+        "text": "The girl could not reach the shelf. She asked her father to help her. His dad said he would help her get it. He took out a big box and filled it with water. Then he put it on the table.\nThe girl was so happy when she saw the shelf. It was tall and shiny. She smiled and hugged her dad. They both felt good inside. \nThe girl ran to the shelf and looked at all the toys. She wanted to buy them, but she couldn't find any. She started to cry.\nHer dad came back with a big smile. He gave her a hug and said he was sorry. He said he would take care of her and help her find some new toys. \nThey went back to the shelf together. The girl smiled as she watched her dad. It was a fun day!",
+        "stop_reason": "eos",
+        "generated_tokens": 159,
+        "latency_ms": 1568.3557000011206,
+        "repeated_trigram_fraction": 0.03821656050955413,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The girl could not reach the shelf. She asked her father to help her. He was a bit scared, but he said yes.\nThe girl and her father walked to the shelf. The girl looked at the shelf with big eyes. She saw many things she wanted to do.\n\"Can I climb on the shelf?\" she asked her father.\nHer father smiled and said, \"Yes, you can climb on it.\"\nThe girl was so happy. She climbed on top of the shelf. It was fun! The girl felt like she was flying. \nShe reached the top of the chair and looked around. She saw lots of things. There were books, toys, and books. She was so excited to explore.",
+        "stop_reason": "eos",
+        "generated_tokens": 136,
+        "latency_ms": 857.4749999970663,
+        "repeated_trigram_fraction": 0.02985074626865669,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The girl could not reach the shelf. She asked her father to",
+      "seed": 7,
+      "before": {
+        "text": "The girl could not reach the shelf. She asked her father to help her. His father said, \"We need to find something.\"\nSo they went to look for a toy that was hidden under the bed. They found it very carefully and put it in the shelf. Then they looked at the shelf. It was full of things that were very special.\nThe girl was so happy. She hugged her father and said, \"Thank you! I'm so glad we found this shelf.\" Her dad smiled and said, “You're welcome. Now let's go have some fun!” \nAnd they went to the store together. The girl had a great time at the store and she was very proud of herself for being so thoughtful.",
+        "stop_reason": "eos",
+        "generated_tokens": 136,
+        "latency_ms": 1378.3305000106338,
+        "repeated_trigram_fraction": 0.02985074626865669,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The girl could not reach the shelf. She asked her father to help her. He said, \"It's too high for you. You need to be careful.\"\nThe girl was sad but she listened to her father. She looked around and saw a big box. It was full of books. The girl wanted to read the book. She opened it and started to read.\nShe found a book with pictures of animals. She read the words and learned new things. She learned about animals, plants, and flowers. She was happy.\nThe girl learned a lot from her father. He said it was his job. He said he could read more books later. The girl was happy.",
+        "stop_reason": "eos",
+        "generated_tokens": 127,
+        "latency_ms": 777.7352999983123,
+        "repeated_trigram_fraction": 0.04800000000000004,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "A rabbit found a carrot. Instead of eating it alone,",
+      "seed": 42,
+      "before": {
+        "text": "A rabbit found a carrot. Instead of eating it alone, he decided to take it home and make sure it was safe. He thought about how important it was to share his own food with others.\nHe hopped around the forest looking for food. Finally he found some seeds that he wanted to share with others. He ate the seeds and felt happy that he had made a new friend.\nThe rabbit thanked the rabbit and ran home. He was so excited to show his family what he had done. He smiled, knowing he had made someone else happy.",
+        "stop_reason": "eos",
+        "generated_tokens": 100,
+        "latency_ms": 1063.6280000035185,
+        "repeated_trigram_fraction": 0.020408163265306145,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "A rabbit found a carrot. Instead of eating it alone, he decided to take a bite. He was so excited that he started to eat the carrot. It tasted so good! He ate the whole carrot and felt happy.\nThe rabbit kept eating the carrot until the sun went down. Then he hopped away, feeling very tired. He had been looking forward to getting to eat the delicious carrot. \nBut then he heard a voice. It was his mother. She said, \"What are you doing? That's my carrot!\" The rabbit was so surprised that he stopped eating and looked at his mother. His mother smiled and said, \"That's very sweet of you! Now let's go and get some more carrots.\" \nThe rabbit was so happy that he had been able to eat the yummy carrot! He thanked his mother for taking him",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 981.5863000039826,
+        "repeated_trigram_fraction": 0.03797468354430378,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "A rabbit found a carrot. Instead of eating it alone,",
+      "seed": 7,
+      "before": {
+        "text": "A rabbit found a carrot. Instead of eating it alone, he decided to take it home with him. He was so happy to have his carrot back.\nThe rabbit went back to the forest and looked for the carrot. But it was gone! He was so sad. He looked around but couldn't find any more carrot.\nThen he heard a voice. It was an old owl. The owl said, \"I can help you find your carrot.\"\nThe rabbit was so happy! He thanked the owl and hopped away.\nThe next day, the rabbit went back home. He was still very sad. But he knew that his carrot was still there, so he decided to look for it again.",
+        "stop_reason": "eos",
+        "generated_tokens": 131,
+        "latency_ms": 1277.412399998866,
+        "repeated_trigram_fraction": 0.054263565891472854,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "A rabbit found a carrot. Instead of eating it alone, he was very hungry. He looked around for something to eat, but he could not find anything.\nHe decided to go on an adventure and find some food. As he hopped along, he saw a big tree with lots of carrots. The rabbit wanted to get the carrot, so he hopped closer and closer. \nBut when he got close, he heard a loud noise! It was coming from the tree! He was scared, but he kept hopping until he reached the tree. There he found a big pile of carrots.\nHe quickly grabbed one of the carrots and started to eat it. He ate it all up and felt much better. He had found something to eat and he was very happy. \nThe rabbit was glad that he had found the carrot and he hopped away with",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1028.9477999976953,
+        "repeated_trigram_fraction": 0.03797468354430378,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Max broke his friend's toy by accident. He felt sorry and",
+      "seed": 42,
+      "before": {
+        "text": "Max broke his friend's toy by accident. He felt sorry and ashamed. He said he was sorry and hugged his friend.\n\"I'm sorry, Max. I didn't mean to break your toy. I just wanted to play with you. Can we play together?\" Lily said.\nMax smiled and hugged her back. He said, \"Okay, let's play together. But first, let's clean up this mess and put the toys back in the box. Then we can both have fun.\"\nLily nodded and they hugged. They learned that sharing is caring and that it's okay to make mistakes sometimes. They also learned that some things are not always nice and that it is important to be kind to others.",
+        "stop_reason": "eos",
+        "generated_tokens": 133,
+        "latency_ms": 1296.2207999953534,
+        "repeated_trigram_fraction": 0.022900763358778664,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Max broke his friend's toy by accident. He felt sorry and wanted to make it up to her. He found a pair of scissors and started to cut the toy.\n\"Hey, what are you doing?\" Max asked.\n\"I'm cutting my new toy,\" he said.\nHis friend looked at him and smiled. \"That's very nice of you, Max,\" she said. \"But you have to be careful with it. It's sharp and can hurt you.\"\nMax nodded and put the scissors back in the box. He felt proud that he had been careful with his new toy.\nThe moral of the story is: Don't touch things that are not yours. Do not use them too much, or you might break something.",
+        "stop_reason": "eos",
+        "generated_tokens": 140,
+        "latency_ms": 867.1390000017709,
+        "repeated_trigram_fraction": 0.01449275362318836,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Max broke his friend's toy by accident. He felt sorry and",
+      "seed": 7,
+      "before": {
+        "text": "Max broke his friend's toy by accident. He felt sorry and ashamed. He said, \"I'm sorry, mom. I wanted to play with my new toy. Can we play together?\"\nHis mom smiled and said, \"Of course, Max. We can play with your new toy together. But first, let's put it back in the box.\"\nMax nodded and hugged his mom. He was happy again. He played with his new toy until it was time to go home. He said goodbye to his new friend and went to bed.",
+        "stop_reason": "eos",
+        "generated_tokens": 99,
+        "latency_ms": 975.0897999911103,
+        "repeated_trigram_fraction": 0.020618556701030966,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Max broke his friend's toy by accident. He felt sorry and wanted to help his friend. So he picked up the broken pieces and put them back together.\nMax was happy that his friend was okay. He said, \"I'm sorry I made a mistake. I will be more careful next time.\" His friend smiled and said, \"It's okay. Let's go get some ice cream.\"\nSo they went to the store and bought some ice cream. Max was very happy and thanked his friend again. They both enjoyed their ice cream and were glad that they could help each other.",
+        "stop_reason": "eos",
+        "generated_tokens": 107,
+        "latency_ms": 666.2093999984791,
+        "repeated_trigram_fraction": 0.01904761904761909,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The snow melted in the warm sun. The children",
+      "seed": 42,
+      "before": {
+        "text": "The snow melted in the warm sun. The children were so excited to go outside and play. They ran around, playing tag and laughing.\nSuddenly, a big wave came and blew the snow away. It was so cold that it made the children sad. \nThey looked up at the sky and saw the snow was gone. But they knew that they had to be careful. So they went back inside and watched the snow again.",
+        "stop_reason": "eos",
+        "generated_tokens": 78,
+        "latency_ms": 708.2623999740463,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The snow melted in the warm sun. The children were so excited to see it. They ran around, playing in the snow.\n\"Look at all the snow!\" said one of them. \"It's so cold and icy!\"\nThe children laughed. They loved the snow. It was so much fun!\nSuddenly, a big gust of wind blew through the sky. The children jumped up and down and laughed.\n\"Let's go inside!\" they shouted. But it was too late. The snow started to melt away. \nThe children were sad. They had lost their icy snow and the snow was gone forever.",
+        "stop_reason": "eos",
+        "generated_tokens": 118,
+        "latency_ms": 729.848499999207,
+        "repeated_trigram_fraction": 0.025862068965517238,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The snow melted in the warm sun. The children",
+      "seed": 7,
+      "before": {
+        "text": "The snow melted in the warm sun. The children were very happy and they all ran around the snow together.\nThen, they saw a big hill. They wanted to climb it, so they started to climb. As they climbed higher, the ground became rough and slippery. \nSuddenly, the wind blew and the snow stopped. The children ran to the hill to get their hands. They were so happy! They had climbed up the hill and were able to climb the hill.\nThe children were so proud of themselves for climbing so high. They smiled and laughed as they slid down. They had a great time, and they knew that they would never forget it.",
+        "stop_reason": "eos",
+        "generated_tokens": 125,
+        "latency_ms": 1166.4855999988504,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The snow melted in the warm sun. The children were so happy and excited to go outside. They ran around, laughing and having fun.\nSuddenly, a big dog came running towards them. It was barking loudly and making a lot of noise. The children got scared and started to run away. But the dog chased after them and they were too fast.\nThe dog chased them all around the snow, but it was too late. The dog had already gone away and the children couldn't get back home. They were very sad and scared. \nThe dog never made it back home again.",
+        "stop_reason": "eos",
+        "generated_tokens": 111,
+        "latency_ms": 688.7227999977767,
+        "repeated_trigram_fraction": 0.00917431192660545,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Two friends built a small boat. They put it on the water and",
+      "seed": 42,
+      "before": {
+        "text": "Two friends built a small boat. They put it on the water and watched it sail away.\nOne day, they decided to go to the beach. The sun was shining brightly and the waves were bright blue. \nThe friends wanted to explore the sand. So they got out of the boat and started to dig.\nThey found a big rock and put it in the sand. They were so happy!\nThey had a great time playing in the sand, splashing and splashing around.\nWhen it was time to go home, they said goodbye to their new friends. It was a beautiful day and they couldn't wait to come back again.",
+        "stop_reason": "eos",
+        "generated_tokens": 117,
+        "latency_ms": 1139.4160999916494,
+        "repeated_trigram_fraction": 0.017391304347826098,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Two friends built a small boat. They put it on the water and sailed it around the house.\nOne day, they decided to build a boat out of sticks and stones. They worked hard and soon the boat was complete.\nThe two friends were so proud. They looked at each other and smiled.\nThen, they sailed back home. They had built a big boat and the other one had a better boat.",
+        "stop_reason": "eos",
+        "generated_tokens": 71,
+        "latency_ms": 425.0607000067248,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Two friends built a small boat. They put it on the water and",
+      "seed": 7,
+      "before": {
+        "text": "Two friends built a small boat. They put it on the water and watched it sail away.\nThe little girl was so excited to see the boat that she asked her mom if they could go outside and play. Her mom said yes, so they went outside.\nThey saw a big hill and decided to go up there. The little girl was very excited to see what was on the other side of the hill. She wanted to explore it, but her mom said no.\nThe two friends started to fight over the big hill. They were very impatient and didn't want to leave.\nBut then, they heard a voice from behind them. It was their mom. She said that it was time for the little girl to go home. So they went back inside and had dinner.\nThey had a great day at the lake and they couldn't wait to",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1603.4103000129107,
+        "repeated_trigram_fraction": 0.025316455696202556,
+        "ends_with_punctuation": false
+      },
+      "after": {
+        "text": "Two friends built a small boat. They put it on the water and sailed around it. The boat was so big, it was the most beautiful thing they had ever seen!\nOne day, the two friends decided to build a boat. They worked hard, and soon they had made a big, strong boat. It was so strong that they could not move it anymore.\nThe friends were very proud of their boat. They had built a big, beautiful boat. They were so happy with their new boat.",
+        "stop_reason": "eos",
+        "generated_tokens": 89,
+        "latency_ms": 545.8517000006395,
+        "repeated_trigram_fraction": 0.03448275862068961,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Sara heard a kitten crying behind the fence. She",
+      "seed": 42,
+      "before": {
+        "text": "Sara heard a kitten crying behind the fence. She ran to the fence and saw that it was broken. It had a red mark on it and a hole in it. Sara felt sorry for the kitten.\n\"Don't worry, kitten,\" she said. \"I will help you.\" She ran to get her mom and dad. They were very happy to see the kitten. They hugged Sara and thanked her.\nSara's mom and dad hugged them back. They told them that they were proud of their daughter and that they loved them very much. Sara felt happy and proud. She knew that the kitten was a good kitten.",
+        "stop_reason": "eos",
+        "generated_tokens": 117,
+        "latency_ms": 1142.5731999916025,
+        "repeated_trigram_fraction": 0.02608695652173909,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Sara heard a kitten crying behind the fence. She went to see what it was, but she saw that it had a hurt wing. It was very small and had a red collar. Sara felt sorry for the kitten and wanted to help it.\nShe picked up the kitten and held it in her hand. The kitten looked at Sara with its big eyes and licked her face. Sara smiled and said, \"It's okay, kitten. I'm here to make sure you feel better.\" She gently rubbed the kitten's back and the kitten felt better.\nThe kitten was happy and said, Okay, it would be fine. Sara and the kitten played together in the park until it was time for them to go home. Sara hugged the kitten and said, “Thank you for being my friend. You are very kind.” The kitten purred and",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 985.370000002149,
+        "repeated_trigram_fraction": 0.03164556962025311,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "Sara heard a kitten crying behind the fence. She",
+      "seed": 7,
+      "before": {
+        "text": "Sara heard a kitten crying behind the fence. She ran to her mom and asked, \"Mommy, what's wrong?\"\nHer mom said, \"The kitten was not nice to be so loud. It was just hungry. You should be gentle with its tail.\"\nSara nodded and said, \"I'm sorry, mommy. I wanted to help it. Can we make some cookies for the kitten?\"\nHer mother smiled and said, “Of course, Sara. We can make some cookies together. Let's make a cake together. It will be fun!”\nSara smiled and said thank you. She was happy to help her mom. They made a new cake together. They were happy and proud of their work.",
+        "stop_reason": "eos",
+        "generated_tokens": 135,
+        "latency_ms": 1402.1902000240516,
+        "repeated_trigram_fraction": 0.045112781954887216,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Sara heard a kitten crying behind the fence. She went to see what was wrong. She saw a small kitten stuck in the fence. The kitten was scared and ran away. Sara felt sorry for the kitten.\n\"I'm sorry, kitten,\" Sara said. \"I didn't mean to hurt you.\"\nThe kitten looked at Sara and licked her hand. It was not angry anymore. It was just scared. Sara smiled and said, \"It's okay, kitten. I'm not mad at you. You are my friend.\"\nSara hugged the kitten and said,\n\"Thank you, kitten. You are a good friend too. Do you want to play with me?\"\nThe kitten nodded and ran away from Sara. Sara felt better. She was happy to have a new friend.",
+        "stop_reason": "eos",
+        "generated_tokens": 151,
+        "latency_ms": 944.4217999989633,
+        "repeated_trigram_fraction": 0.046979865771812124,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The baker had no flour left. To make more bread, he",
+      "seed": 42,
+      "before": {
+        "text": "The baker had no flour left. To make more bread, he was very sad. He wanted to make something special.\nHe went to the kitchen and found some flour, sugar, and eggs. He put the flour in the oven and waited. After a while, he decided to bake it.\nHe mixed the flour and sugar together and put them in the oven. Then he put the pan in the oven to bake. It smelled so good!\nThe baker was happy that his cake was ready. He smiled and said \"Thank you, mommy!\"",
+        "stop_reason": "eos",
+        "generated_tokens": 99,
+        "latency_ms": 962.6083000039216,
+        "repeated_trigram_fraction": 0.030927835051546393,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The baker had no flour left. To make more bread, he was very sad. He wanted to make something special.\nHe looked around and saw a big piece of paper on the table. He thought it would be fun to make something with it. So he started to cut the paper into shapes.\nBut then he heard a loud noise. It was the baker! She had made a mess in the kitchen. The baker was very angry. He grabbed a knife and tried to put it away. \nThe baker was very sad and scared. But then he saw the cake and he smiled. He was glad that he could make something special with the scissors.",
+        "stop_reason": "eos",
+        "generated_tokens": 121,
+        "latency_ms": 750.6610999989789,
+        "repeated_trigram_fraction": 0.03361344537815125,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The baker had no flour left. To make more bread, he",
+      "seed": 7,
+      "before": {
+        "text": "The baker had no flour left. To make more bread, he was very angry. He wanted to give his eggs back to her and make him feel better.\nHe went to the kitchen and saw a big bowl of butter. It looked so yummy! He took it out and started to eat it. The butter felt so good that he ate it all up! \nThe waiter came and gave him some of the butter. The baker was very happy and thanked the waiter for his help. He said, \"You are a very kind helper!\" \nThe Remy smiled and hugged his bowl. He knew he had done something wrong.",
+        "stop_reason": "eos",
+        "generated_tokens": 115,
+        "latency_ms": 1146.58880000934,
+        "repeated_trigram_fraction": 0.008849557522123908,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The baker had no flour left. To make more bread, he was feeling sad. He wanted to make a cake.\nHe asked his friend, the little girl, for help. She said, \"I can help you. I can make a big cake.\" \nThe baker smiled. He got some flour and sugar. He put them in the oven. Then he took it out and put it on the table.\nThe little girl was so happy. She said to the baker, \"Thank you!\" The baker smiled.\nHe then opened the oven door. Inside, he found a big bowl of butter. He took it out of the oven and began to stir it with his hands.\nThe cake was delicious! He thanked the baker and gave him a hug. The little girl said, \"You're welcome!\" \nThey both enjoyed the",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 968.6368000038783,
+        "repeated_trigram_fraction": 0.03797468354430378,
+        "ends_with_punctuation": false
+      }
+    },
+    {
+      "prompt": "A boy found a lost key on the path. He wanted to",
+      "seed": 42,
+      "before": {
+        "text": "A boy found a lost key on the path. He wanted to find it, but he was too small to reach it. So he asked his mom if he could help. She said yes and they both went to look for the key.\nThey searched high and low until they found it. It was so shiny and sparkly! The boy was so happy that he jumped up and down with joy. He had found the key!",
+        "stop_reason": "eos",
+        "generated_tokens": 73,
+        "latency_ms": 743.9387999766041,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "A boy found a lost key on the path. He wanted to help it, so he ran around looking for the key. But no matter how hard he tried, the key wouldn't go away.\nHe asked his friends for help, but they couldn't hear him. Then, one of them had an idea. They said that if he was very careful, he would take the key and put it in a safe place. The boy was so excited!\nSo, the boy and his friends took the key to the treasure chest. Inside, they found a beautiful, new toy. It was a shiny red car with a big bow on top. They were so happy!\nThe boy thanked his friends for helping him find the key. He promised to always be careful when he was playing with his friends.",
+        "stop_reason": "eos",
+        "generated_tokens": 150,
+        "latency_ms": 899.5866999975988,
+        "repeated_trigram_fraction": 0.013513513513513487,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "A boy found a lost key on the path. He wanted to",
+      "seed": 7,
+      "before": {
+        "text": "A boy found a lost key on the path. He wanted to find out what was inside, so he decided to take it and explore the new place.\nHe walked through the park and soon he saw a big tree with a hole in it. He was very excited and started to climb up the tree. But as he got closer, he heard a voice behind him.\n\"Hey little boy! What are you doing here?\" It was a friendly old man.\nThe boy was surprised and he asked, \"What are you doing?\"\nThe old man smiled and said, \"I'm just trying to find my way out of the tree.\"\nThe boy smiled and said \"I know what? I wanted to help you get to the new place.\" \nThe old lady thanked him and they both walked away together. The boy was very happy that",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1565.407000016421,
+        "repeated_trigram_fraction": 0.03164556962025311,
+        "ends_with_punctuation": false
+      },
+      "after": {
+        "text": "A boy found a lost key on the path. He wanted to help, so he picked it up and took it home. He showed it to his mom and she smiled. She said it was very special and that the boy should keep it safe.\nThe boy put the key in his pocket and ran back home. He was so excited to show his family his new key. His parents were so proud of him for being so helpful. They hugged him and gave him a big hug. \nFrom then on, the boy always kept the key close by. He kept it safe and never let anyone take it away. He was very happy with his special key and he never wanted to lose it again!",
+        "stop_reason": "eos",
+        "generated_tokens": 129,
+        "latency_ms": 764.8735999973724,
+        "repeated_trigram_fraction": 0.015748031496062964,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The little bear was tired after a long walk. When he got home,",
+      "seed": 42,
+      "before": {
+        "text": "The little bear was tired after a long walk. When he got home, he was ready to take a nap. He closed his eyes and felt the warm sun on his face. He lay down in his bed and closed his eyes.\nSuddenly, he heard a noise coming from outside. It was a big dog! The bear was barking loudly and running around the house. The little bear was scared and ran away as fast as he could.\nThe little bear's mom came in and saw the bear. She was very angry and said, \"You should never take a nap when you're tired.\" The little bear nodded and said, “I promise I will take a nap.” \nThe next morning, the little bear woke up feeling much better. He was still tired but happy. He knew that he had been brave enough to take a rest.",
+        "stop_reason": "eos",
+        "generated_tokens": 157,
+        "latency_ms": 1555.7677999895532,
+        "repeated_trigram_fraction": 0.03870967741935483,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The little bear was tired after a long walk. When he got home, he saw his mom smiling at him. She had a big smile on her face and she said, \"Hi, my love!\" \nThe little bear looked up at her and smiled back. His mom asked, \"What's your name?\"\n\"My name is Daisy,\" she replied. \"Do you want to play with me?\"\nThe little boy nodded eagerly. He was excited to play with Daisy in the garden. They ran around and played tag. \nAfter a while, Daisy said goodbye and gave her mom a big hug. She thanked her for playing with her and then went back to bed.",
+        "stop_reason": "eos",
+        "generated_tokens": 124,
+        "latency_ms": 744.5779999980005,
+        "repeated_trigram_fraction": 0.016393442622950838,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The little bear was tired after a long walk. When he got home,",
+      "seed": 7,
+      "before": {
+        "text": "The little bear was tired after a long walk. When he got home, he put his coat on and looked out of the window. He felt so cozy and warm in his bed.\nSuddenly, he heard a noise coming from outside. He looked up and saw a big truck driving by. The truck had a sign that said \"Smhe\".\nThe bear was very curious and he wanted to see what the truck was doing. So he went inside and found out that it was a fire truck. The fire truck was burning, but the little bear was happy because he knew that he could help the truck.\nHe went back outside and saw that the fire truck had spread quickly. He ran outside and put out the fire truck. Now the fire truck was ready and the fire truck made it strong.\nThe little bear thanked the truck driver for his help.",
+        "stop_reason": "length",
+        "generated_tokens": 160,
+        "latency_ms": 1589.025599998422,
+        "repeated_trigram_fraction": 0.03164556962025311,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The little bear was tired after a long walk. When he got home, he looked around and saw something shiny in the corner of his eye. He decided to take a closer look. It was a shiny coin!\nHe picked it up and held it in his hands. Suddenly, he heard a loud noise and it scared him. He tried to run away but the noise was too fast. He started to cry.\nThe little bear's mom saw what had happened and came running over to help. She picked him up and hugged him tight. She said, \"It's okay, honey. You don't need to be scared. Let's go get you a new coin.\" \nSo the little bear and his mom went to the store and bought the new coin. The little bear was happy again and thanked his mom for helping him.",
+        "stop_reason": "eos",
+        "generated_tokens": 155,
+        "latency_ms": 913.9046000054805,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Dad turned off the light. The room became dark, and",
+      "seed": 42,
+      "before": {
+        "text": "Dad turned off the light. The room became dark, and the sun was shining brightly. Dad said it was time to go inside.\nThe family went inside, but they had never been in the house before. They were scared, but they kept going.\nThey soon came across a big house. It was full of old things, like a big window and a big bed. Dad said he could stay there for a while.\nDad said it was too dangerous for his little one to go inside the house. But the family was brave. They walked slowly, until they reached the door. \nThey opened it and saw that it was still dark. Dad said they had to stay close and stay safe. The family stayed in their room, but they stayed safe.",
+        "stop_reason": "eos",
+        "generated_tokens": 144,
+        "latency_ms": 1495.622899994487,
+        "repeated_trigram_fraction": 0.04225352112676062,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Dad turned off the light. The room became dark, and the sun was shining brightly. Dad looked around and saw a big tree. He wanted to climb it and see what was on top.\nHe started to climb. Dad climbed higher and higher until he reached the top. Dad felt proud of himself for climbing so high.\nDad looked down and said \"You did it! You are brave!\" Dad smiled and hugged him back. Dad smiled and knew he had made a great big difference.",
+        "stop_reason": "eos",
+        "generated_tokens": 88,
+        "latency_ms": 520.348300000478,
+        "repeated_trigram_fraction": 0.011627906976744207,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Dad turned off the light. The room became dark, and",
+      "seed": 7,
+      "before": {
+        "text": "Dad turned off the light. The room became dark, and the sky was dark. Dad looked out of the window and saw the sun was shining. He smiled and said, \"Let's go outside and play!\"\nThe family went outside. It was a sunny day and they had lots of fun. They played in the snow and laughed. When it was time to go home, they said goodbye and promised to come back soon.",
+        "stop_reason": "eos",
+        "generated_tokens": 75,
+        "latency_ms": 762.8205999790225,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Dad turned off the light. The room became dark, and the lights were going down. Dad was feeling scared.\nDad looked around and saw a big, bright light in the sky. He knew it was time to go inside. Dad smiled and said, \"Come on, Dad! Let's go!\"\nDad took off his shoes and they walked outside. Dad felt brave and held onto the light. Dad held the light and the light went up and down. Dad laughed and said, “I'm not scared anymore!”\nThey kept walking until they reached a big park. Dad had never seen so many things like trees and flowers. Dad was happy and excited to explore the park.",
+        "stop_reason": "eos",
+        "generated_tokens": 127,
+        "latency_ms": 744.843899999978,
+        "repeated_trigram_fraction": 0.02400000000000002,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Nora finished her drawing. She showed it to her mother, who",
+      "seed": 42,
+      "before": {
+        "text": "Nora finished her drawing. She showed it to her mother, who smiled and said, \"That's a beautiful picture, sweetheart!\"\nM cowboy was so happy that she hugged her mum and thanked her for the wonderful surprise. From then on, she always looked forward to playing with her friends and making sure they were always there.",
+        "stop_reason": "eos",
+        "generated_tokens": 53,
+        "latency_ms": 505.7129999913741,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Nora finished her drawing. She showed it to her mother, who smiled and said, \"That's a beautiful picture!\"\nNbbie was so excited. She had never seen anything like it before! She ran over to the wall and started to draw. She drew a big, beautiful sun on the wall. She was so proud of her drawing.\nSuddenly, there was a loud noise. It was coming from outside. N dentist said, \"Nbbie, you should go inside.\"\nNbbie stepped out of the room. She had forgotten about the dark and scary place. But she knew it was safe now. She smiled and hugged her mom.",
+        "stop_reason": "eos",
+        "generated_tokens": 119,
+        "latency_ms": 715.6414999990375,
+        "repeated_trigram_fraction": 0.02564102564102566,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "Nora finished her drawing. She showed it to her mother, who",
+      "seed": 7,
+      "before": {
+        "text": "Nora finished her drawing. She showed it to her mother, who smiled and said, \"That's amazing!\"\nMices was so happy. She hugged her mom and thanked her for the wonderful surprise. From then on, she made sure to always be careful with her things.",
+        "stop_reason": "eos",
+        "generated_tokens": 43,
+        "latency_ms": 424.57610002020374,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "Nora finished her drawing. She showed it to her mother, who smiled at her.\n\"What are you doing?\" she asked.\n\"I'm drawing a picture,\" said Nzie.\nHer mother smiled and said, \"That's great! Let's see if we can make something together.\"\nThey started to work on the paper. They made a beautiful picture with many colors and shapes. N Larry was so proud of her work.\nWhen they finished, N� said, \"We did it! We made a beautiful drawing!\"\nN delic nodded and smiled. She felt proud of her drawing.",
+        "stop_reason": "eos",
+        "generated_tokens": 111,
+        "latency_ms": 666.3203999996767,
+        "repeated_trigram_fraction": 0.03669724770642202,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The children cleaned up all their toys. At last,",
+      "seed": 42,
+      "before": {
+        "text": "The children cleaned up all their toys. At last, they had a big hug and a kiss. They were so happy that they could play with the toys again soon.",
+        "stop_reason": "eos",
+        "generated_tokens": 23,
+        "latency_ms": 262.95900001423433,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The children cleaned up all their toys. At last, they were done and it was time to go home.\nOn the way home, they stopped at a park. It was very peaceful and there were lots of trees and flowers. The children looked around and saw a big tree with a swing. \nThey ran over to the swing and started swinging. They laughed and smiled as they swung back and forth. After a while, they got tired and decided to take a break. \nThe children sat down on a bench and enjoyed the peaceful view. Then they went home and had some yummy cookies. The children were happy and full of joy.",
+        "stop_reason": "eos",
+        "generated_tokens": 120,
+        "latency_ms": 710.8856000049855,
+        "repeated_trigram_fraction": 0.016949152542372836,
+        "ends_with_punctuation": true
+      }
+    },
+    {
+      "prompt": "The children cleaned up all their toys. At last,",
+      "seed": 7,
+      "before": {
+        "text": "The children cleaned up all their toys. At last, they were all clean and tidy again. They looked at each other with big smiles on their faces.\nThe children had a great time playing together. They were so happy to be together again!",
+        "stop_reason": "eos",
+        "generated_tokens": 39,
+        "latency_ms": 378.3314999891445,
+        "repeated_trigram_fraction": 0.0,
+        "ends_with_punctuation": true
+      },
+      "after": {
+        "text": "The children cleaned up all their toys. At last, they had a big mess and were very tired.\nThen one day, the children found a big box in the corner of the room. It was full of old toys, but it was so much fun to play with! \nThe children decided to take the box to the park. They took it home and put it on the table. \nWhen they got home, they opened the box and saw that all the toys were in the box. The children were so happy that they had found the box. They played with the toys all day long and had lots of fun. \nThe end!",
+        "stop_reason": "eos",
+        "generated_tokens": 122,
+        "latency_ms": 729.1840000034426,
+        "repeated_trigram_fraction": 0.025000000000000022,
+        "ends_with_punctuation": true
+      }
+    }
+  ]
+}

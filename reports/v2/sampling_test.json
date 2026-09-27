@@ -1,0 +1,488 @@
+{
+  "split": "test",
+  "examples": 64,
+  "mask_seed": 314,
+  "mask_rate": 0.5,
+  "temperature": 0,
+  "device": "cuda",
+  "precision": "bf16",
+  "checkpoint_step": 6000,
+  "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+  "results": [
+    {
+      "policy": "one_pass",
+      "masked_accuracy": 0.5261707988980716,
+      "exact_match": 0.015625,
+      "mean_forward_passes": 1.0,
+      "mean_latency_ms": 8.41450156258361,
+      "p95_latency_ms": 8.939509993069803,
+      "masked_tokens": 4356
+    },
+    {
+      "policy": "left_to_right",
+      "masked_accuracy": 0.522038567493113,
+      "exact_match": 0.015625,
+      "mean_forward_passes": 11.234375,
+      "mean_latency_ms": 85.0412953104751,
+      "p95_latency_ms": 100.12680499203267,
+      "masked_tokens": 4356
+    },
+    {
+      "policy": "confidence",
+      "masked_accuracy": 0.533287419651056,
+      "exact_match": 0.015625,
+      "mean_forward_passes": 11.234375,
+      "mean_latency_ms": 82.3012109362935,
+      "p95_latency_ms": 106.58910501078934,
+      "masked_tokens": 4356
+    },
+    {
+      "policy": "adaptive",
+      "masked_accuracy": 0.5339761248852158,
+      "exact_match": 0.015625,
+      "mean_forward_passes": 11.09375,
+      "mean_latency_ms": 80.80032343696075,
+      "p95_latency_ms": 93.17576998873845,
+      "masked_tokens": 4356
+    }
+  ],
+  "bigram": {
+    "policy": "bidirectional_bigram",
+    "masked_accuracy": 0.2936179981634527,
+    "masked_tokens": 4356,
+    "description": "Add-one unigram-prior smoothing; immediate visible neighbours only"
+  },
+  "samples": [
+    {
+      "prompt": "Once upon a time, a little girl found",
+      "text": "Once upon a time, a little girl found a hug. She was so happy that she had fun with her friends.",
+      "tokens": [
+        1,
+        430,
+        445,
+        263,
+        401,
+        16,
+        263,
+        400,
+        448,
+        593,
+        263,
+        581,
+        18,
+        317,
+        286,
+        356,
+        406,
+        361,
+        341,
+        365,
+        492,
+        347,
+        313,
+        478,
+        18
+      ],
+      "trace": [
+        {
+          "step": 1,
+          "remaining": 15,
+          "text": "[BOS]Once upon a time, a little girl found[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][EOS]",
+          "block": 1
+        },
+        {
+          "step": 2,
+          "remaining": 14,
+          "text": "[BOS]Once upon a time, a little girl found[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 3,
+          "remaining": 13,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 4,
+          "remaining": 12,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK].[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 5,
+          "remaining": 11,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 6,
+          "remaining": 10,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She was[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 7,
+          "remaining": 9,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She was[MASK] happy[MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 8,
+          "remaining": 8,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She was so happy[MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 9,
+          "remaining": 6,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She was so happy[MASK] she[MASK][MASK][MASK] her[MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 10,
+          "remaining": 4,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She was so happy that she[MASK][MASK] with her[MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 11,
+          "remaining": 2,
+          "text": "[BOS]Once upon a time, a little girl found a[MASK]. She was so happy that she had[MASK] with her friends.[EOS]",
+          "block": 1
+        },
+        {
+          "step": 12,
+          "remaining": 0,
+          "text": "[BOS]Once upon a time, a little girl found a hug. She was so happy that she had fun with her friends.[EOS]",
+          "block": 1
+        }
+      ],
+      "forward_passes": 12,
+      "latency_ms": 96.46749999956228,
+      "seed": 42
+    },
+    {
+      "prompt": "Tom opened the door and saw",
+      "text": "Tom opened the door and saw the perfect girl. He was so happy he He had a fun day.",
+      "tokens": [
+        1,
+        770,
+        970,
+        267,
+        959,
+        269,
+        415,
+        267,
+        1577,
+        448,
+        18,
+        318,
+        286,
+        356,
+        406,
+        283,
+        318,
+        365,
+        263,
+        492,
+        360,
+        18
+      ],
+      "trace": [
+        {
+          "step": 1,
+          "remaining": 15,
+          "text": "[BOS]Tom opened the door and saw[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][EOS]",
+          "block": 1
+        },
+        {
+          "step": 2,
+          "remaining": 14,
+          "text": "[BOS]Tom opened the door and saw[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 3,
+          "remaining": 13,
+          "text": "[BOS]Tom opened the door and saw[MASK][MASK][MASK].[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 4,
+          "remaining": 12,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK].[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 5,
+          "remaining": 11,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK].[MASK][MASK][MASK] happy[MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 6,
+          "remaining": 10,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK].[MASK] was[MASK] happy[MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 7,
+          "remaining": 9,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK].[MASK] was so happy[MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 8,
+          "remaining": 8,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK]. He was so happy[MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 9,
+          "remaining": 6,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK]. He was so happy he He[MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 10,
+          "remaining": 4,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK]. He was so happy he He had[MASK][MASK] day.[EOS]",
+          "block": 1
+        },
+        {
+          "step": 11,
+          "remaining": 2,
+          "text": "[BOS]Tom opened the door and saw the[MASK][MASK]. He was so happy he He had a fun day.[EOS]",
+          "block": 1
+        },
+        {
+          "step": 12,
+          "remaining": 0,
+          "text": "[BOS]Tom opened the door and saw the perfect girl. He was so happy he He had a fun day.[EOS]",
+          "block": 1
+        }
+      ],
+      "forward_passes": 12,
+      "latency_ms": 85.0225999893155,
+      "seed": 42
+    },
+    {
+      "prompt": "The woman stood on the balcony and",
+      "text": "The woman stood on the balcony and thanked the lady. She was so happy that she had a great day.",
+      "tokens": [
+        1,
+        377,
+        2331,
+        2545,
+        349,
+        267,
+        2479,
+        71,
+        2646,
+        269,
+        846,
+        267,
+        1272,
+        18,
+        317,
+        286,
+        356,
+        406,
+        361,
+        341,
+        365,
+        263,
+        1074,
+        360,
+        18
+      ],
+      "trace": [
+        {
+          "step": 1,
+          "remaining": 15,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][EOS]",
+          "block": 1
+        },
+        {
+          "step": 2,
+          "remaining": 14,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 3,
+          "remaining": 13,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK].[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 4,
+          "remaining": 12,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK].[MASK] was[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 5,
+          "remaining": 11,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK]. She was[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 6,
+          "remaining": 10,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK]. She was so[MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 7,
+          "remaining": 9,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK]. She was so happy[MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 8,
+          "remaining": 8,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK]. She was so happy that[MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 9,
+          "remaining": 6,
+          "text": "[BOS]The woman stood on the balcony and[MASK][MASK][MASK]. She was so happy that she had[MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 10,
+          "remaining": 4,
+          "text": "[BOS]The woman stood on the balcony and[MASK] the[MASK]. She was so happy that she had a[MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 11,
+          "remaining": 2,
+          "text": "[BOS]The woman stood on the balcony and thanked the[MASK]. She was so happy that she had a[MASK] day.[EOS]",
+          "block": 1
+        },
+        {
+          "step": 12,
+          "remaining": 0,
+          "text": "[BOS]The woman stood on the balcony and thanked the lady. She was so happy that she had a great day.[EOS]",
+          "block": 1
+        }
+      ],
+      "forward_passes": 12,
+      "latency_ms": 87.35049999086186,
+      "seed": 42
+    },
+    {
+      "prompt": "A small bird was afraid to fly. One day,",
+      "text": "A small bird was afraid to fly. One day, the bird went to the bird and the bird went home in the tree.",
+      "tokens": [
+        1,
+        37,
+        794,
+        538,
+        286,
+        2019,
+        270,
+        936,
+        18,
+        504,
+        360,
+        16,
+        267,
+        538,
+        469,
+        270,
+        267,
+        538,
+        269,
+        267,
+        538,
+        469,
+        584,
+        320,
+        267,
+        670,
+        18
+      ],
+      "trace": [
+        {
+          "step": 1,
+          "remaining": 15,
+          "text": "[BOS]A small bird was afraid to fly. One day,[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][EOS]",
+          "block": 1
+        },
+        {
+          "step": 2,
+          "remaining": 14,
+          "text": "[BOS]A small bird was afraid to fly. One day,[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 3,
+          "remaining": 13,
+          "text": "[BOS]A small bird was afraid to fly. One day, the[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 4,
+          "remaining": 12,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 5,
+          "remaining": 11,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird[MASK] to[MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 6,
+          "remaining": 10,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird[MASK] to[MASK][MASK] and[MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 7,
+          "remaining": 9,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird went to[MASK][MASK] and[MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 8,
+          "remaining": 8,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird went to the[MASK] and[MASK][MASK][MASK][MASK][MASK][MASK][MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 9,
+          "remaining": 6,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird went to the bird and[MASK][MASK][MASK][MASK][MASK] the[MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 10,
+          "remaining": 4,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird went to the bird and[MASK] bird[MASK][MASK] in the[MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 11,
+          "remaining": 2,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird went to the bird and the bird went[MASK] in the[MASK].[EOS]",
+          "block": 1
+        },
+        {
+          "step": 12,
+          "remaining": 0,
+          "text": "[BOS]A small bird was afraid to fly. One day, the bird went to the bird and the bird went home in the tree.[EOS]",
+          "block": 1
+        }
+      ],
+      "forward_passes": 12,
+      "latency_ms": 86.3379999937024,
+      "seed": 42
+    }
+  ]
+}

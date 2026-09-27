@@ -1,0 +1,21 @@
+{
+  "resumed_at_step": 2000,
+  "change": "Enable tested experimental ROCm attention kernels and causal right-padding fast path; weights, optimizer, RNG and schedule recovered unchanged. Backend rounding differs; bitwise GPU equivalence not claimed.",
+  "validation": "CPU selected logits and gradients agree within 1e-5; real-data GPU BF16 losses 1.62380135 vs 1.62380588, finite gradients.",
+  "environment": {
+    "TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL": "1"
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "torch": "2.13.0+rocm10.0.0",
+    "hip": "7.15.26333",
+    "gpu": "AMD Radeon RX 9060 XT",
+    "precision": "bf16"
+  },
+  "verification": {
+    "unit_tests": 29,
+    "expanded_cpu_resume": "exact match",
+    "api": "deterministic greedy generation and three invalid-request checks passed on intermediate checkpoint"
+  },
+  "session_recovery": "Resumed from step 13000 after interruption. Logged uncheckpointed updates were preserved separately and excluded from the recovered trajectory. Duration and token totals describe the recovered trajectory, not discarded work."
+}
