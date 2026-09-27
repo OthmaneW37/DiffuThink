@@ -6,6 +6,8 @@ StoryPatch is an inspectable editing workshop for simple English stories, powere
 
 The contribution is the constrained, reversible workflow and visible model behavior. Text infilling, Transformers and likelihood ranking are established techniques; no scientific novelty claim is made.
 
+**Published model:** [OthmaneW/DiffuThink-Story-512](https://huggingface.co/OthmaneW/DiffuThink-Story-512)
+
 ## Try locally
 
 ```powershell
@@ -42,7 +44,7 @@ docker build -t storypatch artifacts/StoryPatch-Space
 docker run --rm -p 127.0.0.1:7860:7860 storypatch
 ```
 
-`artifacts/DiffuThink-Story-512` contains weights, tokenizer, source, model card, comparisons and checksums. `artifacts/StoryPatch-Space` adds a CPU Docker app and Space metadata. These commands prepare local artifacts; they do not publish. Choose the project/model license before public release and preserve dataset attribution.
+`artifacts/DiffuThink-Story-512` contains weights, tokenizer, source, model card, comparisons and checksums. `artifacts/StoryPatch-Space` adds a CPU Docker app and Space metadata. The released code and weights use Apache-2.0; preserve the separate TinyStories dataset attribution.
 
 ## Limits and authorship
 
