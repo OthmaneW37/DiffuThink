@@ -20,11 +20,13 @@ def main():
     shutil.copytree(source,out)
     (out/"README.md").rename(out/"MODEL_CARD.md")
     (out/"app.py").write_text('''import os
+from pathlib import Path
 from argparse import Namespace
 from diffuthink.v2.demo import serve
 
 if __name__ == "__main__":
-    serve(Namespace(model=".",device="cpu",port=int(os.environ.get("PORT","7860")),
+    serve(Namespace(model=".",ranker="ranker" if Path("ranker/ranker_info.json").exists() else None,
+                    device="cpu",port=int(os.environ.get("PORT","7860")),
                     host=os.environ.get("SPACE_HOST","0.0.0.0"),threads=2))
 ''',encoding="utf-8")
     (out/"Dockerfile").write_text('''FROM python:3.11-slim
@@ -86,6 +88,11 @@ This folder is a local release candidate. No Space has been created or uploaded 
 ''',encoding="utf-8")
     readme=(out/"README.md").read_text(encoding="utf-8")
     readme=readme.replace("13.44M-parameter",f"{parameters/1e6:.2f}M-parameter")
+    if (out/"ranker/ranker_info.json").exists():
+        readme=readme.replace("ranks the remaining alternatives by local causal negative log-likelihood",
+            "offers local causal NLL ranking and an optional independently trained 3.53M-parameter compatibility model to compare proposals with the original")
+        readme=readme.replace("Original wording can score better than every proposal.",
+            "Validation-calibrated thresholds may recommend keeping the original. The labels are procedural synthetic contrasts, not human judgments. Scores are not confidence probabilities. NLL stays the UI default because learned ranking regresses on legacy probes; select the experimental correction mode to try it.")
     if not (out/"comparison.json").exists():
         readme=readme.replace("`comparison.json`", "`selection.json`" if (out/"selection.json").exists() else "the model card")
     (out/"README.md").write_text(readme,encoding="utf-8")

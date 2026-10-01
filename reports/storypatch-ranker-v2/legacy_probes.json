@@ -1,0 +1,1386 @@
+{
+  "summary": {
+    "nll_top1": 0.7222222222222222,
+    "learned_top1": 0.5277777777777778,
+    "recommended": 0.3333333333333333
+  },
+  "cases": 36,
+  "rows": [
+    {
+      "case": {
+        "id": "challenge-000",
+        "category": "emotion",
+        "text": "Lily lost her favorite toy. She felt happy. Tears ran down her face.",
+        "start": 37,
+        "end": 42,
+        "accepted": [
+          "sad",
+          "very sad",
+          "upset"
+        ]
+      },
+      "nll_top1": "very sad",
+      "learned_top1": "sad",
+      "recommended": "sad",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "sad",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "sad",
+          "local_nll": 2.969944953918457,
+          "ranker_score": 6.351097106933594
+        },
+        {
+          "replacement": "very sad",
+          "local_nll": 2.5403027534484863,
+          "ranker_score": 5.740927219390869
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-001",
+        "category": "emotion",
+        "text": "Ben won the game. He felt sad. He smiled and cheered.",
+        "start": 26,
+        "end": 29,
+        "accepted": [
+          "happy",
+          "very happy",
+          "excited",
+          "proud"
+        ]
+      },
+      "nll_top1": "happy",
+      "learned_top1": "happy",
+      "recommended": "happy",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "happy",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "happy",
+          "local_nll": 2.0426506996154785,
+          "ranker_score": 6.684871196746826
+        },
+        {
+          "replacement": "a happy",
+          "local_nll": 3.402787685394287,
+          "ranker_score": -4.279606342315674
+        },
+        {
+          "replacement": "proud",
+          "local_nll": 2.215261936187744,
+          "ranker_score": -22.206985473632812
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-002",
+        "category": "emotion",
+        "text": "A loud crash woke Mia. She felt calm. Her hands shook with fear.",
+        "start": 32,
+        "end": 36,
+        "accepted": [
+          "scared",
+          "afraid",
+          "frightened"
+        ]
+      },
+      "nll_top1": "helpless",
+      "learned_top1": "sad",
+      "recommended": "sad",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "sad",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "sad",
+          "local_nll": 2.9780538082122803,
+          "ranker_score": 3.6745493412017822
+        },
+        {
+          "replacement": "sad,",
+          "local_nll": 3.83996844291687,
+          "ranker_score": -20.275447845458984
+        },
+        {
+          "replacement": "pain",
+          "local_nll": 3.5786001682281494,
+          "ranker_score": -20.611421585083008
+        },
+        {
+          "replacement": "helpless",
+          "local_nll": 2.9384212493896484,
+          "ranker_score": -20.891651153564453
+        },
+        {
+          "replacement": "hurt",
+          "local_nll": 3.4479033946990967,
+          "ranker_score": -21.26226043701172
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-003",
+        "category": "emotion",
+        "text": "Sam had not eaten all day. He felt full. His stomach growled.",
+        "start": 35,
+        "end": 39,
+        "accepted": [
+          "hungry",
+          "very hungry"
+        ]
+      },
+      "nll_top1": "so sad",
+      "learned_top1": "scared",
+      "recommended": "scared",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "scared",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "scared",
+          "local_nll": 4.584311485290527,
+          "ranker_score": 3.2592833042144775
+        },
+        {
+          "replacement": "so sad",
+          "local_nll": 3.548433542251587,
+          "ranker_score": 2.9033424854278564
+        },
+        {
+          "replacement": "sad",
+          "local_nll": 4.279909133911133,
+          "ranker_score": -16.312671661376953
+        },
+        {
+          "replacement": "sick",
+          "local_nll": 4.002574443817139,
+          "ranker_score": -19.638423919677734
+        },
+        {
+          "replacement": "cold",
+          "local_nll": 4.486077785491943,
+          "ranker_score": -21.559345245361328
+        },
+        {
+          "replacement": "hot",
+          "local_nll": 4.683385372161865,
+          "ranker_score": -21.782852172851562
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-004",
+        "category": "emotion",
+        "text": "The baby had played for hours. She felt awake. She yawned and closed her eyes.",
+        "start": 40,
+        "end": 45,
+        "accepted": [
+          "tired",
+          "sleepy",
+          "very tired"
+        ]
+      },
+      "nll_top1": "very tired",
+      "learned_top1": "warm",
+      "recommended": "warm",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "warm",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "warm",
+          "local_nll": 2.351592779159546,
+          "ranker_score": 2.2777349948883057
+        },
+        {
+          "replacement": "very tired",
+          "local_nll": 1.4291845560073853,
+          "ranker_score": -12.6871919631958
+        },
+        {
+          "replacement": "tired",
+          "local_nll": 1.6626222133636475,
+          "ranker_score": -13.385124206542969
+        },
+        {
+          "replacement": "sleepy",
+          "local_nll": 1.5798200368881226,
+          "ranker_score": -14.636319160461426
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-005",
+        "category": "emotion",
+        "text": "Dad came home with a puppy. Ana was angry. She smiled and hugged her new pet.",
+        "start": 36,
+        "end": 41,
+        "accepted": [
+          "happy",
+          "excited",
+          "very happy"
+        ]
+      },
+      "nll_top1": "so happy",
+      "learned_top1": "so happy",
+      "recommended": "angry",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "angry",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "so happy",
+          "local_nll": 1.6790379285812378,
+          "ranker_score": -2.2521917819976807
+        },
+        {
+          "replacement": "happy",
+          "local_nll": 2.0893747806549072,
+          "ranker_score": -21.48470115661621
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-006",
+        "category": "object",
+        "text": "Mia had a blue cup. She drank from her red cup. It was the same blue cup.",
+        "start": 39,
+        "end": 42,
+        "accepted": [
+          "blue"
+        ]
+      },
+      "nll_top1": "blue",
+      "learned_top1": "blue",
+      "recommended": "red",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "red",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "blue",
+          "local_nll": 1.880785346031189,
+          "ranker_score": -2.964012622833252
+        },
+        {
+          "replacement": "blue blue",
+          "local_nll": 2.437495231628418,
+          "ranker_score": -3.9688403606414795
+        },
+        {
+          "replacement": "yellow",
+          "local_nll": 2.061751127243042,
+          "ranker_score": -13.199760437011719
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-007",
+        "category": "object",
+        "text": "Ben put on his red hat. His green hat kept his head warm. He loved its red color.",
+        "start": 28,
+        "end": 33,
+        "accepted": [
+          "red"
+        ]
+      },
+      "nll_top1": "red",
+      "learned_top1": "red",
+      "recommended": "red",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "red",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "red",
+          "local_nll": 3.2721590995788574,
+          "ranker_score": 5.049088001251221
+        },
+        {
+          "replacement": "red hat",
+          "local_nll": 3.6767120361328125,
+          "ranker_score": -3.4210691452026367
+        },
+        {
+          "replacement": "blue",
+          "local_nll": 3.2733154296875,
+          "ranker_score": -17.723005294799805
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-008",
+        "category": "object",
+        "text": "The dog chased a ball. It picked up the book in its mouth and brought the ball back.",
+        "start": 40,
+        "end": 44,
+        "accepted": [
+          "ball"
+        ]
+      },
+      "nll_top1": "ball",
+      "learned_top1": "ball and",
+      "recommended": "book",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "book",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "ball and",
+          "local_nll": 2.643805503845215,
+          "ranker_score": -21.343915939331055
+        },
+        {
+          "replacement": "ball",
+          "local_nll": 1.810939073562622,
+          "ranker_score": -21.50189781188965
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-009",
+        "category": "object",
+        "text": "Lucy planted a seed. She watered the stone every day until the seed began to grow.",
+        "start": 37,
+        "end": 42,
+        "accepted": [
+          "seed"
+        ]
+      },
+      "nll_top1": "seed",
+      "learned_top1": "seed every",
+      "recommended": "stone",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "stone",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "seed every",
+          "local_nll": 2.174877882003784,
+          "ranker_score": -16.575950622558594
+        },
+        {
+          "replacement": "seed",
+          "local_nll": 1.1965181827545166,
+          "ranker_score": -17.20634651184082
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-010",
+        "category": "object",
+        "text": "Tom opened his book. He read the shoe until he reached the last page.",
+        "start": 33,
+        "end": 37,
+        "accepted": [
+          "book",
+          "story"
+        ]
+      },
+      "nll_top1": "book",
+      "learned_top1": "same book",
+      "recommended": "shoe",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "shoe",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "same book",
+          "local_nll": 2.8530356884002686,
+          "ranker_score": -18.5443058013916
+        },
+        {
+          "replacement": "book",
+          "local_nll": 2.601956844329834,
+          "ranker_score": -19.431835174560547
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-011",
+        "category": "object",
+        "text": "Mom baked a cake. She cut the chair into slices and served the cake.",
+        "start": 30,
+        "end": 35,
+        "accepted": [
+          "cake"
+        ]
+      },
+      "nll_top1": "cake",
+      "learned_top1": "cake",
+      "recommended": "chair",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "chair",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "cake",
+          "local_nll": 2.4397940635681152,
+          "ranker_score": -19.867647171020508
+        },
+        {
+          "replacement": "candles",
+          "local_nll": 3.092719078063965,
+          "ranker_score": -21.488479614257812
+        },
+        {
+          "replacement": "dough on",
+          "local_nll": 4.4553961753845215,
+          "ranker_score": -21.593523025512695
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-012",
+        "category": "state",
+        "text": "The box was empty. There was something inside. It contained nothing at all.",
+        "start": 29,
+        "end": 38,
+        "accepted": [
+          "nothing"
+        ]
+      },
+      "nll_top1": "no surprise",
+      "learned_top1": "no surprise",
+      "recommended": "something",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "something",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "no surprise",
+          "local_nll": 3.628756046295166,
+          "ranker_score": -18.162412643432617
+        },
+        {
+          "replacement": "no",
+          "local_nll": 3.7752432823181152,
+          "ranker_score": -18.605880737304688
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-013",
+        "category": "state",
+        "text": "The rain soaked his coat. His coat was dry. Water dripped from it.",
+        "start": 39,
+        "end": 42,
+        "accepted": [
+          "wet",
+          "very wet"
+        ]
+      },
+      "nll_top1": "wet",
+      "learned_top1": "wet",
+      "recommended": "wet",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "wet",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "wet",
+          "local_nll": 3.9919676780700684,
+          "ranker_score": 8.905430793762207
+        },
+        {
+          "replacement": "so cold",
+          "local_nll": 3.992619037628174,
+          "ranker_score": -5.3753743171691895
+        },
+        {
+          "replacement": "cold",
+          "local_nll": 4.217764854431152,
+          "ranker_score": -18.84490394592285
+        },
+        {
+          "replacement": "hot",
+          "local_nll": 4.500383377075195,
+          "ranker_score": -19.241395950317383
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-014",
+        "category": "state",
+        "text": "The fire went out. The room grew hot. Everyone needed a blanket.",
+        "start": 33,
+        "end": 36,
+        "accepted": [
+          "cold",
+          "colder"
+        ]
+      },
+      "nll_top1": "so big",
+      "learned_top1": "so big",
+      "recommended": "hot",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "hot",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "so big",
+          "local_nll": 3.5452218055725098,
+          "ranker_score": -6.900716304779053
+        },
+        {
+          "replacement": "bigger",
+          "local_nll": 3.871809720993042,
+          "ranker_score": -18.401790618896484
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-015",
+        "category": "state",
+        "text": "Dad turned off the only lamp. The room became bright. Nobody could see in the dark.",
+        "start": 46,
+        "end": 52,
+        "accepted": [
+          "dark"
+        ]
+      },
+      "nll_top1": "dark",
+      "learned_top1": "dark",
+      "recommended": "dark",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "dark",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "dark",
+          "local_nll": 2.7137789726257324,
+          "ranker_score": 8.550750732421875
+        },
+        {
+          "replacement": "dark inside",
+          "local_nll": 2.8494725227355957,
+          "ranker_score": -5.388586521148682
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-016",
+        "category": "state",
+        "text": "The door was locked. Mia could open it. She needed the key first.",
+        "start": 31,
+        "end": 35,
+        "accepted": [
+          "not open",
+          "not unlock"
+        ]
+      },
+      "nll_top1": "not open",
+      "learned_top1": "not open",
+      "recommended": "open",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "open",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "not open",
+          "local_nll": 2.0344557762145996,
+          "ranker_score": -14.933560371398926
+        },
+        {
+          "replacement": "unlock",
+          "local_nll": 2.935807466506958,
+          "ranker_score": -17.64567756652832
+        },
+        {
+          "replacement": "do",
+          "local_nll": 2.998377799987793,
+          "ranker_score": -19.781986236572266
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-017",
+        "category": "state",
+        "text": "Lucy gave away all her cookies. She had many cookies left. Her plate was empty.",
+        "start": 40,
+        "end": 44,
+        "accepted": [
+          "no",
+          "zero"
+        ]
+      },
+      "nll_top1": "no",
+      "learned_top1": "a yummy",
+      "recommended": "many",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "many",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "a yummy",
+          "local_nll": 3.1334025859832764,
+          "ranker_score": -16.756685256958008
+        },
+        {
+          "replacement": "no",
+          "local_nll": 2.2782347202301025,
+          "ranker_score": -18.658367156982422
+        },
+        {
+          "replacement": "all",
+          "local_nll": 3.5266520977020264,
+          "ranker_score": -18.759845733642578
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-018",
+        "category": "location",
+        "text": "The children stayed inside the house. They played outside all afternoon without leaving the house.",
+        "start": 50,
+        "end": 57,
+        "accepted": [
+          "inside",
+          "indoors"
+        ]
+      },
+      "nll_top1": "and played",
+      "learned_top1": "until",
+      "recommended": "outside",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "outside",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "until",
+          "local_nll": 4.426279067993164,
+          "ranker_score": -20.169355392456055
+        },
+        {
+          "replacement": "happily",
+          "local_nll": 3.2870261669158936,
+          "ranker_score": -20.605501174926758
+        },
+        {
+          "replacement": "and played",
+          "local_nll": 2.7578656673431396,
+          "ranker_score": -20.985240936279297
+        },
+        {
+          "replacement": "and",
+          "local_nll": 3.984219551086426,
+          "ranker_score": -22.73419189453125
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-019",
+        "category": "location",
+        "text": "Tom put his toy under the bed. Later he found it on the bed, exactly where he had left it.",
+        "start": 49,
+        "end": 51,
+        "accepted": [
+          "under",
+          "underneath",
+          "beneath"
+        ]
+      },
+      "nll_top1": "under",
+      "learned_top1": "under",
+      "recommended": "under",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "under",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "under",
+          "local_nll": 2.5232717990875244,
+          "ranker_score": 6.797684192657471
+        },
+        {
+          "replacement": "in",
+          "local_nll": 2.9847395420074463,
+          "ranker_score": -17.986772537231445
+        },
+        {
+          "replacement": "was in",
+          "local_nll": 3.0939877033233643,
+          "ranker_score": -18.216657638549805
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-020",
+        "category": "location",
+        "text": "The bird sat in its nest. It stayed in the pond all night and left the nest at dawn.",
+        "start": 43,
+        "end": 47,
+        "accepted": [
+          "nest"
+        ]
+      },
+      "nll_top1": "nest",
+      "learned_top1": "nest for",
+      "recommended": "pond",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "pond",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "nest for",
+          "local_nll": 4.2003254890441895,
+          "ranker_score": -21.568065643310547
+        },
+        {
+          "replacement": "nest",
+          "local_nll": 4.082644462585449,
+          "ranker_score": -21.717206954956055
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-021",
+        "category": "location",
+        "text": "The fish lived in a pond. It swam in the sky while the other fish watched.",
+        "start": 41,
+        "end": 44,
+        "accepted": [
+          "pond",
+          "water"
+        ]
+      },
+      "nll_top1": "pond,",
+      "learned_top1": "pond",
+      "recommended": "sky",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "sky",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "pond",
+          "local_nll": 2.255293369293213,
+          "ranker_score": -14.92957592010498
+        },
+        {
+          "replacement": "pond,",
+          "local_nll": 2.124826192855835,
+          "ranker_score": -16.14716911315918
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-022",
+        "category": "location",
+        "text": "Mia hid the key in her pocket. She reached into her shoe and took the key out of her pocket.",
+        "start": 52,
+        "end": 56,
+        "accepted": [
+          "pocket"
+        ]
+      },
+      "nll_top1": "pocket",
+      "learned_top1": "pocket",
+      "recommended": "shoe",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "shoe",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "pocket",
+          "local_nll": 1.2805202007293701,
+          "ranker_score": -21.846988677978516
+        },
+        {
+          "replacement": "pocket and",
+          "local_nll": 2.039170265197754,
+          "ranker_score": -22.2585506439209
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-023",
+        "category": "location",
+        "text": "The children sat at a table. Their plates were on the floor. They ate from the table.",
+        "start": 54,
+        "end": 59,
+        "accepted": [
+          "table"
+        ]
+      },
+      "nll_top1": "table",
+      "learned_top1": "table outside",
+      "recommended": "floor",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "floor",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "table outside",
+          "local_nll": 2.8226521015167236,
+          "ranker_score": -19.85308837890625
+        },
+        {
+          "replacement": "table",
+          "local_nll": 2.022895097732544,
+          "ranker_score": -21.49641990661621
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-024",
+        "category": "identity",
+        "text": "Lily was a little girl. He put on her coat and went out.",
+        "start": 24,
+        "end": 26,
+        "accepted": [
+          "She"
+        ]
+      },
+      "nll_top1": "She",
+      "learned_top1": "She",
+      "recommended": "She",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "She",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "She",
+          "local_nll": 2.7060937881469727,
+          "ranker_score": 8.286334991455078
+        },
+        {
+          "replacement": "She always",
+          "local_nll": 2.741779327392578,
+          "ranker_score": -21.200075149536133
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-025",
+        "category": "identity",
+        "text": "Tom was a little boy. She picked up his toy and smiled.",
+        "start": 22,
+        "end": 25,
+        "accepted": [
+          "He"
+        ]
+      },
+      "nll_top1": "He",
+      "learned_top1": "He",
+      "recommended": "He",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "He",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "He",
+          "local_nll": 3.0154550075531006,
+          "ranker_score": 7.675759315490723
+        },
+        {
+          "replacement": "He had",
+          "local_nll": 3.18315052986145,
+          "ranker_score": -5.451544761657715
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-026",
+        "category": "identity",
+        "text": "Two girls went to the park. She played together until it was time to go home.",
+        "start": 28,
+        "end": 31,
+        "accepted": [
+          "They"
+        ]
+      },
+      "nll_top1": "They",
+      "learned_top1": "They",
+      "recommended": "She",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "She",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "They",
+          "local_nll": 1.0522031784057617,
+          "ranker_score": -2.224123001098633
+        },
+        {
+          "replacement": "They both",
+          "local_nll": 1.547157883644104,
+          "ranker_score": -14.343456268310547
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-027",
+        "category": "identity",
+        "text": "The puppy was a small dog. The cat wagged its tail and barked.",
+        "start": 31,
+        "end": 34,
+        "accepted": [
+          "dog",
+          "puppy"
+        ]
+      },
+      "nll_top1": "puppy",
+      "learned_top1": "puppy",
+      "recommended": "cat",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "cat",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "puppy",
+          "local_nll": 1.750527024269104,
+          "ranker_score": -21.073612213134766
+        },
+        {
+          "replacement": "dog was",
+          "local_nll": 2.219879627227783,
+          "ranker_score": -21.319698333740234
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-028",
+        "category": "identity",
+        "text": "Mia and Ben were friends. He both liked the same game.",
+        "start": 26,
+        "end": 28,
+        "accepted": [
+          "They"
+        ]
+      },
+      "nll_top1": "They",
+      "learned_top1": "They",
+      "recommended": "They",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "They",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "They",
+          "local_nll": 3.124868392944336,
+          "ranker_score": 5.733421325683594
+        },
+        {
+          "replacement": "They were",
+          "local_nll": 4.150475978851318,
+          "ranker_score": -0.06353031098842621
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-029",
+        "category": "identity",
+        "text": "The bird built a nest. The fish laid an egg in its nest.",
+        "start": 27,
+        "end": 31,
+        "accepted": [
+          "bird"
+        ]
+      },
+      "nll_top1": "bird",
+      "learned_top1": "nest",
+      "recommended": "fish",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "fish",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "nest",
+          "local_nll": 3.3174939155578613,
+          "ranker_score": -18.037029266357422
+        },
+        {
+          "replacement": "bird had",
+          "local_nll": 2.8026721477508545,
+          "ranker_score": -19.065845489501953
+        },
+        {
+          "replacement": "bird",
+          "local_nll": 2.5359787940979004,
+          "ranker_score": -19.451934814453125
+        },
+        {
+          "replacement": "egg",
+          "local_nll": 3.9023170471191406,
+          "ranker_score": -21.907228469848633
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-030",
+        "category": "agreement",
+        "text": "Yesterday, Tom walk to the park. He stayed there all afternoon.",
+        "start": 15,
+        "end": 19,
+        "accepted": [
+          "walked"
+        ]
+      },
+      "nll_top1": "went",
+      "learned_top1": "went",
+      "recommended": "went",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "went",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "went",
+          "local_nll": 2.0387723445892334,
+          "ranker_score": 2.0653014183044434
+        },
+        {
+          "replacement": "went outside",
+          "local_nll": 2.3577680587768555,
+          "ranker_score": 2.0223305225372314
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-031",
+        "category": "agreement",
+        "text": "Every morning, she eat her breakfast before school.",
+        "start": 19,
+        "end": 22,
+        "accepted": [
+          "eats"
+        ]
+      },
+      "nll_top1": "ate",
+      "learned_top1": "ate",
+      "recommended": "ate",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "ate",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "ate",
+          "local_nll": 2.83488392829895,
+          "ranker_score": 2.6311874389648438
+        },
+        {
+          "replacement": "put",
+          "local_nll": 4.452193737030029,
+          "ranker_score": -17.424711227416992
+        },
+        {
+          "replacement": "had",
+          "local_nll": 3.6242282390594482,
+          "ranker_score": -17.86368751525879
+        },
+        {
+          "replacement": "waited for",
+          "local_nll": 3.1999478340148926,
+          "ranker_score": -18.628732681274414
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-032",
+        "category": "agreement",
+        "text": "There was three apples on the table.",
+        "start": 6,
+        "end": 9,
+        "accepted": [
+          "were",
+          "are"
+        ]
+      },
+      "nll_top1": "were",
+      "learned_top1": "were",
+      "recommended": "were",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "were",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "were",
+          "local_nll": 3.312285900115967,
+          "ranker_score": 5.522696018218994
+        },
+        {
+          "replacement": "was a",
+          "local_nll": 3.4742205142974854,
+          "ranker_score": -18.745380401611328
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-033",
+        "category": "agreement",
+        "text": "The two dogs was playing together in the garden.",
+        "start": 13,
+        "end": 16,
+        "accepted": [
+          "were"
+        ]
+      },
+      "nll_top1": "were",
+      "learned_top1": "were",
+      "recommended": "were",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "were",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "were",
+          "local_nll": 0.8926716446876526,
+          "ranker_score": 7.573479652404785
+        },
+        {
+          "replacement": "were always",
+          "local_nll": 1.613624095916748,
+          "ranker_score": -16.318208694458008
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-034",
+        "category": "agreement",
+        "text": "Yesterday, Mia go home after school.",
+        "start": 15,
+        "end": 17,
+        "accepted": [
+          "went"
+        ]
+      },
+      "nll_top1": "went",
+      "learned_top1": "went",
+      "recommended": "went",
+      "recommendation": {
+        "action": "replace",
+        "replacement": "went",
+        "reason": "learned_preference",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "went",
+          "local_nll": 3.7416648864746094,
+          "ranker_score": 2.3313958644866943
+        },
+        {
+          "replacement": "and her",
+          "local_nll": 4.225393772125244,
+          "ranker_score": -20.873933792114258
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "challenge-035",
+        "category": "agreement",
+        "text": "He gave me a apple. I ate the apple.",
+        "start": 11,
+        "end": 12,
+        "accepted": [
+          "an"
+        ]
+      },
+      "nll_top1": "the",
+      "learned_top1": "the banana",
+      "recommended": "a",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "a",
+        "reason": "insufficient_margin",
+        "margin_threshold": 12,
+        "score_floor": 2
+      },
+      "candidates": [
+        {
+          "replacement": "the banana",
+          "local_nll": 3.644852876663208,
+          "ranker_score": -20.469608306884766
+        },
+        {
+          "replacement": "the",
+          "local_nll": 2.6240718364715576,
+          "ranker_score": -21.448055267333984
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "seed": 42,
+    "seed_increment": 13,
+    "precision": "bf16",
+    "ranker_precision": "fp32",
+    "device": "cuda",
+    "role": "Legacy diagnostic probes only, no checkpoint or threshold selection."
+  },
+  "limitations": "Authored synthetic probes with incomplete exact answers; no human evaluation."
+}

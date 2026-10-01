@@ -61,6 +61,11 @@ def serve(args):
     import torch
     torch.set_num_threads(getattr(args,"threads",4))
     model, tokenizer = load(args.model, args.device)
+    ranker = None
+    ranker_path = getattr(args, "ranker", None)
+    if ranker_path:
+        from diffuthink.storypatch.ranker import Reranker
+        ranker = Reranker.load(ranker_path, tokenizer, args.device)
     info = json.loads((Path(args.model) / "training_info.json").read_text())
     phase = info.get("previous_phase")
     total_steps = info["step"]
@@ -68,6 +73,9 @@ def serve(args):
         total_steps += phase["step"]
         phase = phase.get("previous_phase")
     info = {**info, "phase_step": info["step"], "step": total_steps}
+    if ranker is not None:
+        info["ranker"] = {"parameters": ranker.info["parameters"], "step": ranker.info["step"],
+                          "calibration": ranker.info["calibration"]}
     # Warm the kernels before reporting interactive latency to the viewer.
     with torch.inference_mode(), amp(args.device, "bf16" if args.device == "cuda" else "fp32"):
         warm = torch.tensor([[1, 3, 2]], device=args.device)
@@ -97,7 +105,11 @@ def serve(args):
                 options=dict(steps=int(data.get("steps",12)),temperature=float(data.get("temperature",0.7)),seed=int(data.get("seed",42)),policy=data.get("policy","confidence"),precision="bf16" if args.device=="cuda" else "fp32")
                 if not 1<=options["steps"]<=32 or not 0<=options["temperature"]<=1.5: raise ValueError("Invalid sampling range")
                 if data.get("mode")=="rewrite":
-                    result=rewrite_span(model,tokenizer,data["prompt"],data.get("start"),data.get("end"),seed=options["seed"],precision=options["precision"])
+                    ranking=data.get("ranking","nll")
+                    if ranking not in ("nll","learned"):raise ValueError("Unknown ranking mode")
+                    if ranking=="learned" and ranker is None:raise ValueError("Experimental ranker is not loaded")
+                    result=rewrite_span(model,tokenizer,data["prompt"],data.get("start"),data.get("end"),seed=options["seed"],precision=options["precision"],ranker=ranker if ranking=="learned" else None)
+                    result["ranking"]=ranking
                 elif data.get("mode")=="infill":
                     if not isinstance(data.get("suffix",""),str): raise ValueError("suffix must be a string")
                     result=infill(model,tokenizer,data["prompt"],data.get("suffix",""),int(data.get("missing_tokens",2)),**options)

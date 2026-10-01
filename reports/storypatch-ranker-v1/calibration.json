@@ -1,0 +1,43 @@
+{
+  "margin_threshold": 1000000.0,
+  "score_floor": 1000000.0,
+  "validation": {
+    "error_cases": 120,
+    "clean_cases": 120,
+    "error_corrected": 0.0,
+    "clean_preserved": 1.0,
+    "balanced_success": 0.5,
+    "wrong_replacement_on_errors": 0.0,
+    "clean_modified": 0.0
+  },
+  "method": "Grid search on validation only: maximize balanced success subject to <=5% clean edits and <=10% wrong edits on errors.",
+  "margin_grid": [
+    0,
+    0.25,
+    0.5,
+    1,
+    1.5,
+    2,
+    3,
+    4,
+    6,
+    8,
+    12,
+    1000000.0
+  ],
+  "score_grid": [
+    -1000000.0,
+    -4,
+    -2,
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    1000000.0
+  ],
+  "contexts": 120,
+  "limitations": "Finite synthetic validation; thresholds are not guarantees on user text."
+}

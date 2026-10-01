@@ -1,0 +1,47 @@
+{
+  "generator_weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+  "ranker_weights_sha256": "a00aef15ea28ba4b60d79c2ab9b062bda5001796f6b5855c1f7e657c5bafb59a",
+  "corpus": {
+    "version": 1,
+    "seed": 173,
+    "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+    "license": "Apache-2.0",
+    "splits": {
+      "train": {
+        "contexts": 12000,
+        "templates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sha256": "79462bbde00682fe7ea4028eb787a35a27cb065562910eeb1630e97a1fd0d484"
+      },
+      "validation": {
+        "contexts": 1200,
+        "templates": [
+          8,
+          9
+        ],
+        "sha256": "e8281648128215da3a63ba35e795e25040b873c92352f74c72a419c840201ce4"
+      },
+      "test": {
+        "contexts": 300,
+        "templates": [
+          10,
+          11
+        ],
+        "sha256": "6a827080af1e105077448b3abdb8b1b469adf1bbde77d5ac83012c687c5af912"
+      }
+    }
+  },
+  "device": "cuda",
+  "generator_precision": "bf16",
+  "ranker_precision": "fp32",
+  "seed": 301,
+  "validation_contexts": 120
+}

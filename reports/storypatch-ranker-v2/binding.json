@@ -1,0 +1,92 @@
+{
+  "generator_weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+  "ranker_weights_sha256": "922edda7af28191f4f0f735ea20cb1d833a77a566fce3fe8e184bca2a16f0deb",
+  "corpus": {
+    "version": 2,
+    "seed": 2841,
+    "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+    "license": "Apache-2.0",
+    "splits": {
+      "train": {
+        "contexts": 12000,
+        "templates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sha256": "05fea23d1bf65a4225d7b0c0e6d3fb288336248c5edc095b7e9410db3d9d26c2"
+      },
+      "validation": {
+        "contexts": 1200,
+        "templates": [
+          8,
+          9
+        ],
+        "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+      },
+      "test": {
+        "contexts": 300,
+        "templates": [
+          10,
+          11
+        ],
+        "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+      }
+    },
+    "mining": {
+      "contexts": 1200,
+      "added_negatives": 2699,
+      "source_corpus": {
+        "version": 2,
+        "seed": 2841,
+        "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+        "license": "Apache-2.0",
+        "splits": {
+          "train": {
+            "contexts": 12000,
+            "templates": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "sha256": "ed50146f5c2e8fc76cfe515ff121930800ad55269478476152289b3667504a31"
+          },
+          "validation": {
+            "contexts": 1200,
+            "templates": [
+              8,
+              9
+            ],
+            "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+          },
+          "test": {
+            "contexts": 300,
+            "templates": [
+              10,
+              11
+            ],
+            "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+          }
+        }
+      },
+      "generator_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+      "seed": 701,
+      "label_rule": "Closed-world exact accepted list; not human judged. Training split only."
+    }
+  },
+  "device": "cuda",
+  "generator_precision": "bf16",
+  "ranker_precision": "fp32",
+  "seed": 301,
+  "validation_contexts": 120
+}

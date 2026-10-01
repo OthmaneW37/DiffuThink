@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "binding": {
+    "generator_weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+    "ranker_weights_sha256": "a00aef15ea28ba4b60d79c2ab9b062bda5001796f6b5855c1f7e657c5bafb59a",
+    "corpus": {
+      "version": 1,
+      "seed": 173,
+      "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+      "license": "Apache-2.0",
+      "splits": {
+        "train": {
+          "contexts": 12000,
+          "templates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sha256": "79462bbde00682fe7ea4028eb787a35a27cb065562910eeb1630e97a1fd0d484"
+        },
+        "validation": {
+          "contexts": 1200,
+          "templates": [
+            8,
+            9
+          ],
+          "sha256": "e8281648128215da3a63ba35e795e25040b873c92352f74c72a419c840201ce4"
+        },
+        "test": {
+          "contexts": 300,
+          "templates": [
+            10,
+            11
+          ],
+          "sha256": "6a827080af1e105077448b3abdb8b1b469adf1bbde77d5ac83012c687c5af912"
+        }
+      }
+    },
+    "device": "cuda",
+    "generator_precision": "bf16",
+    "ranker_precision": "fp32",
+    "seed": 301,
+    "validation_contexts": 120
+  },
+  "reference_pool_test": {
+    "pool_top1": 1.0,
+    "bce": 0.008955447934567928,
+    "positive_mean": 12.356356986221813,
+    "negative_mean": -15.063667249149747,
+    "contexts": 300
+  },
+  "end_to_end": {
+    "nll_keep_or_replace": {
+      "error_cases": 300,
+      "clean_cases": 300,
+      "error_corrected": 0.20333333333333334,
+      "clean_preserved": 0.2966666666666667,
+      "balanced_success": 0.25,
+      "wrong_replacement_on_errors": 0.74,
+      "clean_modified": 0.7033333333333334
+    },
+    "learned_keep_or_replace": {
+      "error_cases": 300,
+      "clean_cases": 300,
+      "error_corrected": 0.0,
+      "clean_preserved": 1.0,
+      "balanced_success": 0.5,
+      "wrong_replacement_on_errors": 0.0,
+      "clean_modified": 0.0
+    },
+    "same_pool_error_top1_nll": 0.21666666666666667,
+    "same_pool_error_top1_ranker": 0.43,
+    "error_candidate_coverage": 0.47,
+    "context_preserved": 1.0
+  },
+  "paired_bootstrap": {
+    "metric": "learned minus NLL balanced success",
+    "paired_contexts": 300,
+    "resamples": 1000,
+    "percentile_95": [
+      0.20166666666666666,
+      0.295
+    ],
+    "limitations": "Within this procedural test; does not measure real-world validity."
+  },
+  "categories": {
+    "agreement": {
+      "nll_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.18,
+        "clean_preserved": 0.38,
+        "balanced_success": 0.28,
+        "wrong_replacement_on_errors": 0.72,
+        "clean_modified": 0.62
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.5,
+        "wrong_replacement_on_errors": 0.0,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.18,
+      "same_pool_error_top1_ranker": 0.22,
+      "error_candidate_coverage": 0.22,
+      "context_preserved": 1.0
+    },
+    "color": {
+      "nll_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.42,
+        "clean_preserved": 0.48,
+        "balanced_success": 0.44999999999999996,
+        "wrong_replacement_on_errors": 0.48,
+        "clean_modified": 0.52
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.5,
+        "wrong_replacement_on_errors": 0.0,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.48,
+      "same_pool_error_top1_ranker": 0.72,
+      "error_candidate_coverage": 0.82,
+      "context_preserved": 1.0
+    },
+    "emotion": {
+      "nll_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.1,
+        "clean_preserved": 0.2,
+        "balanced_success": 0.15000000000000002,
+        "wrong_replacement_on_errors": 0.9,
+        "clean_modified": 0.8
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.5,
+        "wrong_replacement_on_errors": 0.0,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.1,
+      "same_pool_error_top1_ranker": 0.48,
+      "error_candidate_coverage": 0.58,
+      "context_preserved": 1.0
+    },
+    "identity": {
+      "nll_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.5,
+        "clean_preserved": 0.52,
+        "balanced_success": 0.51,
+        "wrong_replacement_on_errors": 0.44,
+        "clean_modified": 0.48
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.5,
+        "wrong_replacement_on_errors": 0.0,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.52,
+      "same_pool_error_top1_ranker": 0.98,
+      "error_candidate_coverage": 0.98,
+      "context_preserved": 1.0
+    },
+    "location": {
+      "nll_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 0.02,
+        "balanced_success": 0.01,
+        "wrong_replacement_on_errors": 1.0,
+        "clean_modified": 0.98
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.5,
+        "wrong_replacement_on_errors": 0.0,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.0,
+      "same_pool_error_top1_ranker": 0.12,
+      "error_candidate_coverage": 0.12,
+      "context_preserved": 1.0
+    },
+    "state": {
+      "nll_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.02,
+        "clean_preserved": 0.18,
+        "balanced_success": 0.09999999999999999,
+        "wrong_replacement_on_errors": 0.9,
+        "clean_modified": 0.8200000000000001
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 50,
+        "clean_cases": 50,
+        "error_corrected": 0.0,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.5,
+        "wrong_replacement_on_errors": 0.0,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.02,
+      "same_pool_error_top1_ranker": 0.06,
+      "error_candidate_coverage": 0.1,
+      "context_preserved": 1.0
+    }
+  },
+  "limitations": [
+    "Rule-generated references, not human validated.",
+    "Held-out template combinations within six familiar categories.",
+    "Accepted alternatives are incomplete.",
+    "Paired clean/error cases are clustered by context.",
+    "Top1 conditional candidate preference differs from a cautious keep-or-replace recommendation."
+  ]
+}

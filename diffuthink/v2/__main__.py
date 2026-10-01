@@ -44,6 +44,7 @@ def main():
     benchmark.add_argument("--examples",type=int,default=64)
     serve = sub.add_parser("serve")
     serve.add_argument("--model",default="runs/stories-512/best")
+    serve.add_argument("--ranker",help="Optional independently trained span ranker directory")
     serve.add_argument("--device",choices=["cpu","cuda"],default="cuda")
     serve.add_argument("--port",type=int,default=7861)
     export = sub.add_parser("export")

@@ -27,7 +27,7 @@ def local_nll(model,tokenizer,text,start,end,precision="fp32"):
 
 
 @torch.inference_mode()
-def rewrite_span(model,tokenizer,text,start,end,seed=42,precision="fp32"):
+def rewrite_span(model,tokenizer,text,start,end,seed=42,precision="fp32",ranker=None):
     if not isinstance(text,str) or not 1<=len(text)<=3000:
         raise ValueError("Use a short English text (1..3000 characters)")
     if not isinstance(start,int) or not isinstance(end,int) or not 0<=start<end<=len(text):
@@ -69,8 +69,17 @@ def rewrite_span(model,tokenizer,text,start,end,seed=42,precision="fp32"):
         candidates.append({"replacement":fragment,"text":rewritten,"local_nll":score,
             "delta_nll":score-before,"seed":seed+attempt,"masked_tokens":length,"trace":trace})
     candidates.sort(key=lambda c:c["local_nll"])
-    return {"original":text,"selection":{"start":a,"end":b,"text":text[a:b]},
+    result={"original":text,"selection":{"start":a,"end":b,"text":text[a:b]},
         "prefix":prefix,"suffix":suffix,"original_local_nll":before,"candidates":candidates,
         "attempts":len(lengths),"latency_ms":(time.perf_counter()-started)*1000,
         "method":"Bidirectional denoising; rank by causal NLL of the span and up to 16 following tokens.",
         "limitation":"Ranking reflects this model's preferences, not verified grammar or semantic correctness."}
+    if ranker is not None:
+        ranker.rank(result)
+    else:
+        best=candidates[0] if candidates else None
+        replace=bool(best and best['local_nll']<before)
+        result['recommendation']={'action':'replace' if replace else 'keep',
+            'replacement':best['replacement'] if replace else text[a:b],'reason':'local_likelihood'}
+    result['latency_ms']=(time.perf_counter()-started)*1000
+    return result

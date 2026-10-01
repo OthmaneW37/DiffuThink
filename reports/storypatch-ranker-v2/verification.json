@@ -1,0 +1,23 @@
+{
+  "unit_tests": {
+    "count": 42,
+    "passed": true
+  },
+  "cpu_and_gpu_bundle_api": {
+    "default_nll": true,
+    "explicit_learned": true,
+    "same_candidate_pool": true,
+    "context_preserved": true,
+    "invalid_ranking_rejected": true
+  },
+  "browser": {
+    "model_and_ranker_loaded": true,
+    "ranking_selector": true,
+    "apply_and_undo_exact": true,
+    "keep_original_exact": true,
+    "sad_recommended_on_demo": true
+  },
+  "docker_runtime": "Not built or run; packaging and source checks only.",
+  "human_evaluation": "Not performed; blank blind-review CSV prepared.",
+  "publication": "Local only; no upload in this experiment."
+}

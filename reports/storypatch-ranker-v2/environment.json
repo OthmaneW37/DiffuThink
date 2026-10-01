@@ -1,0 +1,9 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.13.0+rocm10.0.0",
+  "tokenizers": "0.22.2",
+  "safetensors": "0.8.0",
+  "hip": "7.15.26333",
+  "gpu": "AMD Radeon RX 9060 XT"
+}

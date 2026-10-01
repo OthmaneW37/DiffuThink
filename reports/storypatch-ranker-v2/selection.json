@@ -1,0 +1,62 @@
+{
+  "generator": "runs/storypatch-13m/best",
+  "ranker": "runs/storypatch-ranker-v2/best",
+  "generator_weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+  "ranker_weights_sha256": "922edda7af28191f4f0f735ea20cb1d833a77a566fce3fe8e184bca2a16f0deb",
+  "enabled": true,
+  "rule": "Enable only if validation balanced success > always-keep (50%), clean modified <=5%, wrong error replacements <=10%. Test is descriptive only.",
+  "validation": {
+    "error_cases": 120,
+    "clean_cases": 120,
+    "error_corrected": 0.5166666666666667,
+    "clean_preserved": 1.0,
+    "balanced_success": 0.7583333333333333,
+    "wrong_replacement_on_errors": 0.06666666666666667,
+    "clean_modified": 0.0
+  },
+  "calibration": {
+    "margin_threshold": 12,
+    "score_floor": 2,
+    "validation": {
+      "error_cases": 120,
+      "clean_cases": 120,
+      "error_corrected": 0.5166666666666667,
+      "clean_preserved": 1.0,
+      "balanced_success": 0.7583333333333333,
+      "wrong_replacement_on_errors": 0.06666666666666667,
+      "clean_modified": 0.0
+    },
+    "method": "Grid search on validation only: maximize balanced success subject to <=5% clean edits and <=10% wrong edits on errors.",
+    "margin_grid": [
+      0,
+      0.25,
+      0.5,
+      1,
+      1.5,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12,
+      1000000.0
+    ],
+    "score_grid": [
+      -1000000.0,
+      -4,
+      -2,
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      1000000.0
+    ],
+    "contexts": 120,
+    "limitations": "Finite synthetic validation; thresholds are not guarantees on user text."
+  },
+  "ui_default": "nll",
+  "availability": "Experimental opt-in; legacy diagnostic ranking regresses."
+}

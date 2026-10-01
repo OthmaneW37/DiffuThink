@@ -1,0 +1,153 @@
+{
+  "architecture": "storypatch_span_ranker_v1",
+  "initialized_from": "random; no external or generator weights",
+  "parameters": 3528769,
+  "settings": {
+    "data": "data/processed/storypatch-corrections-mined-v2",
+    "tokenizer": "runs/storypatch-13m/best/tokenizer.json",
+    "output": "runs/storypatch-ranker-v2",
+    "device": "cuda",
+    "steps": 2400,
+    "batch_pairs": 48,
+    "width": 192,
+    "lr": 0.0007,
+    "eval_every": 200,
+    "seed": 73
+  },
+  "corpus": {
+    "version": 2,
+    "seed": 2841,
+    "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+    "license": "Apache-2.0",
+    "splits": {
+      "train": {
+        "contexts": 12000,
+        "templates": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "sha256": "05fea23d1bf65a4225d7b0c0e6d3fb288336248c5edc095b7e9410db3d9d26c2"
+      },
+      "validation": {
+        "contexts": 1200,
+        "templates": [
+          8,
+          9
+        ],
+        "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+      },
+      "test": {
+        "contexts": 300,
+        "templates": [
+          10,
+          11
+        ],
+        "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+      }
+    },
+    "mining": {
+      "contexts": 1200,
+      "added_negatives": 2699,
+      "source_corpus": {
+        "version": 2,
+        "seed": 2841,
+        "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+        "license": "Apache-2.0",
+        "splits": {
+          "train": {
+            "contexts": 12000,
+            "templates": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "sha256": "ed50146f5c2e8fc76cfe515ff121930800ad55269478476152289b3667504a31"
+          },
+          "validation": {
+            "contexts": 1200,
+            "templates": [
+              8,
+              9
+            ],
+            "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+          },
+          "test": {
+            "contexts": 300,
+            "templates": [
+              10,
+              11
+            ],
+            "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+          }
+        }
+      },
+      "generator_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+      "seed": 701,
+      "label_rule": "Closed-world exact accepted list; not human judged. Training split only."
+    }
+  },
+  "tokenizer_sha256": "f4456efd1157b187514dc317ce3683970a0aca8f80614c7f84c9b92ed2a4e378",
+  "loss": "BCE(candidate compatibility) + 0.5 softplus(negative score - positive score)",
+  "calibration": {
+    "margin_threshold": 12,
+    "score_floor": 2,
+    "validation": {
+      "error_cases": 120,
+      "clean_cases": 120,
+      "error_corrected": 0.5166666666666667,
+      "clean_preserved": 1.0,
+      "balanced_success": 0.7583333333333333,
+      "wrong_replacement_on_errors": 0.06666666666666667,
+      "clean_modified": 0.0
+    },
+    "method": "Grid search on validation only: maximize balanced success subject to <=5% clean edits and <=10% wrong edits on errors.",
+    "margin_grid": [
+      0,
+      0.25,
+      0.5,
+      1,
+      1.5,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12,
+      1000000.0
+    ],
+    "score_grid": [
+      -1000000.0,
+      -4,
+      -2,
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      1000000.0
+    ],
+    "contexts": 120,
+    "limitations": "Finite synthetic validation; thresholds are not guarantees on user text."
+  },
+  "step": 1600,
+  "validation": {
+    "pool_top1": 1.0,
+    "bce": 0.0008965141023509204,
+    "positive_mean": 7.518789186405282,
+    "negative_mean": -18.56577195511924,
+    "contexts": 1200
+  }
+}

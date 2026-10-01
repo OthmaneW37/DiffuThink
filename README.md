@@ -6,6 +6,30 @@ StoryPatch is an inspectable editing workshop for simple English stories, powere
 
 The contribution is the constrained, reversible workflow and visible model behavior. Text infilling, Transformers and likelihood ranking are established techniques; no scientific novelty claim is made.
 
+## Learned ranking and keeping the original (local experiment)
+
+A separate 3.53M-parameter Transformer learns span compatibility from random
+initialization. It ranks the same denoising proposals and compares them with the
+original passage. Validation chooses when to recommend a replacement or keep
+the original. The user always decides whether to apply the suggestion. The
+original NLL ranking stays the UI default: the new scorer improves the procedural
+paired test but regresses on legacy diagnostics (top1 52.8% vs 72.2%). Select
+"Correction ciblée · expérimental" to compare it explicitly.
+
+Training uses 12,000 procedural contexts and additional proposals mined from
+training contexts only. A paired test contains 600 editing cases across 300
+contexts. Labels are synthetic, with incomplete accepted-answer lists; no
+human-validated quality gain is claimed. A CSV for blind review is provided.
+
+See [measured results](reports/storypatch-ranker-v2/RESULTATS.md) and
+[the French implementation and reproduction guide](docs/STORYPATCH_RANKER.md).
+The earlier unsuccessful ranker experiment is also retained. This local
+experiment does not replace the published Hub checkpoint.
+
+```powershell
+python -m diffuthink.v2 serve --model runs/storypatch-13m/best --ranker runs/storypatch-ranker-v2/best --device cpu --port 7862
+```
+
 **Published model:** [OthmaneW/DiffuThink-Story-512](https://huggingface.co/OthmaneW/DiffuThink-Story-512)
 
 ## StoryPatch v2 experiment
@@ -45,7 +69,7 @@ The checkpoint is `runs/stories-512/best`. Use `--device cpu` without a supporte
 - Own 8,192-token BPE; 512-token context; 500,000 synthetic TinyStories training documents.
 - Latest phase: 16,000 additional updates and 108,397,864 non-PAD tokens presented.
 - On identical 1,380 legacy test windows, perplexity improves from **7.206 to 6.147**. Repetition and EOS rates do not uniformly improve. All samples and regressions are retained.
-- 29 unit tests, exact CPU recovery test, independent bundle reload and browser application/undo checks.
+- 42 unit tests, exact CPU recovery tests, independent CPU/GPU bundle reload and browser application/undo/keep checks.
 
 Read [all results](reports/context512/RESULTATS.md), [training protocol](docs/STORY512.md), [StoryPatch design](docs/STORYPATCH.md), and the [French interview guide](docs/ENTRETIEN.md).
 
