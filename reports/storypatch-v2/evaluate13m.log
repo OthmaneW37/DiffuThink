@@ -1,0 +1,38 @@
+{"span": {"nll": 3.681417161467993, "token_accuracy": 0.2838773491592483, "parallel_exact_match": 0.1575, "targets": 3033, "examples": 400, "meaning": "Exact reference reconstruction; valid alternative wording can score zero"}, "causal": {"nll": 1.659709926505353, "perplexity": 5.257785479015552, "accuracy": 0.5988291014340218, "tokens": 76010}}
+{"case": "challenge-000", "top1": true, "top": "very sad"}
+{"case": "challenge-001", "top1": true, "top": "happy"}
+{"case": "challenge-002", "top1": false, "top": "very sad"}
+{"case": "challenge-003", "top1": false, "top": "very sad"}
+{"case": "challenge-004", "top1": true, "top": "sleepy"}
+{"case": "challenge-005", "top1": true, "top": "very happy"}
+{"case": "challenge-006", "top1": true, "top": "blue"}
+{"case": "challenge-007", "top1": true, "top": "red"}
+{"case": "challenge-008", "top1": true, "top": "ball"}
+{"case": "challenge-009", "top1": true, "top": "seed"}
+{"case": "challenge-010", "top1": true, "top": "book"}
+{"case": "challenge-011", "top1": true, "top": "cake"}
+{"case": "challenge-012", "top1": false, "top": "no"}
+{"case": "challenge-013", "top1": true, "top": "wet"}
+{"case": "challenge-014", "top1": false, "top": "tall"}
+{"case": "challenge-015", "top1": true, "top": "dark"}
+{"case": "challenge-016", "top1": true, "top": "not open"}
+{"case": "challenge-017", "top1": false, "top": "no more"}
+{"case": "challenge-018", "top1": false, "top": "together"}
+{"case": "challenge-019", "top1": true, "top": "under"}
+{"case": "challenge-020", "top1": true, "top": "nest"}
+{"case": "challenge-021", "top1": true, "top": "pond"}
+{"case": "challenge-022", "top1": true, "top": "pocket"}
+{"case": "challenge-023", "top1": true, "top": "table"}
+{"case": "challenge-024", "top1": true, "top": "She"}
+{"case": "challenge-025", "top1": true, "top": "He"}
+{"case": "challenge-026", "top1": true, "top": "They"}
+{"case": "challenge-027", "top1": true, "top": "puppy"}
+{"case": "challenge-028", "top1": true, "top": "They"}
+{"case": "challenge-029", "top1": false, "top": "bird had"}
+{"case": "challenge-030", "top1": false, "top": "went"}
+{"case": "challenge-031", "top1": false, "top": "ate"}
+{"case": "challenge-032", "top1": true, "top": "were"}
+{"case": "challenge-033", "top1": true, "top": "were"}
+{"case": "challenge-034", "top1": true, "top": "went"}
+{"case": "challenge-035", "top1": false, "top": "the"}
+{"examples": 36, "top1": 0.7222222222222222, "top3": 0.7777777777777778, "context_preserved": 1.0, "empty": 0.0, "median_latency_ms": 69.8172000120394, "by_category": {"agreement": {"top1": 0.5, "top3": 0.5, "context_preserved": 1.0, "empty": 0.0}, "emotion": {"top1": 0.6666666666666666, "top3": 0.8333333333333334, "context_preserved": 1.0, "empty": 0.0}, "identity": {"top1": 0.8333333333333334, "top3": 0.8333333333333334, "context_preserved": 1.0, "empty": 0.0}, "location": {"top1": 0.8333333333333334, "top3": 0.8333333333333334, "context_preserved": 1.0, "empty": 0.0}, "object": {"top1": 1.0, "top3": 1.0, "context_preserved": 1.0, "empty": 0.0}, "state": {"top1": 0.5, "top3": 0.6666666666666666, "context_preserved": 1.0, "empty": 0.0}}}

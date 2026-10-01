@@ -16,6 +16,7 @@ def main():
         if hashlib.sha256((source/name).read_bytes()).hexdigest()!=expected:
             raise ValueError(f"Invalid bundle file: {name}")
     if out.exists():raise ValueError("Use a new Space output folder")
+    parameters=json.loads((source/"training_info.json").read_text())["parameters"]
     shutil.copytree(source,out)
     (out/"README.md").rename(out/"MODEL_CARD.md")
     (out/"app.py").write_text('''import os
@@ -83,6 +84,11 @@ CPU inference, two PyTorch threads. This is an exploratory demo with sequential 
 
 This folder is a local release candidate. No Space has been created or uploaded automatically. Code and weights use Apache-2.0; preserve TinyStories attribution and its separate dataset terms. Docker metadata follows the [official Docker Spaces documentation](https://huggingface.co/docs/hub/spaces-sdks-docker).
 ''',encoding="utf-8")
+    readme=(out/"README.md").read_text(encoding="utf-8")
+    readme=readme.replace("13.44M-parameter",f"{parameters/1e6:.2f}M-parameter")
+    if not (out/"comparison.json").exists():
+        readme=readme.replace("`comparison.json`", "`selection.json`" if (out/"selection.json").exists() else "the model card")
+    (out/"README.md").write_text(readme,encoding="utf-8")
     checks={str(f.relative_to(out)).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest()
             for f in out.rglob('*') if f.is_file() and f.name!='SHA256SUMS.json'}
     (out/"SHA256SUMS.json").write_text(json.dumps(checks,indent=2))

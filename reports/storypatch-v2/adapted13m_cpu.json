@@ -1,0 +1,1963 @@
+{
+  "model": "runs/storypatch-13m/best",
+  "weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+  "data_manifest": {
+    "version": 1,
+    "source": "data/processed/stories-512",
+    "source_manifest": {
+      "dataset": "roneneldan/TinyStories",
+      "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+      "license": "cdla-sharing-1.0",
+      "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+      "synthetic": true,
+      "selection": "First unique documents in pinned source order; alternating validation/test documents",
+      "tokenizer_train_documents": 50000,
+      "vocab_size": 8192,
+      "max_length": 512,
+      "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+      "splits": {
+        "train": {
+          "documents": 500000,
+          "windows": 514199,
+          "text_tokens": 107857284,
+          "complete_story_windows": 485910,
+          "documents_sha256": "b4876f6394b78ca3560848f22195b8e125c2872621c857148b77f93e5264cc16",
+          "array_sha256": "b1fde06202d29af0d1146276d8be1bb4e5ebac1e7d767f6d58a8ca43a1aa16f1"
+        },
+        "validation": {
+          "documents": 1000,
+          "windows": 1008,
+          "text_tokens": 187038,
+          "complete_story_windows": 992,
+          "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+          "array_sha256": "92d568c80995bf436d18ab320b4644c96eed757f47a263270be4303f566fd703"
+        },
+        "test": {
+          "documents": 1000,
+          "windows": 1012,
+          "text_tokens": 188300,
+          "complete_story_windows": 988,
+          "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+          "array_sha256": "fb581db76905e21e777b1746b2c3ca5d3cb2c8b5462e15910c8b4e6d644250c9"
+        }
+      },
+      "tokenizer_source": "data/processed/stories-v2/tokenizer.json"
+    },
+    "seed": 4801,
+    "spans_per_window": 8,
+    "max_words": 12,
+    "max_span_tokens": 16,
+    "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+    "splits": {
+      "test": {
+        "rejected_quality": 1,
+        "rejected_duplicate": 0,
+        "rejected_alignment": 0,
+        "windows": 1011,
+        "candidate_spans": 8088,
+        "files": {
+          "test.npy": "419c2dfe9a0fcf03f1203914c2df0400ea4601dff19806f9e3fdfd9441c403ad",
+          "test_spans.npy": "41d835ed26a1786f6405b6d2435ed2f4c2dca22eb794b79d1a3d4cf32bca6e86",
+          "test_source_rows.npy": "aa465ccaa78b501f63bdebe5769efb165cf7f28a8fabce3451e116d09dd8891a"
+        }
+      },
+      "validation": {
+        "rejected_quality": 5,
+        "rejected_duplicate": 0,
+        "rejected_alignment": 0,
+        "windows": 1003,
+        "candidate_spans": 8024,
+        "files": {
+          "validation.npy": "f9eaf135ca2c8d291cf3d277357ed3f1dd7921305b9e51ebc79d66660f5640d8",
+          "validation_spans.npy": "612b4b04db23a3778a08a29dfd042a8e38ccf583c9a17952e3e2ee23d3716918",
+          "validation_source_rows.npy": "20ed44c2d8342befac05ea70d2bae83cc1b17d005886d992390bf710933321a2"
+        }
+      },
+      "train": {
+        "rejected_quality": 1666,
+        "rejected_duplicate": 0,
+        "rejected_alignment": 0,
+        "windows": 512533,
+        "candidate_spans": 4100264,
+        "files": {
+          "train.npy": "22dafe745270f2214b94df0c0d92f8ab20ea7d7e068249b703e4b9f558613ff2",
+          "train_spans.npy": "720e8d1e6845715c276f6813de084bd31a375b78a7523bcdb89374edf75aea40",
+          "train_source_rows.npy": "81a587e95a81cfd053f8a6f5d9c9f5d6705dd1e3156aa4ea6bad34be39f46605"
+        }
+      }
+    },
+    "supervision": "Self-supervised reconstruction; original spans are not verified corrections",
+    "deduplication": "Normalized exact window hashes across splits; no general near-deduplication claim"
+  },
+  "split": "test",
+  "editor_attempts": 6,
+  "challenge_sha256": "293040e4339ec809d4ec95822dcffad013099ee1eaf6e00fad8b767a5ae27dec",
+  "seed": 42,
+  "limitations": "Exact reference metrics miss valid alternatives. Authored challenges are diagnostic, not a general grammar or coherence score.",
+  "span": {
+    "nll": 3.6812201304047405,
+    "token_accuracy": 0.282558522914606,
+    "parallel_exact_match": 0.1575,
+    "targets": 3033,
+    "examples": 400,
+    "meaning": "Exact reference reconstruction; valid alternative wording can score zero"
+  },
+  "causal": {
+    "nll": 1.6595115080458163,
+    "perplexity": 5.256742340812591,
+    "accuracy": 0.5988948822523352,
+    "tokens": 76010
+  },
+  "iterative_reconstruction": {
+    "samples": [
+      {
+        "index": 0,
+        "reference": " she saw a little bird named Billy. Billy saw that",
+        "prediction": " she had an idea. She had a plan idea.",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 1,
+        "reference": " thoughtful girl named Sue. Sue loved to help her mom around the",
+        "prediction": " little girl named Sue. Sue loved to play her toys in her",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 2,
+        "reference": " went back home together. They had",
+        "prediction": " went back to playing. They had",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 3,
+        "reference": " big tree. He was very happy. Tom knew",
+        "prediction": " big. He was happy and happy. He knew",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 4,
+        "reference": " like your jewelry. Can I wear",
+        "prediction": " want to play. Can I have",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 5,
+        "reference": " can't find my belt, and I miss it.\" His mom",
+        "prediction": " lost my belt and I can't find it anywhere.\" His mom",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 6,
+        "reference": " work. Lily felt happy and proud to",
+        "prediction": " work. From that day on, to",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 7,
+        "reference": " it.\"\nThey tried to roll the rock",
+        "prediction": " it up together.\"\nThey pushed the rock",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 8,
+        "reference": " upon a time, there was a little boy named Tim",
+        "prediction": " upon a time, there was a little boy named Tim",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 9,
+        "reference": " to catch the",
+        "prediction": " to eat the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 10,
+        "reference": " did not like the smell.\nOne day, the",
+        "prediction": " were sad because they didn't like him.\nThe",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 11,
+        "reference": " trip and lots of",
+        "prediction": " time and had a",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 12,
+        "reference": " a trick like the big dog. He jumped and spun in the",
+        "prediction": " the same on the video, but the dog was still in the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 13,
+        "reference": " Sue, decided to march",
+        "prediction": " Amy. They all went",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 14,
+        "reference": " they picked",
+        "prediction": " and eat",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 15,
+        "reference": " his tail",
+        "prediction": " his tail",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 16,
+        "reference": "One day, Max and Sue went to the",
+        "prediction": "One day, Sue and Max went to the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 17,
+        "reference": " was so",
+        "prediction": " was so",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 18,
+        "reference": " miserable anymore. He was happy, just like Puff. And they",
+        "prediction": " miserable anymore. He was very happy to help the people. And they",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 19,
+        "reference": " bunny named Fluffy. Fluffy loved to play",
+        "prediction": " girl named Fluffy. Fluffy loved to play",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 20,
+        "reference": " down into the well and rolled",
+        "prediction": " up the hill and finally got",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 21,
+        "reference": " remembered",
+        "prediction": " loved",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 22,
+        "reference": "After they finished camping, the family went home and",
+        "prediction": "So, the man went back to the tent and",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 23,
+        "reference": " earthquake caused the",
+        "prediction": " earthquake hit the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 24,
+        "reference": " you can always come sleep with me and",
+        "prediction": " you can't sleep in your closet,",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 25,
+        "reference": " flute. She went to the store and bought him",
+        "prediction": " flute with a new one. She said it was",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 26,
+        "reference": " didn't",
+        "prediction": " didn't",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 27,
+        "reference": " went back inside and had",
+        "prediction": " continued to play in the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 28,
+        "reference": " her teddy bear. The little girl was",
+        "prediction": " her teddy bear bear. The girl was",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 29,
+        "reference": " it everywhere, but she couldn't find it",
+        "prediction": " it, but she couldn't find it anywhere",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 30,
+        "reference": " to help people. He was very generous and",
+        "prediction": " to play with his. One day, Tom",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 31,
+        "reference": " the",
+        "prediction": " the",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 32,
+        "reference": " fight. He wished they",
+        "prediction": " be mean, but he",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 33,
+        "reference": " rot. Benny didn't know that it was bad to",
+        "prediction": " rot. Benny was sad because he didn't want to",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 34,
+        "reference": " her mommy told",
+        "prediction": " her mommy told",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 35,
+        "reference": " something new. From then on, he made sure to always tie",
+        "prediction": " a lesson. From that day on, Timmy always more careful with",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 36,
+        "reference": " a time, there was a little girl named Lily. She liked to",
+        "prediction": " a time, there was a little girl named Lily. She loved to",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 37,
+        "reference": " upset",
+        "prediction": " sad",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 38,
+        "reference": " from",
+        "prediction": " in",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 39,
+        "reference": " the door open but it was",
+        "prediction": " the door, but it was",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 40,
+        "reference": " the judge was hoping to",
+        "prediction": " he didn't know to",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 41,
+        "reference": " come back and play again",
+        "prediction": " come back and play again",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 42,
+        "reference": " me paint",
+        "prediction": " me paint",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 43,
+        "reference": " he really needed it to sleep. \nOne",
+        "prediction": " he couldn't find his toy. \nOne",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 44,
+        "reference": " She picked it up and shook it, but it",
+        "prediction": " It was shiny and had a lock, but she",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 45,
+        "reference": " if she could play",
+        "prediction": " if she could play",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 46,
+        "reference": " day, her mommy told her",
+        "prediction": " day, Lily's mommy told",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 47,
+        "reference": " was boring to watch them fight.\nSuddenly, a big wave came",
+        "prediction": " was important to stop be friends.\nThe dolphin swam to the ocean",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 48,
+        "reference": " tail, so Lily",
+        "prediction": " tail, but Lily",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 49,
+        "reference": " where the butterfly's wings",
+        "prediction": " with her crayons and she",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 50,
+        "reference": " another",
+        "prediction": " another",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 51,
+        "reference": " in the meadow with his friends. One day",
+        "prediction": " with his friends in the meadow. One day",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 52,
+        "reference": " you okay, Lily",
+        "prediction": " you okay, Lily",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 53,
+        "reference": " Timmy was sad because he wanted Max to come with them.\nBut",
+        "prediction": " Timmy felt sad and wanted to play with all the park.\nBut",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 54,
+        "reference": " drawings. Timmy was sad because he thought his drawings",
+        "prediction": " mom was very upset. Timmy was sad because he",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 55,
+        "reference": " park, she found a shiny gold coin on the",
+        "prediction": " park, she saw a big dog sitting on the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 56,
+        "reference": " that it's important to share and",
+        "prediction": " that Billy was playing and wanted to",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 57,
+        "reference": " grateful and thanked the",
+        "prediction": " happy and thanked the",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 58,
+        "reference": " a time, there was a big house with",
+        "prediction": " a time there was a mouse who lived in",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 59,
+        "reference": " and",
+        "prediction": " with",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 60,
+        "reference": " you have a problem and that",
+        "prediction": " you need it. And,",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 61,
+        "reference": " named Lily. She",
+        "prediction": " named Lily. She",
+        "exact": true,
+        "context_preserved": true
+      },
+      {
+        "index": 62,
+        "reference": " was so excited to play that he rushed to the park",
+        "prediction": " was so excited that he wanted to go on the barrel",
+        "exact": false,
+        "context_preserved": true
+      },
+      {
+        "index": 63,
+        "reference": " other ways. And so, the daughter played",
+        "prediction": " the park. The daughter was happy to go",
+        "exact": false,
+        "context_preserved": true
+      }
+    ],
+    "examples": 64,
+    "exact_match": 0.1875,
+    "context_preservation": 1.0,
+    "oracle_length": true,
+    "note": "Reference span length supplied; this is not the editor candidate metric."
+  },
+  "editor": {
+    "examples": 36,
+    "top1": 0.6944444444444444,
+    "top3": 0.8055555555555556,
+    "context_preserved": 1.0,
+    "empty": 0.0,
+    "median_latency_ms": 8728.946249961155,
+    "by_category": {
+      "agreement": {
+        "top1": 0.5,
+        "top3": 0.5,
+        "context_preserved": 1.0,
+        "empty": 0.0
+      },
+      "emotion": {
+        "top1": 0.5,
+        "top3": 0.6666666666666666,
+        "context_preserved": 1.0,
+        "empty": 0.0
+      },
+      "identity": {
+        "top1": 0.8333333333333334,
+        "top3": 1.0,
+        "context_preserved": 1.0,
+        "empty": 0.0
+      },
+      "location": {
+        "top1": 0.8333333333333334,
+        "top3": 0.8333333333333334,
+        "context_preserved": 1.0,
+        "empty": 0.0
+      },
+      "object": {
+        "top1": 1.0,
+        "top3": 1.0,
+        "context_preserved": 1.0,
+        "empty": 0.0
+      },
+      "state": {
+        "top1": 0.5,
+        "top3": 0.8333333333333334,
+        "context_preserved": 1.0,
+        "empty": 0.0
+      }
+    },
+    "samples": [
+      {
+        "id": "challenge-000",
+        "category": "emotion",
+        "text": "Lily lost her favorite toy. She felt happy. Tears ran down her face.",
+        "start": 37,
+        "end": 42,
+        "accepted": [
+          "sad",
+          "very sad",
+          "upset"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 6285.580399970058,
+        "candidates": [
+          {
+            "replacement": "very sad",
+            "text": "Lily lost her favorite toy. She felt very sad. Tears ran down her face.",
+            "local_nll": 2.5448131561279297,
+            "delta_nll": -0.6775496006011963,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "sad",
+            "text": "Lily lost her favorite toy. She felt sad. Tears ran down her face.",
+            "local_nll": 2.9738869667053223,
+            "delta_nll": -0.2484757900238037,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-001",
+        "category": "emotion",
+        "text": "Ben won the game. He felt sad. He smiled and cheered.",
+        "start": 26,
+        "end": 29,
+        "accepted": [
+          "happy",
+          "very happy",
+          "excited",
+          "proud"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 5553.441900003236,
+        "candidates": [
+          {
+            "replacement": "very happy",
+            "text": "Ben won the game. He felt very happy. He smiled and cheered.",
+            "local_nll": 2.0022072792053223,
+            "delta_nll": -1.5348565578460693,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "happy",
+            "text": "Ben won the game. He felt happy. He smiled and cheered.",
+            "local_nll": 2.0369765758514404,
+            "delta_nll": -1.5000872611999512,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-002",
+        "category": "emotion",
+        "text": "A loud crash woke Mia. She felt calm. Her hands shook with fear.",
+        "start": 32,
+        "end": 36,
+        "accepted": [
+          "scared",
+          "afraid",
+          "frightened"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8739.301099965815,
+        "candidates": [
+          {
+            "replacement": "helpless",
+            "text": "A loud crash woke Mia. She felt helpless. Her hands shook with fear.",
+            "local_nll": 2.9329357147216797,
+            "delta_nll": -1.0288810729980469,
+            "seed": 43,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "sad",
+            "text": "A loud crash woke Mia. She felt sad. Her hands shook with fear.",
+            "local_nll": 2.984046697616577,
+            "delta_nll": -0.9777700901031494,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "hurt and",
+            "text": "A loud crash woke Mia. She felt hurt and. Her hands shook with fear.",
+            "local_nll": 4.0661234855651855,
+            "delta_nll": 0.10430669784545898,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-003",
+        "category": "emotion",
+        "text": "Sam had not eaten all day. He felt full. His stomach growled.",
+        "start": 35,
+        "end": 39,
+        "accepted": [
+          "hungry",
+          "very hungry"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8527.986900007818,
+        "candidates": [
+          {
+            "replacement": "very sick",
+            "text": "Sam had not eaten all day. He felt very sick. His stomach growled.",
+            "local_nll": 3.2959225177764893,
+            "delta_nll": -1.654714822769165,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "sick",
+            "text": "Sam had not eaten all day. He felt sick. His stomach growled.",
+            "local_nll": 4.010621547698975,
+            "delta_nll": -0.9400157928466797,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "sad",
+            "text": "Sam had not eaten all day. He felt sad. His stomach growled.",
+            "local_nll": 4.304111003875732,
+            "delta_nll": -0.6465263366699219,
+            "seed": 45,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "empty",
+            "text": "Sam had not eaten all day. He felt empty. His stomach growled.",
+            "local_nll": 4.655590534210205,
+            "delta_nll": -0.2950468063354492,
+            "seed": 43,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "lonely",
+            "text": "Sam had not eaten all day. He felt lonely. His stomach growled.",
+            "local_nll": 4.819777488708496,
+            "delta_nll": -0.1308598518371582,
+            "seed": 44,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-004",
+        "category": "emotion",
+        "text": "The baby had played for hours. She felt awake. She yawned and closed her eyes.",
+        "start": 40,
+        "end": 45,
+        "accepted": [
+          "tired",
+          "sleepy",
+          "very tired"
+        ],
+        "top1": false,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9030.51960002631,
+        "candidates": [
+          {
+            "replacement": "so tired",
+            "text": "The baby had played for hours. She felt so tired. She yawned and closed her eyes.",
+            "local_nll": 1.4498100280761719,
+            "delta_nll": -1.1887731552124023,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "sleepy",
+            "text": "The baby had played for hours. She felt sleepy. She yawned and closed her eyes.",
+            "local_nll": 1.5778332948684692,
+            "delta_nll": -1.060749888420105,
+            "seed": 45,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "tired",
+            "text": "The baby had played for hours. She felt tired. She yawned and closed her eyes.",
+            "local_nll": 1.6561245918273926,
+            "delta_nll": -0.9824585914611816,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "happy",
+            "text": "The baby had played for hours. She felt happy. She yawned and closed her eyes.",
+            "local_nll": 1.9473457336425781,
+            "delta_nll": -0.6912374496459961,
+            "seed": 43,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-005",
+        "category": "emotion",
+        "text": "Dad came home with a puppy. Ana was angry. She smiled and hugged her new pet.",
+        "start": 36,
+        "end": 41,
+        "accepted": [
+          "happy",
+          "excited",
+          "very happy"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 7989.966900029685,
+        "candidates": [
+          {
+            "replacement": "very happy",
+            "text": "Dad came home with a puppy. Ana was very happy. She smiled and hugged her new pet.",
+            "local_nll": 1.6798595190048218,
+            "delta_nll": -1.4040042161941528,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "happy",
+            "text": "Dad came home with a puppy. Ana was happy. She smiled and hugged her new pet.",
+            "local_nll": 2.089244842529297,
+            "delta_nll": -0.9946188926696777,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-006",
+        "category": "object",
+        "text": "Mia had a blue cup. She drank from her red cup. It was the same blue cup.",
+        "start": 39,
+        "end": 42,
+        "accepted": [
+          "blue"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9763.640400022268,
+        "candidates": [
+          {
+            "replacement": "blue",
+            "text": "Mia had a blue cup. She drank from her blue cup. It was the same blue cup.",
+            "local_nll": 1.8929840326309204,
+            "delta_nll": -0.20647656917572021,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "blue red",
+            "text": "Mia had a blue cup. She drank from her blue red cup. It was the same blue cup.",
+            "local_nll": 2.615302801132202,
+            "delta_nll": 0.5158421993255615,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-007",
+        "category": "object",
+        "text": "Ben put on his red hat. His green hat kept his head warm. He loved its red color.",
+        "start": 28,
+        "end": 33,
+        "accepted": [
+          "red"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8894.344099971931,
+        "candidates": [
+          {
+            "replacement": "red",
+            "text": "Ben put on his red hat. His red hat kept his head warm. He loved its red color.",
+            "local_nll": 3.274883270263672,
+            "delta_nll": -0.15449166297912598,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "red hat",
+            "text": "Ben put on his red hat. His red hat hat kept his head warm. He loved its red color.",
+            "local_nll": 3.6775553226470947,
+            "delta_nll": 0.24818038940429688,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-008",
+        "category": "object",
+        "text": "The dog chased a ball. It picked up the book in its mouth and brought the ball back.",
+        "start": 40,
+        "end": 44,
+        "accepted": [
+          "ball"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9381.342199980281,
+        "candidates": [
+          {
+            "replacement": "ball",
+            "text": "The dog chased a ball. It picked up the ball in its mouth and brought the ball back.",
+            "local_nll": 1.806730031967163,
+            "delta_nll": -1.093398094177246,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "ball high",
+            "text": "The dog chased a ball. It picked up the ball high in its mouth and brought the ball back.",
+            "local_nll": 2.4965665340423584,
+            "delta_nll": -0.4035615921020508,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-009",
+        "category": "object",
+        "text": "Lucy planted a seed. She watered the stone every day until the seed began to grow.",
+        "start": 37,
+        "end": 42,
+        "accepted": [
+          "seed"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9392.886199988425,
+        "candidates": [
+          {
+            "replacement": "seed",
+            "text": "Lucy planted a seed. She watered the seed every day until the seed began to grow.",
+            "local_nll": 1.2028683423995972,
+            "delta_nll": -0.9530504941940308,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "seed every",
+            "text": "Lucy planted a seed. She watered the seed every every day until the seed began to grow.",
+            "local_nll": 2.1768131256103516,
+            "delta_nll": 0.020894289016723633,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-010",
+        "category": "object",
+        "text": "Tom opened his book. He read the shoe until he reached the last page.",
+        "start": 33,
+        "end": 37,
+        "accepted": [
+          "book",
+          "story"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8258.018399996217,
+        "candidates": [
+          {
+            "replacement": "book",
+            "text": "Tom opened his book. He read the book until he reached the last page.",
+            "local_nll": 2.6008102893829346,
+            "delta_nll": -1.7998721599578857,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "same book",
+            "text": "Tom opened his book. He read the same book until he reached the last page.",
+            "local_nll": 2.8546838760375977,
+            "delta_nll": -1.5459985733032227,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-011",
+        "category": "object",
+        "text": "Mom baked a cake. She cut the chair into slices and served the cake.",
+        "start": 30,
+        "end": 35,
+        "accepted": [
+          "cake"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 7888.723700016271,
+        "candidates": [
+          {
+            "replacement": "cake",
+            "text": "Mom baked a cake. She cut the cake into slices and served the cake.",
+            "local_nll": 2.439939022064209,
+            "delta_nll": -1.1358962059020996,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "cake with",
+            "text": "Mom baked a cake. She cut the cake with into slices and served the cake.",
+            "local_nll": 4.034748077392578,
+            "delta_nll": 0.45891284942626953,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-012",
+        "category": "state",
+        "text": "The box was empty. There was something inside. It contained nothing at all.",
+        "start": 29,
+        "end": 38,
+        "accepted": [
+          "nothing"
+        ],
+        "top1": false,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9326.414599956479,
+        "candidates": [
+          {
+            "replacement": "no box",
+            "text": "The box was empty. There was no box inside. It contained nothing at all.",
+            "local_nll": 3.3722236156463623,
+            "delta_nll": -0.3574669361114502,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "nothing",
+            "text": "The box was empty. There was nothing inside. It contained nothing at all.",
+            "local_nll": 3.3778882026672363,
+            "delta_nll": -0.35180234909057617,
+            "seed": 47,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "no",
+            "text": "The box was empty. There was no inside. It contained nothing at all.",
+            "local_nll": 3.775376558303833,
+            "delta_nll": 0.04568600654602051,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-013",
+        "category": "state",
+        "text": "The rain soaked his coat. His coat was dry. Water dripped from it.",
+        "start": 39,
+        "end": 42,
+        "accepted": [
+          "wet",
+          "very wet"
+        ],
+        "top1": false,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9151.534699951299,
+        "candidates": [
+          {
+            "replacement": "so warm",
+            "text": "The rain soaked his coat. His coat was so warm. Water dripped from it.",
+            "local_nll": 3.9904234409332275,
+            "delta_nll": -0.15092062950134277,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "wet",
+            "text": "The rain soaked his coat. His coat was wet. Water dripped from it.",
+            "local_nll": 4.000153541564941,
+            "delta_nll": -0.1411905288696289,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "tight",
+            "text": "The rain soaked his coat. His coat was tight. Water dripped from it.",
+            "local_nll": 4.274111747741699,
+            "delta_nll": 0.1327676773071289,
+            "seed": 43,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-014",
+        "category": "state",
+        "text": "The fire went out. The room grew hot. Everyone needed a blanket.",
+        "start": 33,
+        "end": 36,
+        "accepted": [
+          "cold",
+          "colder"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 4999.301299976651,
+        "candidates": [
+          {
+            "replacement": "bigger",
+            "text": "The fire went out. The room grew bigger. Everyone needed a blanket.",
+            "local_nll": 3.8771097660064697,
+            "delta_nll": 0.24424958229064941,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "dark.",
+            "text": "The fire went out. The room grew dark.. Everyone needed a blanket.",
+            "local_nll": 7.046749591827393,
+            "delta_nll": 3.4138894081115723,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-015",
+        "category": "state",
+        "text": "Dad turned off the only lamp. The room became bright. Nobody could see in the dark.",
+        "start": 46,
+        "end": 52,
+        "accepted": [
+          "dark"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8461.93679998396,
+        "candidates": [
+          {
+            "replacement": "dark",
+            "text": "Dad turned off the only lamp. The room became dark. Nobody could see in the dark.",
+            "local_nll": 2.704914093017578,
+            "delta_nll": -0.6526403427124023,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "dark inside",
+            "text": "Dad turned off the only lamp. The room became dark inside. Nobody could see in the dark.",
+            "local_nll": 2.8470041751861572,
+            "delta_nll": -0.5105502605438232,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-016",
+        "category": "state",
+        "text": "The door was locked. Mia could open it. She needed the key first.",
+        "start": 31,
+        "end": 35,
+        "accepted": [
+          "not open",
+          "not unlock"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 11749.790300033055,
+        "candidates": [
+          {
+            "replacement": "not open",
+            "text": "The door was locked. Mia could not open it. She needed the key first.",
+            "local_nll": 2.0357096195220947,
+            "delta_nll": -0.9331834316253662,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "unlock",
+            "text": "The door was locked. Mia could unlock it. She needed the key first.",
+            "local_nll": 2.937809467315674,
+            "delta_nll": -0.03108358383178711,
+            "seed": 47,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "see",
+            "text": "The door was locked. Mia could see it. She needed the key first.",
+            "local_nll": 3.2311155796051025,
+            "delta_nll": 0.2622225284576416,
+            "seed": 43,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "not",
+            "text": "The door was locked. Mia could not it. She needed the key first.",
+            "local_nll": 3.435839891433716,
+            "delta_nll": 0.4669468402862549,
+            "seed": 44,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-017",
+        "category": "state",
+        "text": "Lucy gave away all her cookies. She had many cookies left. Her plate was empty.",
+        "start": 40,
+        "end": 44,
+        "accepted": [
+          "no",
+          "zero"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8999.053300009109,
+        "candidates": [
+          {
+            "replacement": "no",
+            "text": "Lucy gave away all her cookies. She had no cookies left. Her plate was empty.",
+            "local_nll": 2.2807083129882812,
+            "delta_nll": -0.4817781448364258,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "her",
+            "text": "Lucy gave away all her cookies. She had her cookies left. Her plate was empty.",
+            "local_nll": 3.091399908065796,
+            "delta_nll": 0.32891345024108887,
+            "seed": 45,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "nothing much",
+            "text": "Lucy gave away all her cookies. She had nothing much cookies left. Her plate was empty.",
+            "local_nll": 3.533686876296997,
+            "delta_nll": 0.77120041847229,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-018",
+        "category": "location",
+        "text": "The children stayed inside the house. They played outside all afternoon without leaving the house.",
+        "start": 50,
+        "end": 57,
+        "accepted": [
+          "inside",
+          "indoors"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9988.346400030423,
+        "candidates": [
+          {
+            "replacement": "together",
+            "text": "The children stayed inside the house. They played together all afternoon without leaving the house.",
+            "local_nll": 2.638705015182495,
+            "delta_nll": -0.3856489658355713,
+            "seed": 43,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "in",
+            "text": "The children stayed inside the house. They played in all afternoon without leaving the house.",
+            "local_nll": 3.461280345916748,
+            "delta_nll": 0.43692636489868164,
+            "seed": 44,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "together and",
+            "text": "The children stayed inside the house. They played together and all afternoon without leaving the house.",
+            "local_nll": 3.5772464275360107,
+            "delta_nll": 0.5528924465179443,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "and",
+            "text": "The children stayed inside the house. They played and all afternoon without leaving the house.",
+            "local_nll": 3.9774365425109863,
+            "delta_nll": 0.9530825614929199,
+            "seed": 45,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "until",
+            "text": "The children stayed inside the house. They played until all afternoon without leaving the house.",
+            "local_nll": 4.416553974151611,
+            "delta_nll": 1.392199993133545,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-019",
+        "category": "location",
+        "text": "Tom put his toy under the bed. Later he found it on the bed, exactly where he had left it.",
+        "start": 49,
+        "end": 51,
+        "accepted": [
+          "under",
+          "underneath",
+          "beneath"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 11453.233200008981,
+        "candidates": [
+          {
+            "replacement": "under",
+            "text": "Tom put his toy under the bed. Later he found it under the bed, exactly where he had left it.",
+            "local_nll": 2.525667667388916,
+            "delta_nll": -0.03739523887634277,
+            "seed": 43,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "in",
+            "text": "Tom put his toy under the bed. Later he found it in the bed, exactly where he had left it.",
+            "local_nll": 2.987260341644287,
+            "delta_nll": 0.4241974353790283,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "outside in",
+            "text": "Tom put his toy under the bed. Later he found it outside in the bed, exactly where he had left it.",
+            "local_nll": 3.5856447219848633,
+            "delta_nll": 1.0225818157196045,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-020",
+        "category": "location",
+        "text": "The bird sat in its nest. It stayed in the pond all night and left the nest at dawn.",
+        "start": 43,
+        "end": 47,
+        "accepted": [
+          "nest"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9637.721700011753,
+        "candidates": [
+          {
+            "replacement": "nest",
+            "text": "The bird sat in its nest. It stayed in the nest all night and left the nest at dawn.",
+            "local_nll": 4.086463928222656,
+            "delta_nll": -0.5991606712341309,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "nest for",
+            "text": "The bird sat in its nest. It stayed in the nest for all night and left the nest at dawn.",
+            "local_nll": 4.189938545227051,
+            "delta_nll": -0.49568605422973633,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-021",
+        "category": "location",
+        "text": "The fish lived in a pond. It swam in the sky while the other fish watched.",
+        "start": 41,
+        "end": 44,
+        "accepted": [
+          "pond",
+          "water"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9988.252500013914,
+        "candidates": [
+          {
+            "replacement": "pond",
+            "text": "The fish lived in a pond. It swam in the pond while the other fish watched.",
+            "local_nll": 2.2504799365997314,
+            "delta_nll": -0.6633124351501465,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "pond all",
+            "text": "The fish lived in a pond. It swam in the pond all while the other fish watched.",
+            "local_nll": 2.7249557971954346,
+            "delta_nll": -0.18883657455444336,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-022",
+        "category": "location",
+        "text": "Mia hid the key in her pocket. She reached into her shoe and took the key out of her pocket.",
+        "start": 52,
+        "end": 56,
+        "accepted": [
+          "pocket"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8372.922400012612,
+        "candidates": [
+          {
+            "replacement": "pocket",
+            "text": "Mia hid the key in her pocket. She reached into her pocket and took the key out of her pocket.",
+            "local_nll": 1.273215651512146,
+            "delta_nll": -1.0053907632827759,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "pocket out",
+            "text": "Mia hid the key in her pocket. She reached into her pocket out and took the key out of her pocket.",
+            "local_nll": 2.179628610610962,
+            "delta_nll": -0.09897780418395996,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-023",
+        "category": "location",
+        "text": "The children sat at a table. Their plates were on the floor. They ate from the table.",
+        "start": 54,
+        "end": 59,
+        "accepted": [
+          "table"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8577.03849999234,
+        "candidates": [
+          {
+            "replacement": "table",
+            "text": "The children sat at a table. Their plates were on the table. They ate from the table.",
+            "local_nll": 2.0200307369232178,
+            "delta_nll": -0.32021236419677734,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "table table",
+            "text": "The children sat at a table. Their plates were on the table table. They ate from the table.",
+            "local_nll": 2.6028740406036377,
+            "delta_nll": 0.2626309394836426,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-024",
+        "category": "identity",
+        "text": "Lily was a little girl. He put on her coat and went out.",
+        "start": 24,
+        "end": 26,
+        "accepted": [
+          "She"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 7756.475000001956,
+        "candidates": [
+          {
+            "replacement": "She",
+            "text": "Lily was a little girl. She put on her coat and went out.",
+            "local_nll": 2.7124745845794678,
+            "delta_nll": -1.2877418994903564,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "She always",
+            "text": "Lily was a little girl. She always put on her coat and went out.",
+            "local_nll": 2.7400081157684326,
+            "delta_nll": -1.2602083683013916,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-025",
+        "category": "identity",
+        "text": "Tom was a little boy. She picked up his toy and smiled.",
+        "start": 22,
+        "end": 25,
+        "accepted": [
+          "He"
+        ],
+        "top1": false,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9070.599000027869,
+        "candidates": [
+          {
+            "replacement": "He always",
+            "text": "Tom was a little boy. He always picked up his toy and smiled.",
+            "local_nll": 2.9059410095214844,
+            "delta_nll": -2.069857120513916,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "He",
+            "text": "Tom was a little boy. He picked up his toy and smiled.",
+            "local_nll": 3.0164008140563965,
+            "delta_nll": -1.959397315979004,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-026",
+        "category": "identity",
+        "text": "Two girls went to the park. She played together until it was time to go home.",
+        "start": 28,
+        "end": 31,
+        "accepted": [
+          "They"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 7532.9728000215255,
+        "candidates": [
+          {
+            "replacement": "They",
+            "text": "Two girls went to the park. They played together until it was time to go home.",
+            "local_nll": 1.061181902885437,
+            "delta_nll": -0.6092512607574463,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "They both",
+            "text": "Two girls went to the park. They both played together until it was time to go home.",
+            "local_nll": 1.5472925901412964,
+            "delta_nll": -0.12314057350158691,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-027",
+        "category": "identity",
+        "text": "The puppy was a small dog. The cat wagged its tail and barked.",
+        "start": 31,
+        "end": 34,
+        "accepted": [
+          "dog",
+          "puppy"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 7175.8924999739975,
+        "candidates": [
+          {
+            "replacement": "puppy",
+            "text": "The puppy was a small dog. The puppy wagged its tail and barked.",
+            "local_nll": 1.7561233043670654,
+            "delta_nll": -0.7928619384765625,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "puppy was",
+            "text": "The puppy was a small dog. The puppy was wagged its tail and barked.",
+            "local_nll": 2.086467742919922,
+            "delta_nll": -0.46251749992370605,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-028",
+        "category": "identity",
+        "text": "Mia and Ben were friends. He both liked the same game.",
+        "start": 26,
+        "end": 28,
+        "accepted": [
+          "They"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9032.00010000728,
+        "candidates": [
+          {
+            "replacement": "They",
+            "text": "Mia and Ben were friends. They both liked the same game.",
+            "local_nll": 3.1119418144226074,
+            "delta_nll": -2.2636661529541016,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "They both",
+            "text": "Mia and Ben were friends. They both both liked the same game.",
+            "local_nll": 4.403751373291016,
+            "delta_nll": -0.9718565940856934,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-029",
+        "category": "identity",
+        "text": "The bird built a nest. The fish laid an egg in its nest.",
+        "start": 27,
+        "end": 31,
+        "accepted": [
+          "bird"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8718.591399956495,
+        "candidates": [
+          {
+            "replacement": "bird",
+            "text": "The bird built a nest. The bird laid an egg in its nest.",
+            "local_nll": 2.5404152870178223,
+            "delta_nll": -1.4948601722717285,
+            "seed": 44,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "bird had",
+            "text": "The bird built a nest. The bird had laid an egg in its nest.",
+            "local_nll": 2.8085529804229736,
+            "delta_nll": -1.2267224788665771,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "nest",
+            "text": "The bird built a nest. The nest laid an egg in its nest.",
+            "local_nll": 3.3158326148986816,
+            "delta_nll": -0.7194428443908691,
+            "seed": 42,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-030",
+        "category": "agreement",
+        "text": "Yesterday, Tom walk to the park. He stayed there all afternoon.",
+        "start": 15,
+        "end": 19,
+        "accepted": [
+          "walked"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 8293.252200004645,
+        "candidates": [
+          {
+            "replacement": "went",
+            "text": "Yesterday, Tom went to the park. He stayed there all afternoon.",
+            "local_nll": 2.025803804397583,
+            "delta_nll": -1.083554983139038,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "was going",
+            "text": "Yesterday, Tom was going to the park. He stayed there all afternoon.",
+            "local_nll": 2.29357647895813,
+            "delta_nll": -0.8157823085784912,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-031",
+        "category": "agreement",
+        "text": "Every morning, she eat her breakfast before school.",
+        "start": 19,
+        "end": 22,
+        "accepted": [
+          "eats"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9243.057999992743,
+        "candidates": [
+          {
+            "replacement": "ate",
+            "text": "Every morning, she ate her breakfast before school.",
+            "local_nll": 2.8415029048919678,
+            "delta_nll": -1.0209369659423828,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "would take",
+            "text": "Every morning, she would take her breakfast before school.",
+            "local_nll": 3.083280563354492,
+            "delta_nll": -0.7791593074798584,
+            "seed": 46,
+            "masked_tokens": 2
+          },
+          {
+            "replacement": "took",
+            "text": "Every morning, she took her breakfast before school.",
+            "local_nll": 3.5934808254241943,
+            "delta_nll": -0.26895904541015625,
+            "seed": 47,
+            "masked_tokens": 1
+          }
+        ]
+      },
+      {
+        "id": "challenge-032",
+        "category": "agreement",
+        "text": "There was three apples on the table.",
+        "start": 6,
+        "end": 9,
+        "accepted": [
+          "were",
+          "are"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 6648.842299997341,
+        "candidates": [
+          {
+            "replacement": "were",
+            "text": "There were three apples on the table.",
+            "local_nll": 3.30774188041687,
+            "delta_nll": -0.2922806739807129,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "was a",
+            "text": "There was a three apples on the table.",
+            "local_nll": 3.4751503467559814,
+            "delta_nll": -0.12487220764160156,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-033",
+        "category": "agreement",
+        "text": "The two dogs was playing together in the garden.",
+        "start": 13,
+        "end": 16,
+        "accepted": [
+          "were"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 6791.102899995167,
+        "candidates": [
+          {
+            "replacement": "were",
+            "text": "The two dogs were playing together in the garden.",
+            "local_nll": 0.8927320241928101,
+            "delta_nll": -1.2346843481063843,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "were lived",
+            "text": "The two dogs were lived playing together in the garden.",
+            "local_nll": 2.902683973312378,
+            "delta_nll": 0.7752676010131836,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-034",
+        "category": "agreement",
+        "text": "Yesterday, Mia go home after school.",
+        "start": 15,
+        "end": 17,
+        "accepted": [
+          "went"
+        ],
+        "top1": true,
+        "top3": true,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 7532.443500007503,
+        "candidates": [
+          {
+            "replacement": "went",
+            "text": "Yesterday, Mia went home after school.",
+            "local_nll": 3.7457165718078613,
+            "delta_nll": -1.2745728492736816,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "and his",
+            "text": "Yesterday, Mia and his home after school.",
+            "local_nll": 5.3372273445129395,
+            "delta_nll": 0.3169379234313965,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      },
+      {
+        "id": "challenge-035",
+        "category": "agreement",
+        "text": "He gave me a apple. I ate the apple.",
+        "start": 11,
+        "end": 12,
+        "accepted": [
+          "an"
+        ],
+        "top1": false,
+        "top3": false,
+        "context_preserved": true,
+        "empty": false,
+        "latency_ms": 9703.130400041118,
+        "candidates": [
+          {
+            "replacement": "the",
+            "text": "He gave me the apple. I ate the apple.",
+            "local_nll": 2.6204304695129395,
+            "delta_nll": -0.14756226539611816,
+            "seed": 42,
+            "masked_tokens": 1
+          },
+          {
+            "replacement": "the banana",
+            "text": "He gave me the banana apple. I ate the apple.",
+            "local_nll": 3.63551926612854,
+            "delta_nll": 0.8675265312194824,
+            "seed": 46,
+            "masked_tokens": 2
+          }
+        ]
+      }
+    ]
+  }
+}

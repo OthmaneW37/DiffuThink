@@ -1,0 +1,74 @@
+{
+  "model": "runs/storypatch-13m/best",
+  "weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+  "rule": "Lowest validation span NLL + .25 causal NLL; span improvement and <=10% causal NLL regression required",
+  "test_not_used_for_selection": true,
+  "validation": [
+    {
+      "label": "Published 13M",
+      "model": "runs/stories-512/best",
+      "validation_span": {
+        "nll": 3.7149850261700266,
+        "token_accuracy": 0.2733964248159832,
+        "parallel_exact_match": 0.11328125,
+        "targets": 1902,
+        "examples": 256,
+        "meaning": "Exact reference reconstruction; valid alternative wording can score zero"
+      },
+      "validation_causal": {
+        "nll": 1.487570929843493,
+        "perplexity": 4.426330582383125,
+        "accuracy": 0.6266838784900789,
+        "tokens": 48029
+      },
+      "selection_score": 4.0868777586309,
+      "report": "baseline.json",
+      "parameters": 13439680,
+      "weights_sha256": "4a498ee7c247e3a4422aa59f06ac1948e7bfae009b6bd12e2ca1dee18dcca5f4"
+    },
+    {
+      "label": "Adapted 13M",
+      "model": "runs/storypatch-13m/best",
+      "validation_span": {
+        "nll": 3.566066192402323,
+        "token_accuracy": 0.2854889589905363,
+        "parallel_exact_match": 0.1171875,
+        "targets": 1902,
+        "examples": 256,
+        "meaning": "Exact reference reconstruction; valid alternative wording can score zero"
+      },
+      "validation_causal": {
+        "nll": 1.5066558806756074,
+        "perplexity": 4.511618149715976,
+        "accuracy": 0.6253513502259052,
+        "tokens": 48029
+      },
+      "selection_score": 3.942730162571225,
+      "report": "adapted13m.json",
+      "parameters": 13439680,
+      "weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a"
+    },
+    {
+      "label": "Scratch 58M",
+      "model": "runs/storypatch-58m-edit/best",
+      "validation_span": {
+        "nll": 4.113018753902143,
+        "token_accuracy": 0.23080967402733965,
+        "parallel_exact_match": 0.078125,
+        "targets": 1902,
+        "examples": 256,
+        "meaning": "Exact reference reconstruction; valid alternative wording can score zero"
+      },
+      "validation_causal": {
+        "nll": 1.7533036680963585,
+        "perplexity": 5.773645411392634,
+        "accuracy": 0.5896437568968748,
+        "tokens": 48029
+      },
+      "selection_score": 4.551344670926232,
+      "report": "scratch58m.json",
+      "parameters": 58471936,
+      "weights_sha256": "772927eb6a79de6284b6e163a39df9ed4d44c7b52a53517cb80467975b090bc7"
+    }
+  ]
+}

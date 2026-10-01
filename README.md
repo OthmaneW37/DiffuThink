@@ -8,6 +8,26 @@ The contribution is the constrained, reversible workflow and visible model behav
 
 **Published model:** [OthmaneW/DiffuThink-Story-512](https://huggingface.co/OthmaneW/DiffuThink-Story-512)
 
+## StoryPatch v2 experiment
+
+Whole-word span training is implemented and measured. A 13.44M adaptation and a
+58.47M model initialized from scratch were trained locally. Validation selects
+the adapted 13M: iterative exact reconstruction improves from 14.1% to 18.8% on
+64 held-out passages, while causal perplexity and top-three diagnostic coverage
+slightly regress. The larger model does not beat the smaller one at this budget.
+
+See [all results and failures](reports/storypatch-v2/RESULTATS.md),
+[reproduction protocol](docs/STORYPATCH_V2.md), and
+[the French explanation](docs/STORYPATCH_V2_EXPLIQUE.md).
+This local experiment does not replace the previously published Hub checkpoint.
+
+```powershell
+python -m diffuthink.v2 serve --model runs/storypatch-13m/best --device cpu --port 7862
+```
+
+The standalone local release folder `artifacts/StoryPatch-v2` includes its own
+inference source, checkpoint, model card, evidence and checksums.
+
 ## Try locally
 
 ```powershell

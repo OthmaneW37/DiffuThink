@@ -41,6 +41,6 @@ $('explore').onclick=async()=>{if(!selection||busy)return;busy=true;$('explore')
  }catch(e){$('status').textContent=e.message}finally{busy=false;$('explore').disabled=!selection}};
 $('undo').onclick=()=>{if(previous===null)return;$('story').value=previous;previous=null;$('undo').disabled=true;$('results').replaceChildren();selection=null;$('selection').textContent='Sélectionne un passage';$('explore').disabled=true;$('status').textContent='Texte précédent restauré.'};
 $('download').onclick=()=>{const url=URL.createObjectURL(new Blob([$('story').value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='storypatch.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
-fetch('/api/info').then(r=>r.json()).then(x=>{$('modelinfo').textContent=(x.parameters/1e6).toFixed(2)+' M paramètres · '+x.manifest.max_length+' tokens de contexte · '+x.manifest.splits.train.documents.toLocaleString('fr')+' récits · poids entraînés depuis zéro'});
+fetch('/api/info').then(r=>r.json()).then(x=>{$('modelinfo').textContent=(x.editing_manifest?'StoryPatch v2 · ':'')+(x.parameters/1e6).toFixed(2)+' M paramètres · '+x.manifest.max_length+' tokens de contexte · '+x.manifest.splits.train.documents.toLocaleString('fr')+' récits sources · poids entraînés depuis zéro'});
 example('mood');
 </script></html>

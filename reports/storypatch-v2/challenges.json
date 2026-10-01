@@ -1,0 +1,389 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "challenge-000",
+      "category": "emotion",
+      "text": "Lily lost her favorite toy. She felt happy. Tears ran down her face.",
+      "start": 37,
+      "end": 42,
+      "accepted": [
+        "sad",
+        "very sad",
+        "upset"
+      ]
+    },
+    {
+      "id": "challenge-001",
+      "category": "emotion",
+      "text": "Ben won the game. He felt sad. He smiled and cheered.",
+      "start": 26,
+      "end": 29,
+      "accepted": [
+        "happy",
+        "very happy",
+        "excited",
+        "proud"
+      ]
+    },
+    {
+      "id": "challenge-002",
+      "category": "emotion",
+      "text": "A loud crash woke Mia. She felt calm. Her hands shook with fear.",
+      "start": 32,
+      "end": 36,
+      "accepted": [
+        "scared",
+        "afraid",
+        "frightened"
+      ]
+    },
+    {
+      "id": "challenge-003",
+      "category": "emotion",
+      "text": "Sam had not eaten all day. He felt full. His stomach growled.",
+      "start": 35,
+      "end": 39,
+      "accepted": [
+        "hungry",
+        "very hungry"
+      ]
+    },
+    {
+      "id": "challenge-004",
+      "category": "emotion",
+      "text": "The baby had played for hours. She felt awake. She yawned and closed her eyes.",
+      "start": 40,
+      "end": 45,
+      "accepted": [
+        "tired",
+        "sleepy",
+        "very tired"
+      ]
+    },
+    {
+      "id": "challenge-005",
+      "category": "emotion",
+      "text": "Dad came home with a puppy. Ana was angry. She smiled and hugged her new pet.",
+      "start": 36,
+      "end": 41,
+      "accepted": [
+        "happy",
+        "excited",
+        "very happy"
+      ]
+    },
+    {
+      "id": "challenge-006",
+      "category": "object",
+      "text": "Mia had a blue cup. She drank from her red cup. It was the same blue cup.",
+      "start": 39,
+      "end": 42,
+      "accepted": [
+        "blue"
+      ]
+    },
+    {
+      "id": "challenge-007",
+      "category": "object",
+      "text": "Ben put on his red hat. His green hat kept his head warm. He loved its red color.",
+      "start": 28,
+      "end": 33,
+      "accepted": [
+        "red"
+      ]
+    },
+    {
+      "id": "challenge-008",
+      "category": "object",
+      "text": "The dog chased a ball. It picked up the book in its mouth and brought the ball back.",
+      "start": 40,
+      "end": 44,
+      "accepted": [
+        "ball"
+      ]
+    },
+    {
+      "id": "challenge-009",
+      "category": "object",
+      "text": "Lucy planted a seed. She watered the stone every day until the seed began to grow.",
+      "start": 37,
+      "end": 42,
+      "accepted": [
+        "seed"
+      ]
+    },
+    {
+      "id": "challenge-010",
+      "category": "object",
+      "text": "Tom opened his book. He read the shoe until he reached the last page.",
+      "start": 33,
+      "end": 37,
+      "accepted": [
+        "book",
+        "story"
+      ]
+    },
+    {
+      "id": "challenge-011",
+      "category": "object",
+      "text": "Mom baked a cake. She cut the chair into slices and served the cake.",
+      "start": 30,
+      "end": 35,
+      "accepted": [
+        "cake"
+      ]
+    },
+    {
+      "id": "challenge-012",
+      "category": "state",
+      "text": "The box was empty. There was something inside. It contained nothing at all.",
+      "start": 29,
+      "end": 38,
+      "accepted": [
+        "nothing"
+      ]
+    },
+    {
+      "id": "challenge-013",
+      "category": "state",
+      "text": "The rain soaked his coat. His coat was dry. Water dripped from it.",
+      "start": 39,
+      "end": 42,
+      "accepted": [
+        "wet",
+        "very wet"
+      ]
+    },
+    {
+      "id": "challenge-014",
+      "category": "state",
+      "text": "The fire went out. The room grew hot. Everyone needed a blanket.",
+      "start": 33,
+      "end": 36,
+      "accepted": [
+        "cold",
+        "colder"
+      ]
+    },
+    {
+      "id": "challenge-015",
+      "category": "state",
+      "text": "Dad turned off the only lamp. The room became bright. Nobody could see in the dark.",
+      "start": 46,
+      "end": 52,
+      "accepted": [
+        "dark"
+      ]
+    },
+    {
+      "id": "challenge-016",
+      "category": "state",
+      "text": "The door was locked. Mia could open it. She needed the key first.",
+      "start": 31,
+      "end": 35,
+      "accepted": [
+        "not open",
+        "not unlock"
+      ]
+    },
+    {
+      "id": "challenge-017",
+      "category": "state",
+      "text": "Lucy gave away all her cookies. She had many cookies left. Her plate was empty.",
+      "start": 40,
+      "end": 44,
+      "accepted": [
+        "no",
+        "zero"
+      ]
+    },
+    {
+      "id": "challenge-018",
+      "category": "location",
+      "text": "The children stayed inside the house. They played outside all afternoon without leaving the house.",
+      "start": 50,
+      "end": 57,
+      "accepted": [
+        "inside",
+        "indoors"
+      ]
+    },
+    {
+      "id": "challenge-019",
+      "category": "location",
+      "text": "Tom put his toy under the bed. Later he found it on the bed, exactly where he had left it.",
+      "start": 49,
+      "end": 51,
+      "accepted": [
+        "under",
+        "underneath",
+        "beneath"
+      ]
+    },
+    {
+      "id": "challenge-020",
+      "category": "location",
+      "text": "The bird sat in its nest. It stayed in the pond all night and left the nest at dawn.",
+      "start": 43,
+      "end": 47,
+      "accepted": [
+        "nest"
+      ]
+    },
+    {
+      "id": "challenge-021",
+      "category": "location",
+      "text": "The fish lived in a pond. It swam in the sky while the other fish watched.",
+      "start": 41,
+      "end": 44,
+      "accepted": [
+        "pond",
+        "water"
+      ]
+    },
+    {
+      "id": "challenge-022",
+      "category": "location",
+      "text": "Mia hid the key in her pocket. She reached into her shoe and took the key out of her pocket.",
+      "start": 52,
+      "end": 56,
+      "accepted": [
+        "pocket"
+      ]
+    },
+    {
+      "id": "challenge-023",
+      "category": "location",
+      "text": "The children sat at a table. Their plates were on the floor. They ate from the table.",
+      "start": 54,
+      "end": 59,
+      "accepted": [
+        "table"
+      ]
+    },
+    {
+      "id": "challenge-024",
+      "category": "identity",
+      "text": "Lily was a little girl. He put on her coat and went out.",
+      "start": 24,
+      "end": 26,
+      "accepted": [
+        "She"
+      ]
+    },
+    {
+      "id": "challenge-025",
+      "category": "identity",
+      "text": "Tom was a little boy. She picked up his toy and smiled.",
+      "start": 22,
+      "end": 25,
+      "accepted": [
+        "He"
+      ]
+    },
+    {
+      "id": "challenge-026",
+      "category": "identity",
+      "text": "Two girls went to the park. She played together until it was time to go home.",
+      "start": 28,
+      "end": 31,
+      "accepted": [
+        "They"
+      ]
+    },
+    {
+      "id": "challenge-027",
+      "category": "identity",
+      "text": "The puppy was a small dog. The cat wagged its tail and barked.",
+      "start": 31,
+      "end": 34,
+      "accepted": [
+        "dog",
+        "puppy"
+      ]
+    },
+    {
+      "id": "challenge-028",
+      "category": "identity",
+      "text": "Mia and Ben were friends. He both liked the same game.",
+      "start": 26,
+      "end": 28,
+      "accepted": [
+        "They"
+      ]
+    },
+    {
+      "id": "challenge-029",
+      "category": "identity",
+      "text": "The bird built a nest. The fish laid an egg in its nest.",
+      "start": 27,
+      "end": 31,
+      "accepted": [
+        "bird"
+      ]
+    },
+    {
+      "id": "challenge-030",
+      "category": "agreement",
+      "text": "Yesterday, Tom walk to the park. He stayed there all afternoon.",
+      "start": 15,
+      "end": 19,
+      "accepted": [
+        "walked"
+      ]
+    },
+    {
+      "id": "challenge-031",
+      "category": "agreement",
+      "text": "Every morning, she eat her breakfast before school.",
+      "start": 19,
+      "end": 22,
+      "accepted": [
+        "eats"
+      ]
+    },
+    {
+      "id": "challenge-032",
+      "category": "agreement",
+      "text": "There was three apples on the table.",
+      "start": 6,
+      "end": 9,
+      "accepted": [
+        "were",
+        "are"
+      ]
+    },
+    {
+      "id": "challenge-033",
+      "category": "agreement",
+      "text": "The two dogs was playing together in the garden.",
+      "start": 13,
+      "end": 16,
+      "accepted": [
+        "were"
+      ]
+    },
+    {
+      "id": "challenge-034",
+      "category": "agreement",
+      "text": "Yesterday, Mia go home after school.",
+      "start": 15,
+      "end": 17,
+      "accepted": [
+        "went"
+      ]
+    },
+    {
+      "id": "challenge-035",
+      "category": "agreement",
+      "text": "He gave me a apple. I ate the apple.",
+      "start": 11,
+      "end": 12,
+      "accepted": [
+        "an"
+      ]
+    }
+  ],
+  "limitations": "Authored synthetic probes, no training use; exact answers are incomplete; no human rating."
+}

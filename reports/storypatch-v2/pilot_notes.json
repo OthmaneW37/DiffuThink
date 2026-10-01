@@ -1,0 +1,7 @@
+{
+  "reason": "Validation span accuracy stagnated near 6%; diagnostic CPU forward predicted one token for every masked position. Causal likelihood was improving. No non-finite loss observed.",
+  "last_recoverable_step": 2500,
+  "planned_steps": 12000,
+  "action": "Stop mixed-from-scratch pilot, continue its own weights with a causal warm-up and lower-LR span specialization. Preserve all pilot logs and checkpoints.",
+  "decision_used": "Validation and CPU diagnostics only; no new model test scores inspected."
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.12.10",
+  "torch": "2.13.0+rocm10.0.0",
+  "gpu": "AMD Radeon RX 9060 XT",
+  "gpu_memory_bytes": 17095983104,
+  "precision": "bf16 for GPU training and evaluation; fp32 for CPU smoke",
+  "attention_environment": {
+    "TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL": "1 in training runner subprocesses"
+  },
+  "notes": "Exact CPU resumption tested. Cross-device or cross-backend bitwise reproducibility is not claimed."
+}
