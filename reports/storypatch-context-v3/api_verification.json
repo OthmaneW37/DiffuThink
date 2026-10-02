@@ -1,0 +1,28 @@
+{
+  "7862": {
+    "first": "very sad",
+    "recommendation": {
+      "action": "keep",
+      "replacement": "happy",
+      "reason": "insufficient_margin",
+      "margin_threshold": 1.5,
+      "score_floor": -2
+    },
+    "preservation": true,
+    "same_candidate_pool": true,
+    "blended_formula_verified": true
+  },
+  "7863": {
+    "first": "very sad",
+    "recommendation": {
+      "action": "keep",
+      "replacement": "happy",
+      "reason": "insufficient_margin",
+      "margin_threshold": 1.5,
+      "score_floor": -2
+    },
+    "preservation": true,
+    "same_candidate_pool": true,
+    "blended_formula_verified": true
+  }
+}

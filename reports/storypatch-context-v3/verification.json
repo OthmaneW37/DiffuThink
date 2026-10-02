@@ -1,0 +1,42 @@
+{
+  "unit_tests": {
+    "passed": 46,
+    "scope": "Repository test suite, including backbone transfer and bounded ranking"
+  },
+  "javascript_syntax": "passed",
+  "api": {
+    "7862": {
+      "first": "very sad",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "happy",
+        "reason": "insufficient_margin",
+        "margin_threshold": 1.5,
+        "score_floor": -2
+      },
+      "preservation": true,
+      "same_candidate_pool": true,
+      "blended_formula_verified": true
+    },
+    "7863": {
+      "first": "very sad",
+      "recommendation": {
+        "action": "keep",
+        "replacement": "happy",
+        "reason": "insufficient_margin",
+        "margin_threshold": 1.5,
+        "score_floor": -2
+      },
+      "preservation": true,
+      "same_candidate_pool": true,
+      "blended_formula_verified": true
+    }
+  },
+  "browser": {
+    "contextual_mode": "passed",
+    "apply_and_undo": "passed",
+    "abstention_wording": "passed"
+  },
+  "human_quality_review": "not_performed",
+  "docker_build": "not_performed"
+}

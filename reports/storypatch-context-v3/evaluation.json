@@ -1,0 +1,1895 @@
+{
+  "binding": {
+    "generator_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+    "ranker_sha256": "d6626acd4513a47bc5bda4cdd805db2b5731d3e251c04ea2579dc0522d5f2a05",
+    "corpus": {
+      "version": 3,
+      "seed": 9821,
+      "source_manifest": {
+        "version": 1,
+        "source": "data/processed/stories-512",
+        "source_manifest": {
+          "dataset": "roneneldan/TinyStories",
+          "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+          "license": "cdla-sharing-1.0",
+          "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+          "synthetic": true,
+          "selection": "First unique documents in pinned source order; alternating validation/test documents",
+          "tokenizer_train_documents": 50000,
+          "vocab_size": 8192,
+          "max_length": 512,
+          "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+          "splits": {
+            "train": {
+              "documents": 500000,
+              "windows": 514199,
+              "text_tokens": 107857284,
+              "complete_story_windows": 485910,
+              "documents_sha256": "b4876f6394b78ca3560848f22195b8e125c2872621c857148b77f93e5264cc16",
+              "array_sha256": "b1fde06202d29af0d1146276d8be1bb4e5ebac1e7d767f6d58a8ca43a1aa16f1"
+            },
+            "validation": {
+              "documents": 1000,
+              "windows": 1008,
+              "text_tokens": 187038,
+              "complete_story_windows": 992,
+              "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+              "array_sha256": "92d568c80995bf436d18ab320b4644c96eed757f47a263270be4303f566fd703"
+            },
+            "test": {
+              "documents": 1000,
+              "windows": 1012,
+              "text_tokens": 188300,
+              "complete_story_windows": 988,
+              "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+              "array_sha256": "fb581db76905e21e777b1746b2c3ca5d3cb2c8b5462e15910c8b4e6d644250c9"
+            }
+          },
+          "tokenizer_source": "data/processed/stories-v2/tokenizer.json"
+        },
+        "seed": 4801,
+        "spans_per_window": 8,
+        "max_words": 12,
+        "max_span_tokens": 16,
+        "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+        "splits": {
+          "test": {
+            "rejected_quality": 1,
+            "rejected_duplicate": 0,
+            "rejected_alignment": 0,
+            "windows": 1011,
+            "candidate_spans": 8088,
+            "files": {
+              "test.npy": "419c2dfe9a0fcf03f1203914c2df0400ea4601dff19806f9e3fdfd9441c403ad",
+              "test_spans.npy": "41d835ed26a1786f6405b6d2435ed2f4c2dca22eb794b79d1a3d4cf32bca6e86",
+              "test_source_rows.npy": "aa465ccaa78b501f63bdebe5769efb165cf7f28a8fabce3451e116d09dd8891a"
+            }
+          },
+          "validation": {
+            "rejected_quality": 5,
+            "rejected_duplicate": 0,
+            "rejected_alignment": 0,
+            "windows": 1003,
+            "candidate_spans": 8024,
+            "files": {
+              "validation.npy": "f9eaf135ca2c8d291cf3d277357ed3f1dd7921305b9e51ebc79d66660f5640d8",
+              "validation_spans.npy": "612b4b04db23a3778a08a29dfd042a8e38ccf583c9a17952e3e2ee23d3716918",
+              "validation_source_rows.npy": "20ed44c2d8342befac05ea70d2bae83cc1b17d005886d992390bf710933321a2"
+            }
+          },
+          "train": {
+            "rejected_quality": 1666,
+            "rejected_duplicate": 0,
+            "rejected_alignment": 0,
+            "windows": 512533,
+            "candidate_spans": 4100264,
+            "files": {
+              "train.npy": "22dafe745270f2214b94df0c0d92f8ab20ea7d7e068249b703e4b9f558613ff2",
+              "train_spans.npy": "720e8d1e6845715c276f6813de084bd31a375b78a7523bcdb89374edf75aea40",
+              "train_source_rows.npy": "81a587e95a81cfd053f8a6f5d9c9f5d6705dd1e3156aa4ea6bad34be39f46605"
+            }
+          }
+        },
+        "supervision": "Self-supervised reconstruction; original spans are not verified corrections",
+        "deduplication": "Normalized exact window hashes across splits; no general near-deduplication claim"
+      },
+      "procedural_manifest": {
+        "version": 2,
+        "seed": 2841,
+        "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+        "license": "Apache-2.0",
+        "splits": {
+          "train": {
+            "contexts": 12000,
+            "templates": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "sha256": "05fea23d1bf65a4225d7b0c0e6d3fb288336248c5edc095b7e9410db3d9d26c2"
+          },
+          "validation": {
+            "contexts": 1200,
+            "templates": [
+              8,
+              9
+            ],
+            "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+          },
+          "test": {
+            "contexts": 300,
+            "templates": [
+              10,
+              11
+            ],
+            "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+          }
+        },
+        "mining": {
+          "contexts": 1200,
+          "added_negatives": 2699,
+          "source_corpus": {
+            "version": 2,
+            "seed": 2841,
+            "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+            "license": "Apache-2.0",
+            "splits": {
+              "train": {
+                "contexts": 12000,
+                "templates": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "sha256": "ed50146f5c2e8fc76cfe515ff121930800ad55269478476152289b3667504a31"
+              },
+              "validation": {
+                "contexts": 1200,
+                "templates": [
+                  8,
+                  9
+                ],
+                "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+              },
+              "test": {
+                "contexts": 300,
+                "templates": [
+                  10,
+                  11
+                ],
+                "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+              }
+            }
+          },
+          "generator_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+          "seed": 701,
+          "label_rule": "Closed-world exact accepted list; not human judged. Training split only."
+        }
+      },
+      "provenance": "Mixed procedural contrasts and synthetic TinyStories excerpts; no human preference labels.",
+      "license": "Corpus excerpts CDLA-Sharing-1.0; procedural material Apache-2.0.",
+      "deduplication": "Exact normalized natural excerpts across splits; original source document splits retained. No near-duplicate claim.",
+      "splits": {
+        "test": {
+          "contexts": 600,
+          "sha256": "56bde01c131ab9300a4d448306d835c655f2d88676a3ef4843751fe857656c11"
+        },
+        "validation": {
+          "contexts": 1200,
+          "sha256": "37bb6f84175073e705a818c7ae0fabcd630f53bd8d261a76ac37cc3c5c78f186"
+        },
+        "train": {
+          "contexts": 24000,
+          "sha256": "7ff87556c13ffe59bd650fd65cc16e940a0fa5e7f2f9e5175553cb525439348c"
+        }
+      }
+    },
+    "validation_contexts": 240,
+    "precision": "bf16 generator / fp32 ranker",
+    "device": "cuda",
+    "seed": 301
+  },
+  "selection": {
+    "blending": {
+      "weight": 0.05,
+      "formula": "-local_nll + weight * clip(learned_score, -8, 8)",
+      "selection": "Validation top1 improvement with no top1 loss in either corpus or procedural domain; ties prefer lower weight.",
+      "baseline": {
+        "corpus": 0.39166666666666666,
+        "procedural": 0.4166666666666667
+      },
+      "trials": [
+        {
+          "weight": 0.0,
+          "top1_by_domain": {
+            "corpus": 0.39166666666666666,
+            "procedural": 0.4166666666666667
+          },
+          "passes": true
+        },
+        {
+          "weight": 0.05,
+          "top1_by_domain": {
+            "corpus": 0.4083333333333333,
+            "procedural": 0.5583333333333333
+          },
+          "passes": true
+        },
+        {
+          "weight": 0.1,
+          "top1_by_domain": {
+            "corpus": 0.4,
+            "procedural": 0.5583333333333333
+          },
+          "passes": true
+        },
+        {
+          "weight": 0.2,
+          "top1_by_domain": {
+            "corpus": 0.39166666666666666,
+            "procedural": 0.5583333333333333
+          },
+          "passes": true
+        },
+        {
+          "weight": 0.4,
+          "top1_by_domain": {
+            "corpus": 0.38333333333333336,
+            "procedural": 0.5583333333333333
+          },
+          "passes": false
+        },
+        {
+          "weight": 0.8,
+          "top1_by_domain": {
+            "corpus": 0.35,
+            "procedural": 0.5583333333333333
+          },
+          "passes": false
+        },
+        {
+          "weight": 1.6,
+          "top1_by_domain": {
+            "corpus": 0.31666666666666665,
+            "procedural": 0.5583333333333333
+          },
+          "passes": false
+        }
+      ]
+    },
+    "calibration": {
+      "margin_threshold": 1.5,
+      "score_floor": -2,
+      "validation": {
+        "error_cases": 240,
+        "clean_cases": 240,
+        "error_corrected": 0.11666666666666667,
+        "clean_preserved": 0.9958333333333333,
+        "balanced_success": 0.55625,
+        "wrong_replacement_on_errors": 0.09583333333333334,
+        "clean_modified": 0.004166666666666652
+      },
+      "method": "Grid search on validation only: maximize balanced success subject to <=5% clean edits and <=10% wrong edits on errors.",
+      "margin_grid": [
+        0,
+        0.25,
+        0.5,
+        1,
+        1.5,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        1000000.0
+      ],
+      "score_grid": [
+        -1000000.0,
+        -4,
+        -2,
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        1000000.0
+      ],
+      "contexts": 240,
+      "limitations": "Finite synthetic validation; thresholds are not guarantees on user text."
+    }
+  },
+  "test": {
+    "all": {
+      "nll_keep_or_replace": {
+        "error_cases": 600,
+        "clean_cases": 600,
+        "error_corrected": 0.33166666666666667,
+        "clean_preserved": 0.4633333333333333,
+        "balanced_success": 0.39749999999999996,
+        "wrong_replacement_on_errors": 0.6383333333333333,
+        "clean_modified": 0.5366666666666666
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 600,
+        "clean_cases": 600,
+        "error_corrected": 0.085,
+        "clean_preserved": 0.9983333333333333,
+        "balanced_success": 0.5416666666666666,
+        "wrong_replacement_on_errors": 0.10333333333333333,
+        "clean_modified": 0.0016666666666667052
+      },
+      "same_pool_error_top1_nll": 0.34,
+      "same_pool_error_top1_ranker": 0.435,
+      "error_candidate_coverage": 0.47333333333333333,
+      "context_preserved": 1.0
+    },
+    "corpus": {
+      "nll_keep_or_replace": {
+        "error_cases": 300,
+        "clean_cases": 300,
+        "error_corrected": 0.3466666666666667,
+        "clean_preserved": 0.6333333333333333,
+        "balanced_success": 0.49,
+        "wrong_replacement_on_errors": 0.64,
+        "clean_modified": 0.3666666666666667
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 300,
+        "clean_cases": 300,
+        "error_corrected": 0.15,
+        "clean_preserved": 0.9966666666666667,
+        "balanced_success": 0.5733333333333334,
+        "wrong_replacement_on_errors": 0.19333333333333333,
+        "clean_modified": 0.0033333333333332993
+      },
+      "same_pool_error_top1_nll": 0.3466666666666667,
+      "same_pool_error_top1_ranker": 0.36333333333333334,
+      "error_candidate_coverage": 0.43666666666666665,
+      "context_preserved": 1.0
+    },
+    "procedural": {
+      "nll_keep_or_replace": {
+        "error_cases": 300,
+        "clean_cases": 300,
+        "error_corrected": 0.31666666666666665,
+        "clean_preserved": 0.29333333333333333,
+        "balanced_success": 0.305,
+        "wrong_replacement_on_errors": 0.6366666666666667,
+        "clean_modified": 0.7066666666666667
+      },
+      "learned_keep_or_replace": {
+        "error_cases": 300,
+        "clean_cases": 300,
+        "error_corrected": 0.02,
+        "clean_preserved": 1.0,
+        "balanced_success": 0.51,
+        "wrong_replacement_on_errors": 0.013333333333333334,
+        "clean_modified": 0.0
+      },
+      "same_pool_error_top1_nll": 0.3333333333333333,
+      "same_pool_error_top1_ranker": 0.5066666666666667,
+      "error_candidate_coverage": 0.51,
+      "context_preserved": 1.0
+    }
+  },
+  "bootstrap": {
+    "metric": "learned minus NLL balanced success",
+    "paired_contexts": 600,
+    "resamples": 1000,
+    "percentile_95": [
+      0.11249999999999993,
+      0.17500000000000004
+    ],
+    "limitations": "Within this procedural test; does not measure real-world validity."
+  },
+  "legacy": {
+    "summary": {
+      "nll": 0.75,
+      "blended": 0.75
+    },
+    "rows": [
+      {
+        "case": {
+          "id": "challenge-000",
+          "category": "emotion",
+          "text": "Lily lost her favorite toy. She felt happy. Tears ran down her face.",
+          "start": 37,
+          "end": 42,
+          "accepted": [
+            "sad",
+            "very sad",
+            "upset"
+          ]
+        },
+        "nll": "very sad",
+        "blended": "very sad",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "happy",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "very sad",
+            "local_nll": 2.5403027534484863,
+            "ranker_score": -2.1787380456924437,
+            "raw_ranker_score": 7.23129415512085
+          },
+          {
+            "replacement": "sad",
+            "local_nll": 2.969944953918457,
+            "ranker_score": -2.6120747327804565,
+            "raw_ranker_score": 7.15740442276001
+          }
+        ],
+        "previous_ranker_top1": "sad"
+      },
+      {
+        "case": {
+          "id": "challenge-001",
+          "category": "emotion",
+          "text": "Ben won the game. He felt sad. He smiled and cheered.",
+          "start": 26,
+          "end": 29,
+          "accepted": [
+            "happy",
+            "very happy",
+            "excited",
+            "proud"
+          ]
+        },
+        "nll": "happy",
+        "blended": "happy",
+        "recommendation": {
+          "action": "replace",
+          "replacement": "happy",
+          "reason": "learned_preference",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "happy",
+            "local_nll": 2.0426506996154785,
+            "ranker_score": -1.6426506996154786,
+            "raw_ranker_score": 8.441244125366211
+          },
+          {
+            "replacement": "proud",
+            "local_nll": 2.215261936187744,
+            "ranker_score": -1.9322461366653443,
+            "raw_ranker_score": 5.660315990447998
+          },
+          {
+            "replacement": "a happy",
+            "local_nll": 3.402787685394287,
+            "ranker_score": -3.309392035007477,
+            "raw_ranker_score": 1.867913007736206
+          }
+        ],
+        "previous_ranker_top1": "happy"
+      },
+      {
+        "case": {
+          "id": "challenge-002",
+          "category": "emotion",
+          "text": "A loud crash woke Mia. She felt calm. Her hands shook with fear.",
+          "start": 32,
+          "end": 36,
+          "accepted": [
+            "scared",
+            "afraid",
+            "frightened"
+          ]
+        },
+        "nll": "scared",
+        "blended": "scared",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "calm",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "scared",
+            "local_nll": 2.9203615188598633,
+            "ranker_score": -2.5235899448394776,
+            "raw_ranker_score": 7.935431480407715
+          },
+          {
+            "replacement": "helpless",
+            "local_nll": 2.9384212493896484,
+            "ranker_score": -2.5549498081207274,
+            "raw_ranker_score": 7.669428825378418
+          },
+          {
+            "replacement": "sad",
+            "local_nll": 2.9780538082122803,
+            "ranker_score": -2.782265305519104,
+            "raw_ranker_score": 3.9157700538635254
+          },
+          {
+            "replacement": "pain",
+            "local_nll": 3.5786001682281494,
+            "ranker_score": -3.343713164329529,
+            "raw_ranker_score": 4.697740077972412
+          },
+          {
+            "replacement": "hurt",
+            "local_nll": 3.4479033946990967,
+            "ranker_score": -3.642672824859619,
+            "raw_ranker_score": -3.895388603210449
+          },
+          {
+            "replacement": "sad,",
+            "local_nll": 3.83996844291687,
+            "ranker_score": -4.098251700401306,
+            "raw_ranker_score": -5.165665149688721
+          }
+        ],
+        "previous_ranker_top1": "scared"
+      },
+      {
+        "case": {
+          "id": "challenge-003",
+          "category": "emotion",
+          "text": "Sam had not eaten all day. He felt full. His stomach growled.",
+          "start": 35,
+          "end": 39,
+          "accepted": [
+            "hungry",
+            "very hungry"
+          ]
+        },
+        "nll": "so sad",
+        "blended": "so sad",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "full",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "so sad",
+            "local_nll": 3.548433542251587,
+            "ranker_score": -3.6275506556034087,
+            "raw_ranker_score": -1.582342267036438
+          },
+          {
+            "replacement": "sick",
+            "local_nll": 4.002574443817139,
+            "ranker_score": -4.327047228813171,
+            "raw_ranker_score": -6.489455699920654
+          },
+          {
+            "replacement": "scared",
+            "local_nll": 4.584311485290527,
+            "ranker_score": -4.541442203521728,
+            "raw_ranker_score": 0.8573856353759766
+          },
+          {
+            "replacement": "sad",
+            "local_nll": 4.279909133911133,
+            "ranker_score": -4.575915956497193,
+            "raw_ranker_score": -5.920136451721191
+          },
+          {
+            "replacement": "cold",
+            "local_nll": 4.486077785491943,
+            "ranker_score": -4.886077785491944,
+            "raw_ranker_score": -9.27464485168457
+          },
+          {
+            "replacement": "hot",
+            "local_nll": 4.683385372161865,
+            "ranker_score": -5.083385372161866,
+            "raw_ranker_score": -8.594403266906738
+          }
+        ],
+        "previous_ranker_top1": "scared"
+      },
+      {
+        "case": {
+          "id": "challenge-004",
+          "category": "emotion",
+          "text": "The baby had played for hours. She felt awake. She yawned and closed her eyes.",
+          "start": 40,
+          "end": 45,
+          "accepted": [
+            "tired",
+            "sleepy",
+            "very tired"
+          ]
+        },
+        "nll": "very tired",
+        "blended": "very tired",
+        "recommendation": {
+          "action": "replace",
+          "replacement": "very tired",
+          "reason": "learned_preference",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "very tired",
+            "local_nll": 1.4291845560073853,
+            "ranker_score": -1.0291845560073853,
+            "raw_ranker_score": 8.47041130065918
+          },
+          {
+            "replacement": "sleepy",
+            "local_nll": 1.5798200368881226,
+            "ranker_score": -1.19981529712677,
+            "raw_ranker_score": 7.600094795227051
+          },
+          {
+            "replacement": "tired",
+            "local_nll": 1.6626222133636475,
+            "ranker_score": -1.265163516998291,
+            "raw_ranker_score": 7.949173927307129
+          },
+          {
+            "replacement": "warm",
+            "local_nll": 2.351592779159546,
+            "ranker_score": -2.2616754472255707,
+            "raw_ranker_score": 1.7983466386795044
+          }
+        ],
+        "previous_ranker_top1": "warm"
+      },
+      {
+        "case": {
+          "id": "challenge-005",
+          "category": "emotion",
+          "text": "Dad came home with a puppy. Ana was angry. She smiled and hugged her new pet.",
+          "start": 36,
+          "end": 41,
+          "accepted": [
+            "happy",
+            "excited",
+            "very happy"
+          ]
+        },
+        "nll": "so happy",
+        "blended": "so happy",
+        "recommendation": {
+          "action": "replace",
+          "replacement": "so happy",
+          "reason": "learned_preference",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "so happy",
+            "local_nll": 1.6790379285812378,
+            "ranker_score": -1.6527889788150787,
+            "raw_ranker_score": 0.5249789953231812
+          },
+          {
+            "replacement": "happy",
+            "local_nll": 2.0893747806549072,
+            "ranker_score": -2.465674567222595,
+            "raw_ranker_score": -7.52599573135376
+          }
+        ],
+        "previous_ranker_top1": "so happy"
+      },
+      {
+        "case": {
+          "id": "challenge-006",
+          "category": "object",
+          "text": "Mia had a blue cup. She drank from her red cup. It was the same blue cup.",
+          "start": 39,
+          "end": 42,
+          "accepted": [
+            "blue"
+          ]
+        },
+        "nll": "blue",
+        "blended": "blue",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "red",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "blue",
+            "local_nll": 1.880785346031189,
+            "ranker_score": -1.480785346031189,
+            "raw_ranker_score": 9.894739151000977
+          },
+          {
+            "replacement": "blue blue",
+            "local_nll": 2.437495231628418,
+            "ranker_score": -2.037495231628418,
+            "raw_ranker_score": 8.045941352844238
+          },
+          {
+            "replacement": "yellow",
+            "local_nll": 2.061751127243042,
+            "ranker_score": -2.461751127243042,
+            "raw_ranker_score": -9.14158821105957
+          }
+        ],
+        "previous_ranker_top1": "blue"
+      },
+      {
+        "case": {
+          "id": "challenge-007",
+          "category": "object",
+          "text": "Ben put on his red hat. His green hat kept his head warm. He loved its red color.",
+          "start": 28,
+          "end": 33,
+          "accepted": [
+            "red"
+          ]
+        },
+        "nll": "red",
+        "blended": "red",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "green",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "red",
+            "local_nll": 3.2721590995788574,
+            "ranker_score": -2.8721590995788575,
+            "raw_ranker_score": 10.475955963134766
+          },
+          {
+            "replacement": "blue",
+            "local_nll": 3.2733154296875,
+            "ranker_score": -3.6733154296875,
+            "raw_ranker_score": -9.486680030822754
+          },
+          {
+            "replacement": "red hat",
+            "local_nll": 3.6767120361328125,
+            "ranker_score": -3.8299659729003905,
+            "raw_ranker_score": -3.0650787353515625
+          }
+        ],
+        "previous_ranker_top1": "red"
+      },
+      {
+        "case": {
+          "id": "challenge-008",
+          "category": "object",
+          "text": "The dog chased a ball. It picked up the book in its mouth and brought the ball back.",
+          "start": 40,
+          "end": 44,
+          "accepted": [
+            "ball"
+          ]
+        },
+        "nll": "ball",
+        "blended": "ball",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "book",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "ball",
+            "local_nll": 1.810939073562622,
+            "ranker_score": -1.4262932300567628,
+            "raw_ranker_score": 7.6929168701171875
+          },
+          {
+            "replacement": "ball and",
+            "local_nll": 2.643805503845215,
+            "ranker_score": -2.5677929878234864,
+            "raw_ranker_score": 1.5202503204345703
+          }
+        ],
+        "previous_ranker_top1": "ball and"
+      },
+      {
+        "case": {
+          "id": "challenge-009",
+          "category": "object",
+          "text": "Lucy planted a seed. She watered the stone every day until the seed began to grow.",
+          "start": 37,
+          "end": 42,
+          "accepted": [
+            "seed"
+          ]
+        },
+        "nll": "seed",
+        "blended": "seed",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "stone",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "seed",
+            "local_nll": 1.1965181827545166,
+            "ranker_score": -0.7965181827545166,
+            "raw_ranker_score": 9.1006498336792
+          },
+          {
+            "replacement": "seed every",
+            "local_nll": 2.174877882003784,
+            "ranker_score": -1.9485410928726197,
+            "raw_ranker_score": 4.526735782623291
+          }
+        ],
+        "previous_ranker_top1": "seed every"
+      },
+      {
+        "case": {
+          "id": "challenge-010",
+          "category": "object",
+          "text": "Tom opened his book. He read the shoe until he reached the last page.",
+          "start": 33,
+          "end": 37,
+          "accepted": [
+            "book",
+            "story"
+          ]
+        },
+        "nll": "book",
+        "blended": "book",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "shoe",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "book",
+            "local_nll": 2.601956844329834,
+            "ranker_score": -2.201956844329834,
+            "raw_ranker_score": 9.65537166595459
+          },
+          {
+            "replacement": "same book",
+            "local_nll": 2.8530356884002686,
+            "ranker_score": -2.458784651756287,
+            "raw_ranker_score": 7.885020732879639
+          }
+        ],
+        "previous_ranker_top1": "same book"
+      },
+      {
+        "case": {
+          "id": "challenge-011",
+          "category": "object",
+          "text": "Mom baked a cake. She cut the chair into slices and served the cake.",
+          "start": 30,
+          "end": 35,
+          "accepted": [
+            "cake"
+          ]
+        },
+        "nll": "cake",
+        "blended": "cake",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "chair",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "cake",
+            "local_nll": 2.4397940635681152,
+            "ranker_score": -2.0397940635681153,
+            "raw_ranker_score": 10.100774765014648
+          },
+          {
+            "replacement": "candles",
+            "local_nll": 3.092719078063965,
+            "ranker_score": -2.692719078063965,
+            "raw_ranker_score": 8.752116203308105
+          },
+          {
+            "replacement": "dough on",
+            "local_nll": 4.4553961753845215,
+            "ranker_score": -4.646898531913758,
+            "raw_ranker_score": -3.830047130584717
+          }
+        ],
+        "previous_ranker_top1": "cake"
+      },
+      {
+        "case": {
+          "id": "challenge-012",
+          "category": "state",
+          "text": "The box was empty. There was something inside. It contained nothing at all.",
+          "start": 29,
+          "end": 38,
+          "accepted": [
+            "nothing"
+          ]
+        },
+        "nll": "no surprise",
+        "blended": "no surprise",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "something",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "no surprise",
+            "local_nll": 3.628756046295166,
+            "ranker_score": -3.526484155654907,
+            "raw_ranker_score": 2.045437812805176
+          },
+          {
+            "replacement": "no",
+            "local_nll": 3.7752432823181152,
+            "ranker_score": -3.8383737444877624,
+            "raw_ranker_score": -1.2626092433929443
+          }
+        ],
+        "previous_ranker_top1": "no surprise"
+      },
+      {
+        "case": {
+          "id": "challenge-013",
+          "category": "state",
+          "text": "The rain soaked his coat. His coat was dry. Water dripped from it.",
+          "start": 39,
+          "end": 42,
+          "accepted": [
+            "wet",
+            "very wet"
+          ]
+        },
+        "nll": "wet",
+        "blended": "wet",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "dry",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "wet",
+            "local_nll": 3.9919676780700684,
+            "ranker_score": -3.5919676780700684,
+            "raw_ranker_score": 9.105957984924316
+          },
+          {
+            "replacement": "so cold",
+            "local_nll": 3.992619037628174,
+            "ranker_score": -3.844361925125122,
+            "raw_ranker_score": 2.965142250061035
+          },
+          {
+            "replacement": "cold",
+            "local_nll": 4.217764854431152,
+            "ranker_score": -4.617764854431153,
+            "raw_ranker_score": -8.541912078857422
+          },
+          {
+            "replacement": "hot",
+            "local_nll": 4.500383377075195,
+            "ranker_score": -4.900383377075196,
+            "raw_ranker_score": -10.205334663391113
+          }
+        ],
+        "previous_ranker_top1": "wet"
+      },
+      {
+        "case": {
+          "id": "challenge-014",
+          "category": "state",
+          "text": "The fire went out. The room grew hot. Everyone needed a blanket.",
+          "start": 33,
+          "end": 36,
+          "accepted": [
+            "cold",
+            "colder"
+          ]
+        },
+        "nll": "so big",
+        "blended": "so big",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "hot",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "so big",
+            "local_nll": 3.5452218055725098,
+            "ranker_score": -3.14522180557251,
+            "raw_ranker_score": 8.143821716308594
+          },
+          {
+            "replacement": "bigger",
+            "local_nll": 3.871809720993042,
+            "ranker_score": -4.264934539794922,
+            "raw_ranker_score": -7.862496376037598
+          }
+        ],
+        "previous_ranker_top1": "so big"
+      },
+      {
+        "case": {
+          "id": "challenge-015",
+          "category": "state",
+          "text": "Dad turned off the only lamp. The room became bright. Nobody could see in the dark.",
+          "start": 46,
+          "end": 52,
+          "accepted": [
+            "dark"
+          ]
+        },
+        "nll": "dark",
+        "blended": "dark",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "bright",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "dark",
+            "local_nll": 2.7137789726257324,
+            "ranker_score": -2.3137789726257325,
+            "raw_ranker_score": 11.245848655700684
+          },
+          {
+            "replacement": "dark inside",
+            "local_nll": 2.8494725227355957,
+            "ranker_score": -2.8570137202739714,
+            "raw_ranker_score": -0.1508239507675171
+          }
+        ],
+        "previous_ranker_top1": "dark"
+      },
+      {
+        "case": {
+          "id": "challenge-016",
+          "category": "state",
+          "text": "The door was locked. Mia could open it. She needed the key first.",
+          "start": 31,
+          "end": 35,
+          "accepted": [
+            "not open",
+            "not unlock"
+          ]
+        },
+        "nll": "not open",
+        "blended": "not open",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "open",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "not open",
+            "local_nll": 2.0344557762145996,
+            "ranker_score": -1.9840773224830628,
+            "raw_ranker_score": 1.0075690746307373
+          },
+          {
+            "replacement": "unlock",
+            "local_nll": 2.935807466506958,
+            "ranker_score": -2.582952857017517,
+            "raw_ranker_score": 7.057092189788818
+          },
+          {
+            "replacement": "do",
+            "local_nll": 2.998377799987793,
+            "ranker_score": -3.316229248046875,
+            "raw_ranker_score": -6.357028961181641
+          }
+        ],
+        "previous_ranker_top1": "not open"
+      },
+      {
+        "case": {
+          "id": "challenge-017",
+          "category": "state",
+          "text": "Lucy gave away all her cookies. She had many cookies left. Her plate was empty.",
+          "start": 40,
+          "end": 44,
+          "accepted": [
+            "no",
+            "zero"
+          ]
+        },
+        "nll": "no",
+        "blended": "no",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "many",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "no",
+            "local_nll": 2.2782347202301025,
+            "ranker_score": -2.671682596206665,
+            "raw_ranker_score": -7.86895751953125
+          },
+          {
+            "replacement": "a yummy",
+            "local_nll": 3.1334025859832764,
+            "ranker_score": -3.0714222967624663,
+            "raw_ranker_score": 1.2396057844161987
+          },
+          {
+            "replacement": "all",
+            "local_nll": 3.5266520977020264,
+            "ranker_score": -3.546010452508926,
+            "raw_ranker_score": -0.3871670961380005
+          }
+        ],
+        "previous_ranker_top1": "a yummy"
+      },
+      {
+        "case": {
+          "id": "challenge-018",
+          "category": "location",
+          "text": "The children stayed inside the house. They played outside all afternoon without leaving the house.",
+          "start": 50,
+          "end": 57,
+          "accepted": [
+            "inside",
+            "indoors"
+          ]
+        },
+        "nll": "and played",
+        "blended": "and played",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "outside",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "and played",
+            "local_nll": 2.7578656673431396,
+            "ranker_score": -2.544952630996704,
+            "raw_ranker_score": 4.258260726928711
+          },
+          {
+            "replacement": "happily",
+            "local_nll": 3.2870261669158936,
+            "ranker_score": -3.3314939022064207,
+            "raw_ranker_score": -0.8893547058105469
+          },
+          {
+            "replacement": "and",
+            "local_nll": 3.984219551086426,
+            "ranker_score": -4.0055818289518355,
+            "raw_ranker_score": -0.427245557308197
+          },
+          {
+            "replacement": "until",
+            "local_nll": 4.426279067993164,
+            "ranker_score": -4.675834584236145,
+            "raw_ranker_score": -4.991110324859619
+          }
+        ],
+        "previous_ranker_top1": "until"
+      },
+      {
+        "case": {
+          "id": "challenge-019",
+          "category": "location",
+          "text": "Tom put his toy under the bed. Later he found it on the bed, exactly where he had left it.",
+          "start": 49,
+          "end": 51,
+          "accepted": [
+            "under",
+            "underneath",
+            "beneath"
+          ]
+        },
+        "nll": "under",
+        "blended": "under",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "on",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "under",
+            "local_nll": 2.5232717990875244,
+            "ranker_score": -2.1232717990875245,
+            "raw_ranker_score": 10.067623138427734
+          },
+          {
+            "replacement": "was in",
+            "local_nll": 3.0939877033233643,
+            "ranker_score": -3.266255259513855,
+            "raw_ranker_score": -3.4453511238098145
+          },
+          {
+            "replacement": "in",
+            "local_nll": 2.9847395420074463,
+            "ranker_score": -3.384739542007446,
+            "raw_ranker_score": -8.055986404418945
+          }
+        ],
+        "previous_ranker_top1": "under"
+      },
+      {
+        "case": {
+          "id": "challenge-020",
+          "category": "location",
+          "text": "The bird sat in its nest. It stayed in the pond all night and left the nest at dawn.",
+          "start": 43,
+          "end": 47,
+          "accepted": [
+            "nest"
+          ]
+        },
+        "nll": "nest",
+        "blended": "nest",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "pond",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "nest",
+            "local_nll": 4.082644462585449,
+            "ranker_score": -3.6826444625854493,
+            "raw_ranker_score": 8.184283256530762
+          },
+          {
+            "replacement": "nest for",
+            "local_nll": 4.2003254890441895,
+            "ranker_score": -3.807837176322937,
+            "raw_ranker_score": 7.849766254425049
+          }
+        ],
+        "previous_ranker_top1": "nest for"
+      },
+      {
+        "case": {
+          "id": "challenge-021",
+          "category": "location",
+          "text": "The fish lived in a pond. It swam in the sky while the other fish watched.",
+          "start": 41,
+          "end": 44,
+          "accepted": [
+            "pond",
+            "water"
+          ]
+        },
+        "nll": "pond,",
+        "blended": "pond,",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "sky",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "pond,",
+            "local_nll": 2.124826192855835,
+            "ranker_score": -1.7782915353775024,
+            "raw_ranker_score": 6.93069314956665
+          },
+          {
+            "replacement": "pond",
+            "local_nll": 2.255293369293213,
+            "ranker_score": -1.855293369293213,
+            "raw_ranker_score": 9.653685569763184
+          }
+        ],
+        "previous_ranker_top1": "pond"
+      },
+      {
+        "case": {
+          "id": "challenge-022",
+          "category": "location",
+          "text": "Mia hid the key in her pocket. She reached into her shoe and took the key out of her pocket.",
+          "start": 52,
+          "end": 56,
+          "accepted": [
+            "pocket"
+          ]
+        },
+        "nll": "pocket",
+        "blended": "pocket",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "shoe",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "pocket",
+            "local_nll": 1.2805202007293701,
+            "ranker_score": -0.8805202007293701,
+            "raw_ranker_score": 8.95186996459961
+          },
+          {
+            "replacement": "pocket and",
+            "local_nll": 2.039170265197754,
+            "ranker_score": -2.3012430667877197,
+            "raw_ranker_score": -5.241456031799316
+          }
+        ],
+        "previous_ranker_top1": "pocket"
+      },
+      {
+        "case": {
+          "id": "challenge-023",
+          "category": "location",
+          "text": "The children sat at a table. Their plates were on the floor. They ate from the table.",
+          "start": 54,
+          "end": 59,
+          "accepted": [
+            "table"
+          ]
+        },
+        "nll": "table",
+        "blended": "table",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "floor",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "table",
+            "local_nll": 2.022895097732544,
+            "ranker_score": -1.6937190294265747,
+            "raw_ranker_score": 6.583521366119385
+          },
+          {
+            "replacement": "table outside",
+            "local_nll": 2.8226521015167236,
+            "ranker_score": -2.968308663368225,
+            "raw_ranker_score": -2.9131312370300293
+          }
+        ],
+        "previous_ranker_top1": "table outside"
+      },
+      {
+        "case": {
+          "id": "challenge-024",
+          "category": "identity",
+          "text": "Lily was a little girl. He put on her coat and went out.",
+          "start": 24,
+          "end": 26,
+          "accepted": [
+            "She"
+          ]
+        },
+        "nll": "She",
+        "blended": "She",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "He",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "She",
+            "local_nll": 2.7060937881469727,
+            "ranker_score": -2.3060937881469727,
+            "raw_ranker_score": 9.46899127960205
+          },
+          {
+            "replacement": "She always",
+            "local_nll": 2.741779327392578,
+            "ranker_score": -2.8433783531188963,
+            "raw_ranker_score": -2.031980514526367
+          }
+        ],
+        "previous_ranker_top1": "She"
+      },
+      {
+        "case": {
+          "id": "challenge-025",
+          "category": "identity",
+          "text": "Tom was a little boy. She picked up his toy and smiled.",
+          "start": 22,
+          "end": 25,
+          "accepted": [
+            "He"
+          ]
+        },
+        "nll": "He",
+        "blended": "He",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "She",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "He",
+            "local_nll": 3.0154550075531006,
+            "ranker_score": -2.6154550075531007,
+            "raw_ranker_score": 9.00454044342041
+          },
+          {
+            "replacement": "He had",
+            "local_nll": 3.18315052986145,
+            "ranker_score": -2.937783694267273,
+            "raw_ranker_score": 4.907336711883545
+          }
+        ],
+        "previous_ranker_top1": "He"
+      },
+      {
+        "case": {
+          "id": "challenge-026",
+          "category": "identity",
+          "text": "Two girls went to the park. She played together until it was time to go home.",
+          "start": 28,
+          "end": 31,
+          "accepted": [
+            "They"
+          ]
+        },
+        "nll": "They",
+        "blended": "They",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "She",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "They",
+            "local_nll": 1.0522031784057617,
+            "ranker_score": -0.6564175605773925,
+            "raw_ranker_score": 7.915712356567383
+          },
+          {
+            "replacement": "They both",
+            "local_nll": 1.547157883644104,
+            "ranker_score": -1.7885940790176391,
+            "raw_ranker_score": -4.828723907470703
+          }
+        ],
+        "previous_ranker_top1": "They"
+      },
+      {
+        "case": {
+          "id": "challenge-027",
+          "category": "identity",
+          "text": "The puppy was a small dog. The cat wagged its tail and barked.",
+          "start": 31,
+          "end": 34,
+          "accepted": [
+            "dog",
+            "puppy"
+          ]
+        },
+        "nll": "puppy",
+        "blended": "puppy",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "cat",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "puppy",
+            "local_nll": 1.750527024269104,
+            "ranker_score": -1.350527024269104,
+            "raw_ranker_score": 8.539040565490723
+          },
+          {
+            "replacement": "dog was",
+            "local_nll": 2.219879627227783,
+            "ranker_score": -1.884831166267395,
+            "raw_ranker_score": 6.700969219207764
+          }
+        ],
+        "previous_ranker_top1": "puppy"
+      },
+      {
+        "case": {
+          "id": "challenge-028",
+          "category": "identity",
+          "text": "Mia and Ben were friends. He both liked the same game.",
+          "start": 26,
+          "end": 28,
+          "accepted": [
+            "They"
+          ]
+        },
+        "nll": "They",
+        "blended": "They",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "He",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "They",
+            "local_nll": 3.124868392944336,
+            "ranker_score": -2.724868392944336,
+            "raw_ranker_score": 8.637487411499023
+          },
+          {
+            "replacement": "They were",
+            "local_nll": 4.150475978851318,
+            "ranker_score": -3.7802287578582763,
+            "raw_ranker_score": 7.40494441986084
+          }
+        ],
+        "previous_ranker_top1": "They"
+      },
+      {
+        "case": {
+          "id": "challenge-029",
+          "category": "identity",
+          "text": "The bird built a nest. The fish laid an egg in its nest.",
+          "start": 27,
+          "end": 31,
+          "accepted": [
+            "bird"
+          ]
+        },
+        "nll": "bird",
+        "blended": "bird",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "fish",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "bird",
+            "local_nll": 2.5359787940979004,
+            "ranker_score": -2.149574708938599,
+            "raw_ranker_score": 7.728081703186035
+          },
+          {
+            "replacement": "bird had",
+            "local_nll": 2.8026721477508545,
+            "ranker_score": -2.6933255076408384,
+            "raw_ranker_score": 2.1869328022003174
+          },
+          {
+            "replacement": "nest",
+            "local_nll": 3.3174939155578613,
+            "ranker_score": -3.6228899717330934,
+            "raw_ranker_score": -6.107921123504639
+          },
+          {
+            "replacement": "egg",
+            "local_nll": 3.9023170471191406,
+            "ranker_score": -4.286371040344238,
+            "raw_ranker_score": -7.681079864501953
+          }
+        ],
+        "previous_ranker_top1": "nest"
+      },
+      {
+        "case": {
+          "id": "challenge-030",
+          "category": "agreement",
+          "text": "Yesterday, Tom walk to the park. He stayed there all afternoon.",
+          "start": 15,
+          "end": 19,
+          "accepted": [
+            "walked"
+          ]
+        },
+        "nll": "went",
+        "blended": "went",
+        "recommendation": {
+          "action": "replace",
+          "replacement": "went",
+          "reason": "learned_preference",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "went",
+            "local_nll": 2.0387723445892334,
+            "ranker_score": -1.852819013595581,
+            "raw_ranker_score": 3.719066619873047
+          },
+          {
+            "replacement": "went outside",
+            "local_nll": 2.3577680587768555,
+            "ranker_score": -2.2333672881126403,
+            "raw_ranker_score": 2.4880154132843018
+          }
+        ],
+        "previous_ranker_top1": "went"
+      },
+      {
+        "case": {
+          "id": "challenge-031",
+          "category": "agreement",
+          "text": "Every morning, she eat her breakfast before school.",
+          "start": 19,
+          "end": 22,
+          "accepted": [
+            "eats"
+          ]
+        },
+        "nll": "ate",
+        "blended": "ate",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "eat",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "ate",
+            "local_nll": 2.83488392829895,
+            "ranker_score": -2.4494802713394166,
+            "raw_ranker_score": 7.708073139190674
+          },
+          {
+            "replacement": "waited for",
+            "local_nll": 3.1999478340148926,
+            "ranker_score": -3.1705774128437043,
+            "raw_ranker_score": 0.5874084234237671
+          },
+          {
+            "replacement": "had",
+            "local_nll": 3.6242282390594482,
+            "ranker_score": -3.3885207653045653,
+            "raw_ranker_score": 4.714149475097656
+          },
+          {
+            "replacement": "put",
+            "local_nll": 4.452193737030029,
+            "ranker_score": -4.581978976726532,
+            "raw_ranker_score": -2.5957047939300537
+          }
+        ],
+        "previous_ranker_top1": "ate"
+      },
+      {
+        "case": {
+          "id": "challenge-032",
+          "category": "agreement",
+          "text": "There was three apples on the table.",
+          "start": 6,
+          "end": 9,
+          "accepted": [
+            "were",
+            "are"
+          ]
+        },
+        "nll": "were",
+        "blended": "were",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "was",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "were",
+            "local_nll": 3.312285900115967,
+            "ranker_score": -2.9635926723480224,
+            "raw_ranker_score": 6.973864555358887
+          },
+          {
+            "replacement": "was a",
+            "local_nll": 3.4742205142974854,
+            "ranker_score": -3.8742205142974853,
+            "raw_ranker_score": -8.374324798583984
+          }
+        ],
+        "previous_ranker_top1": "were"
+      },
+      {
+        "case": {
+          "id": "challenge-033",
+          "category": "agreement",
+          "text": "The two dogs was playing together in the garden.",
+          "start": 13,
+          "end": 16,
+          "accepted": [
+            "were"
+          ]
+        },
+        "nll": "were",
+        "blended": "were",
+        "recommendation": {
+          "action": "replace",
+          "replacement": "were",
+          "reason": "learned_preference",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "were",
+            "local_nll": 0.8926716446876526,
+            "ranker_score": -0.5096674084663391,
+            "raw_ranker_score": 7.6600847244262695
+          },
+          {
+            "replacement": "were always",
+            "local_nll": 1.613624095916748,
+            "ranker_score": -1.8262638807296754,
+            "raw_ranker_score": -4.252795696258545
+          }
+        ],
+        "previous_ranker_top1": "were"
+      },
+      {
+        "case": {
+          "id": "challenge-034",
+          "category": "agreement",
+          "text": "Yesterday, Mia go home after school.",
+          "start": 15,
+          "end": 17,
+          "accepted": [
+            "went"
+          ]
+        },
+        "nll": "went",
+        "blended": "went",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "go",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "went",
+            "local_nll": 3.7416648864746094,
+            "ranker_score": -3.5823410749435425,
+            "raw_ranker_score": 3.186476230621338
+          },
+          {
+            "replacement": "and her",
+            "local_nll": 4.225393772125244,
+            "ranker_score": -4.365866041183471,
+            "raw_ranker_score": -2.809445381164551
+          }
+        ],
+        "previous_ranker_top1": "went"
+      },
+      {
+        "case": {
+          "id": "challenge-035",
+          "category": "agreement",
+          "text": "He gave me a apple. I ate the apple.",
+          "start": 11,
+          "end": 12,
+          "accepted": [
+            "an"
+          ]
+        },
+        "nll": "the",
+        "blended": "the",
+        "recommendation": {
+          "action": "keep",
+          "replacement": "a",
+          "reason": "insufficient_margin",
+          "margin_threshold": 1.5,
+          "score_floor": -2
+        },
+        "candidates": [
+          {
+            "replacement": "the",
+            "local_nll": 2.6240718364715576,
+            "ranker_score": -2.760662925243378,
+            "raw_ranker_score": -2.7318217754364014
+          },
+          {
+            "replacement": "the banana",
+            "local_nll": 3.644852876663208,
+            "ranker_score": -3.489479100704193,
+            "raw_ranker_score": 3.107475519180298
+          }
+        ],
+        "previous_ranker_top1": "the banana"
+      }
+    ],
+    "previous_ranker_matched_pool": {
+      "top1": 0.5555555555555556,
+      "device": "cpu",
+      "precision": "fp32",
+      "weights_sha256": "922edda7af28191f4f0f735ea20cb1d833a77a566fce3fe8e184bca2a16f0deb",
+      "candidate_pool": "exact stored candidate pool shared with NLL and v3; no regeneration"
+    }
+  },
+  "reference_pool_test": {
+    "pool_top1": 0.9916666666666667,
+    "bce": 0.04809597507119179,
+    "positive_mean": 8.719537399663887,
+    "negative_mean": -7.907711292239344,
+    "contexts": 600
+  },
+  "limits": [
+    "TinyStories is synthetic. No human preference labels.",
+    "Corpus metric is original-span reconstruction, not semantic correctness.",
+    "Procedural cases are the previous benchmark reused for regression tracking.",
+    "Legacy probes are repeated diagnostics, not a new unseen test."
+  ]
+}

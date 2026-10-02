@@ -1,10 +1,10 @@
-"""Small bidirectional span compatibility scorer, with independently random weights.
+"""Bidirectional span compatibility scorer with project-local weight lineage.
 
 Scores are learned preferences, not probabilities of semantic correctness.
 """
 import hashlib
 import json
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from pathlib import Path
 import torch
 from torch import nn
@@ -17,6 +17,9 @@ class SpanRanker(nn.Module):
         super().__init__(); self.config=config
         self.embedding=nn.Embedding(config.vocab_size,config.width,padding_idx=PAD)
         self.segment=nn.Embedding(2,config.width)
+        if config.architecture=='storypatch_context_ranker_v2':
+            self.position=nn.Embedding(config.max_length,config.width)
+            self.time_mlp=nn.Sequential(nn.Linear(config.width,config.width),nn.SiLU(),nn.Linear(config.width,config.width))
         self.blocks=nn.ModuleList(Block(config) for _ in range(config.layers))
         self.norm=RMSNorm(config.width)
         self.dropout=nn.Dropout(.1)
@@ -29,15 +32,33 @@ class SpanRanker(nn.Module):
             nn.init.normal_(module.weight,std=.02)
             if getattr(module,'bias',None) is not None: nn.init.zeros_(module.bias)
 
-    def forward(self,tokens,selected):
+    @classmethod
+    def from_own_generator(cls,path):
+        from diffuthink.v2.model import Denoiser
+        source=Denoiser.from_pretrained(path)
+        model=cls(replace(source.config,architecture='storypatch_context_ranker_v2'))
+        for name in ['embedding','position','time_mlp','blocks','norm']:
+            getattr(model,name).load_state_dict(getattr(source,name).state_dict())
+        nn.init.zeros_(model.segment.weight)
+        return model
+
+    def hidden(self,tokens,selected):
         if tokens.ndim!=2 or tokens.shape!=selected.shape or tokens.shape[1]>self.config.max_length:
             raise ValueError('Invalid ranker input shape')
         valid=tokens.ne(PAD); span=selected & valid
         if not span.any(-1).all(): raise ValueError('Every candidate needs a selected token')
         x=self.dropout(self.embedding(tokens)+self.segment(selected.long()))
         time=torch.zeros(tokens.shape[0],self.config.width,device=tokens.device,dtype=x.dtype)
+        if hasattr(self,'position'):
+            x=x+self.position(torch.arange(tokens.shape[1],device=tokens.device))
+            half=self.config.width//2
+            # Exactly the generator's zero-noise conditioning: sin(0), cos(0).
+            time=self.time_mlp(torch.cat([time[:,:half],torch.ones_like(time[:,:half])],-1))
         for block in self.blocks: x=block(x,time,valid)
-        x=self.norm(x)
+        return self.norm(x)
+
+    def forward(self,tokens,selected):
+        x=self.hidden(tokens,selected);valid=tokens.ne(PAD);span=selected & valid
         def pool(mask): return (x*mask[...,None]).sum(1)/mask.sum(1,keepdim=True).clamp_min(1)
         return self.head(self.dropout(torch.cat([pool(span),pool(valid)],-1))).squeeze(-1)
 
@@ -71,6 +92,11 @@ def collate(rows,device):
     return tokens,selected
 
 
+def blended_score(nll,learned,weight):
+    """Bound learned influence; weight zero recovers exactly the NLL ordering."""
+    return -nll+weight*max(-8.,min(8.,learned))
+
+
 class Reranker:
     def __init__(self,model,tokenizer,info):
         self.model=model.eval(); self.tokenizer=tokenizer; self.info=info
@@ -101,6 +127,13 @@ class Reranker:
         except ValueError as exc:
             result['recommendation']={'action':'keep','reason':'ranker_unavailable','detail':str(exc)}
             return result
+        blending=self.info.get('blending')
+        if blending is not None:
+            result['original_raw_ranker_score']=values[0]
+            for c,value in zip(candidates,values[1:]):c['raw_ranker_score']=value
+            values=[blended_score(result['original_local_nll'],values[0],blending['weight'])]+[
+                blended_score(c['local_nll'],s,blending['weight']) for c,s in zip(candidates,values[1:])]
+            result['blending']=blending
         original=values[0]; result['original_ranker_score']=original
         for c,score in zip(candidates,values[1:]):c['ranker_score']=score;c['ranker_margin']=score-original
         candidates.sort(key=lambda c:c['ranker_score'],reverse=True)
@@ -114,5 +147,6 @@ class Reranker:
             'reason':'learned_preference' if edit else 'insufficient_margin',
             'margin_threshold':threshold,'score_floor':floor}
         result['method']='Bidirectional denoising, then independently trained span compatibility ranking; validation-calibrated keep/replace decision.'
+        if blending is not None:result['method']='Bidirectional denoising, then bounded learned compatibility combined with causal NLL; validation-calibrated keep/replace decision.'
         result['limitation']='Synthetic training domain; learned scores are preferences, not verified correctness or confidence probabilities.'
         return result

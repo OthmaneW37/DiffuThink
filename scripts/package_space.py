@@ -89,10 +89,17 @@ This folder is a local release candidate. No Space has been created or uploaded 
     readme=(out/"README.md").read_text(encoding="utf-8")
     readme=readme.replace("13.44M-parameter",f"{parameters/1e6:.2f}M-parameter")
     if (out/"ranker/ranker_info.json").exists():
+        ranker_info=json.loads((out/"ranker/ranker_info.json").read_text())
+        ranker_size=ranker_info['parameters']/1e6
         readme=readme.replace("ranks the remaining alternatives by local causal negative log-likelihood",
-            "offers local causal NLL ranking and an optional independently trained 3.53M-parameter compatibility model to compare proposals with the original")
+            f"offers local causal NLL ranking and an optional {ranker_size:.2f}M-parameter compatibility model trained in this project to compare proposals with the original")
         readme=readme.replace("Original wording can score better than every proposal.",
             "Validation-calibrated thresholds may recommend keeping the original. The labels are procedural synthetic contrasts, not human judgments. Scores are not confidence probabilities. NLL stays the UI default because learned ranking regresses on legacy probes; select the experimental correction mode to try it.")
+        if ranker_info.get('blending'):
+            readme=readme.replace('The labels are procedural synthetic contrasts, not human judgments.',
+                'Labels come from procedural contrasts and original TinyStories spans with mechanical corruptions, without human judgments.')
+            readme=readme.replace('NLL stays the UI default because learned ranking regresses on legacy probes; select the experimental correction mode to try it.',
+                'NLL exploration stays the UI default; select Classement contextuel · expérimental to try the bounded combination of learned compatibility and local NLL. See the model card for measured results and limits.')
     if not (out/"comparison.json").exists():
         readme=readme.replace("`comparison.json`", "`selection.json`" if (out/"selection.json").exists() else "the model card")
     (out/"README.md").write_text(readme,encoding="utf-8")

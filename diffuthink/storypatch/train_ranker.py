@@ -1,4 +1,4 @@
-"""Train a random-initialized ranker on frozen rule-generated contrasts."""
+"""Train a ranker from random weights or our own generator on frozen contrasts."""
 import argparse
 import hashlib
 import json
@@ -43,7 +43,9 @@ def run(args):
         if manifest['splits'][split]['sha256']!=actual:raise ValueError('Frozen corpus changed')
     train=read(Path(args.data)/'train.jsonl');valid=read(Path(args.data)/'validation.jsonl')
     config=Config(vocab_size=tokenizer.get_vocab_size(),width=args.width,heads=4,layers=3,max_length=512,architecture='storypatch_span_ranker_v1')
-    model=SpanRanker(config).to(args.device)
+    initialize_from=getattr(args,'initialize_from',None)
+    model=(SpanRanker.from_own_generator(initialize_from) if initialize_from else SpanRanker(config)).to(args.device)
+    config=model.config
     groups=encode_groups(train,tokenizer,512);vgroups=encode_groups(valid,tokenizer,512)
     optimizer=torch.optim.AdamW(model.parameters(),lr=args.lr,weight_decay=.01)
     settings=vars(args).copy();settings.pop('resume',None)
@@ -52,6 +54,12 @@ def run(args):
           'tokenizer_sha256':hashlib.sha256(tokenizer.to_str().encode()).hexdigest(),
           'loss':'BCE(candidate compatibility) + 0.5 softplus(negative score - positive score)',
           'calibration':{'margin_threshold':1000000.,'score_floor':1000000.,'status':'not calibrated'}}
+    if initialize_from:
+        from diffuthink.v2.data import digest
+        source_tokenizer=Tokenizer.from_file(str(Path(initialize_from)/'tokenizer.json'))
+        if source_tokenizer.to_str()!=tokenizer.to_str():raise ValueError('Generator tokenizer mismatch')
+        info['initialized_from']={'path':initialize_from,'weights_sha256':digest(Path(initialize_from)/'model.safetensors'),
+            'lineage':'Own generator originally initialized randomly; no external pretrained weights. New classification head.'}
     start=0; best=math.inf;stale=0
     if args.resume:
         state=torch.load(args.resume,map_location='cpu',weights_only=False)
@@ -101,4 +109,5 @@ if __name__=='__main__':
     p.add_argument('--steps',type=int,default=2400);p.add_argument('--batch-pairs',type=int,default=48)
     p.add_argument('--width',type=int,default=192);p.add_argument('--lr',type=float,default=.0007)
     p.add_argument('--eval-every',type=int,default=200);p.add_argument('--seed',type=int,default=73)
+    p.add_argument('--initialize-from',help='Transfer the backbone from our own from-scratch generator')
     p.add_argument('--resume');run(p.parse_args())

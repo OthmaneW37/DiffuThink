@@ -10,6 +10,7 @@ from diffuthink.storypatch.ranker import SpanRanker, Reranker, encode_candidate,
 from diffuthink.storypatch.corrections import build, read, editing_cases
 from diffuthink.storypatch.evaluate_ranker import calibrate, decision
 from diffuthink.storypatch.corrections import alternatives
+from diffuthink.storypatch.ranker import blended_score
 
 
 class RankerTests(unittest.TestCase):
@@ -115,6 +116,49 @@ class RankerTests(unittest.TestCase):
             args.resume=str(root/'step1.pt');run(args)
             resumed=torch.load(root/'run/resume.pt',weights_only=False)['model']
             for key in reference:torch.testing.assert_close(reference[key],resumed[key],atol=0,rtol=0)
+
+    def test_own_generator_transfer_preserves_zero_noise_representations(self):
+        from diffuthink.v2.model import Denoiser
+        from torch.nn import functional as F
+        generator=Denoiser(self.model.config).eval()
+        with tempfile.TemporaryDirectory() as directory:
+            generator.save_pretrained(directory)
+            transferred=SpanRanker.from_own_generator(directory).eval()
+            tokens=torch.tensor([[1,6,9,12,2]]);selected=torch.tensor([[False,False,True,False,False]])
+            with torch.inference_mode():
+                original=generator(tokens,torch.zeros(1))
+                restored=F.linear(transferred.hidden(tokens,selected),transferred.embedding.weight)
+            torch.testing.assert_close(original,restored,atol=1e-6,rtol=1e-6)
+            transferred.save(Path(directory)/'ranker',self.info)
+            loaded=Reranker.load(Path(directory)/'ranker',self.tokenizer)
+            with torch.inference_mode():torch.testing.assert_close(transferred(tokens,selected),loaded.model(tokens,selected))
+
+    def test_bounded_blend_cannot_grow_without_limit(self):
+        self.assertEqual(blended_score(2.,1000.,0.),-2.)
+        self.assertEqual(blended_score(2.,1000.,.2),blended_score(2.,8.,.2))
+        self.assertEqual(blended_score(2.,-1000.,.2),blended_score(2.,-8.,.2))
+
+    def test_blend_selection_uses_nonregression_in_each_domain(self):
+        from diffuthink.storypatch.context_evaluate import choose_blend
+        rows=[{'case':{'category':cat,'clean':False,'accepted':['good']},'original_nll':3.,'original_score':0.,
+               'candidates':[{'replacement':'good','local_nll':1.,'ranker_score':-8.},
+                             {'replacement':'bad','local_nll':2.,'ranker_score':8.}]} for cat in ['corpus','color']]
+        result=choose_blend(rows)
+        self.assertEqual(result['weight'],0.)
+        self.assertTrue(any(not trial['passes'] for trial in result['trials']))
+
+    def test_runtime_blend_recovers_nll_with_zero_weight(self):
+        ranker=Reranker(self.model,self.tokenizer,{**self.info,'blending':{'weight':0.},
+            'calibration':{'margin_threshold':1.,'score_floor':-5.}})
+        ranker.scores=lambda texts:[1.,-1000.,1000.]
+        result={'original':'She was happy.','selection':{'start':8,'end':13,'text':'happy'},'original_local_nll':3.,
+            'candidates':[{'replacement':'sad','text':'She was sad.','local_nll':1.},
+                          {'replacement':'blue','text':'She was blue.','local_nll':4.}]}
+        result=ranker.rank(result)
+        self.assertEqual(result['candidates'][0]['replacement'],'sad')
+        self.assertEqual(result['candidates'][0]['ranker_score'],-1.)
+        self.assertEqual(result['candidates'][0]['raw_ranker_score'],-1000.)
+        self.assertEqual(result['recommendation']['replacement'],'sad')
 
 
 if __name__=='__main__':unittest.main()

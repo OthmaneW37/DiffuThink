@@ -75,7 +75,8 @@ def serve(args):
     info = {**info, "phase_step": info["step"], "step": total_steps}
     if ranker is not None:
         info["ranker"] = {"parameters": ranker.info["parameters"], "step": ranker.info["step"],
-                          "calibration": ranker.info["calibration"]}
+                          "calibration": ranker.info["calibration"], "architecture": ranker.info.get("architecture"),
+                          "blending": ranker.info.get("blending")}
     # Warm the kernels before reporting interactive latency to the viewer.
     with torch.inference_mode(), amp(args.device, "bf16" if args.device == "cuda" else "fp32"):
         warm = torch.tensor([[1, 3, 2]], device=args.device)

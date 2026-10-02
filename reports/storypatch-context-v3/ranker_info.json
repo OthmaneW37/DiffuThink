@@ -1,0 +1,334 @@
+{
+  "architecture": "storypatch_context_ranker_v2",
+  "initialized_from": {
+    "path": "runs/storypatch-13m/best",
+    "weights_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+    "lineage": "Own generator originally initialized randomly; no external pretrained weights. New classification head."
+  },
+  "parameters": 13645761,
+  "settings": {
+    "data": "data/processed/storypatch-context-v3",
+    "tokenizer": "runs/storypatch-13m/best/tokenizer.json",
+    "output": "runs/storypatch-context-ranker-v3",
+    "device": "cuda",
+    "steps": 3200,
+    "batch_pairs": 24,
+    "width": 192,
+    "lr": 0.0001,
+    "eval_every": 200,
+    "seed": 73,
+    "initialize_from": "runs/storypatch-13m/best"
+  },
+  "corpus": {
+    "version": 3,
+    "seed": 9821,
+    "source_manifest": {
+      "version": 1,
+      "source": "data/processed/stories-512",
+      "source_manifest": {
+        "dataset": "roneneldan/TinyStories",
+        "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+        "license": "cdla-sharing-1.0",
+        "source": "https://huggingface.co/datasets/roneneldan/TinyStories",
+        "synthetic": true,
+        "selection": "First unique documents in pinned source order; alternating validation/test documents",
+        "tokenizer_train_documents": 50000,
+        "vocab_size": 8192,
+        "max_length": 512,
+        "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+        "splits": {
+          "train": {
+            "documents": 500000,
+            "windows": 514199,
+            "text_tokens": 107857284,
+            "complete_story_windows": 485910,
+            "documents_sha256": "b4876f6394b78ca3560848f22195b8e125c2872621c857148b77f93e5264cc16",
+            "array_sha256": "b1fde06202d29af0d1146276d8be1bb4e5ebac1e7d767f6d58a8ca43a1aa16f1"
+          },
+          "validation": {
+            "documents": 1000,
+            "windows": 1008,
+            "text_tokens": 187038,
+            "complete_story_windows": 992,
+            "documents_sha256": "c6c4866335d6d101e152a43617c39bc6b2f25f05be5c841b6a67a6765e6e7b08",
+            "array_sha256": "92d568c80995bf436d18ab320b4644c96eed757f47a263270be4303f566fd703"
+          },
+          "test": {
+            "documents": 1000,
+            "windows": 1012,
+            "text_tokens": 188300,
+            "complete_story_windows": 988,
+            "documents_sha256": "03d78b126a718f6be7aed5fdb09cd492f4462e0aaf717ca48f81d7349a43087d",
+            "array_sha256": "fb581db76905e21e777b1746b2c3ca5d3cb2c8b5462e15910c8b4e6d644250c9"
+          }
+        },
+        "tokenizer_source": "data/processed/stories-v2/tokenizer.json"
+      },
+      "seed": 4801,
+      "spans_per_window": 8,
+      "max_words": 12,
+      "max_span_tokens": 16,
+      "tokenizer_sha256": "c5478e3379227640a0cbf9c50d3814373d843e9418c146e43de8cc9412dd1283",
+      "splits": {
+        "test": {
+          "rejected_quality": 1,
+          "rejected_duplicate": 0,
+          "rejected_alignment": 0,
+          "windows": 1011,
+          "candidate_spans": 8088,
+          "files": {
+            "test.npy": "419c2dfe9a0fcf03f1203914c2df0400ea4601dff19806f9e3fdfd9441c403ad",
+            "test_spans.npy": "41d835ed26a1786f6405b6d2435ed2f4c2dca22eb794b79d1a3d4cf32bca6e86",
+            "test_source_rows.npy": "aa465ccaa78b501f63bdebe5769efb165cf7f28a8fabce3451e116d09dd8891a"
+          }
+        },
+        "validation": {
+          "rejected_quality": 5,
+          "rejected_duplicate": 0,
+          "rejected_alignment": 0,
+          "windows": 1003,
+          "candidate_spans": 8024,
+          "files": {
+            "validation.npy": "f9eaf135ca2c8d291cf3d277357ed3f1dd7921305b9e51ebc79d66660f5640d8",
+            "validation_spans.npy": "612b4b04db23a3778a08a29dfd042a8e38ccf583c9a17952e3e2ee23d3716918",
+            "validation_source_rows.npy": "20ed44c2d8342befac05ea70d2bae83cc1b17d005886d992390bf710933321a2"
+          }
+        },
+        "train": {
+          "rejected_quality": 1666,
+          "rejected_duplicate": 0,
+          "rejected_alignment": 0,
+          "windows": 512533,
+          "candidate_spans": 4100264,
+          "files": {
+            "train.npy": "22dafe745270f2214b94df0c0d92f8ab20ea7d7e068249b703e4b9f558613ff2",
+            "train_spans.npy": "720e8d1e6845715c276f6813de084bd31a375b78a7523bcdb89374edf75aea40",
+            "train_source_rows.npy": "81a587e95a81cfd053f8a6f5d9c9f5d6705dd1e3156aa4ea6bad34be39f46605"
+          }
+        }
+      },
+      "supervision": "Self-supervised reconstruction; original spans are not verified corrections",
+      "deduplication": "Normalized exact window hashes across splits; no general near-deduplication claim"
+    },
+    "procedural_manifest": {
+      "version": 2,
+      "seed": 2841,
+      "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+      "license": "Apache-2.0",
+      "splits": {
+        "train": {
+          "contexts": 12000,
+          "templates": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sha256": "05fea23d1bf65a4225d7b0c0e6d3fb288336248c5edc095b7e9410db3d9d26c2"
+        },
+        "validation": {
+          "contexts": 1200,
+          "templates": [
+            8,
+            9
+          ],
+          "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+        },
+        "test": {
+          "contexts": 300,
+          "templates": [
+            10,
+            11
+          ],
+          "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+        }
+      },
+      "mining": {
+        "contexts": 1200,
+        "added_negatives": 2699,
+        "source_corpus": {
+          "version": 2,
+          "seed": 2841,
+          "provenance": "Procedural rule-checked synthetic contrasts; no model teacher; no human labels.",
+          "license": "Apache-2.0",
+          "splits": {
+            "train": {
+              "contexts": 12000,
+              "templates": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ],
+              "sha256": "ed50146f5c2e8fc76cfe515ff121930800ad55269478476152289b3667504a31"
+            },
+            "validation": {
+              "contexts": 1200,
+              "templates": [
+                8,
+                9
+              ],
+              "sha256": "93070cd4700665b65cbc6756012e99cf381e1aa3086bd973548c0e034a8487ec"
+            },
+            "test": {
+              "contexts": 300,
+              "templates": [
+                10,
+                11
+              ],
+              "sha256": "aeb45357e4a7a451a46662ab43c566aecac15628b859855bd1db57d5f77449d6"
+            }
+          }
+        },
+        "generator_sha256": "ecfb91fa37a292def9eccb730bdcad1367cde9276ef1288e071f7ef7df3d039a",
+        "seed": 701,
+        "label_rule": "Closed-world exact accepted list; not human judged. Training split only."
+      }
+    },
+    "provenance": "Mixed procedural contrasts and synthetic TinyStories excerpts; no human preference labels.",
+    "license": "Corpus excerpts CDLA-Sharing-1.0; procedural material Apache-2.0.",
+    "deduplication": "Exact normalized natural excerpts across splits; original source document splits retained. No near-duplicate claim.",
+    "splits": {
+      "test": {
+        "contexts": 600,
+        "sha256": "56bde01c131ab9300a4d448306d835c655f2d88676a3ef4843751fe857656c11"
+      },
+      "validation": {
+        "contexts": 1200,
+        "sha256": "37bb6f84175073e705a818c7ae0fabcd630f53bd8d261a76ac37cc3c5c78f186"
+      },
+      "train": {
+        "contexts": 24000,
+        "sha256": "7ff87556c13ffe59bd650fd65cc16e940a0fa5e7f2f9e5175553cb525439348c"
+      }
+    }
+  },
+  "tokenizer_sha256": "f4456efd1157b187514dc317ce3683970a0aca8f80614c7f84c9b92ed2a4e378",
+  "loss": "BCE(candidate compatibility) + 0.5 softplus(negative score - positive score)",
+  "calibration": {
+    "margin_threshold": 1.5,
+    "score_floor": -2,
+    "validation": {
+      "error_cases": 240,
+      "clean_cases": 240,
+      "error_corrected": 0.11666666666666667,
+      "clean_preserved": 0.9958333333333333,
+      "balanced_success": 0.55625,
+      "wrong_replacement_on_errors": 0.09583333333333334,
+      "clean_modified": 0.004166666666666652
+    },
+    "method": "Grid search on validation only: maximize balanced success subject to <=5% clean edits and <=10% wrong edits on errors.",
+    "margin_grid": [
+      0,
+      0.25,
+      0.5,
+      1,
+      1.5,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12,
+      1000000.0
+    ],
+    "score_grid": [
+      -1000000.0,
+      -4,
+      -2,
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      1000000.0
+    ],
+    "contexts": 240,
+    "limitations": "Finite synthetic validation; thresholds are not guarantees on user text."
+  },
+  "step": 3000,
+  "validation": {
+    "pool_top1": 0.9875,
+    "bce": 0.052751410752534866,
+    "positive_mean": 8.676380817642396,
+    "negative_mean": -7.977517883173466,
+    "contexts": 1200
+  },
+  "blending": {
+    "weight": 0.05,
+    "formula": "-local_nll + weight * clip(learned_score, -8, 8)",
+    "selection": "Validation top1 improvement with no top1 loss in either corpus or procedural domain; ties prefer lower weight.",
+    "baseline": {
+      "corpus": 0.39166666666666666,
+      "procedural": 0.4166666666666667
+    },
+    "trials": [
+      {
+        "weight": 0.0,
+        "top1_by_domain": {
+          "corpus": 0.39166666666666666,
+          "procedural": 0.4166666666666667
+        },
+        "passes": true
+      },
+      {
+        "weight": 0.05,
+        "top1_by_domain": {
+          "corpus": 0.4083333333333333,
+          "procedural": 0.5583333333333333
+        },
+        "passes": true
+      },
+      {
+        "weight": 0.1,
+        "top1_by_domain": {
+          "corpus": 0.4,
+          "procedural": 0.5583333333333333
+        },
+        "passes": true
+      },
+      {
+        "weight": 0.2,
+        "top1_by_domain": {
+          "corpus": 0.39166666666666666,
+          "procedural": 0.5583333333333333
+        },
+        "passes": true
+      },
+      {
+        "weight": 0.4,
+        "top1_by_domain": {
+          "corpus": 0.38333333333333336,
+          "procedural": 0.5583333333333333
+        },
+        "passes": false
+      },
+      {
+        "weight": 0.8,
+        "top1_by_domain": {
+          "corpus": 0.35,
+          "procedural": 0.5583333333333333
+        },
+        "passes": false
+      },
+      {
+        "weight": 1.6,
+        "top1_by_domain": {
+          "corpus": 0.31666666666666665,
+          "procedural": 0.5583333333333333
+        },
+        "passes": false
+      }
+    ]
+  }
+}

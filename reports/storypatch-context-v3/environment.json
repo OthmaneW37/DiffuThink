@@ -1,0 +1,11 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.13.0+rocm10.0.0",
+  "hip": "7.15.26333",
+  "tokenizers": "0.22.2",
+  "gpu": "AMD Radeon RX 9060 XT",
+  "training_precision": "fp32",
+  "generator_eval_precision": "bf16",
+  "ranker_eval_precision": "fp32"
+}
