@@ -6,7 +6,7 @@ StoryPatch is an inspectable editing workshop for simple English stories, powere
 
 The contribution is the constrained, reversible workflow and visible model behavior. Text infilling, Transformers and likelihood ranking are established techniques; no scientific novelty claim is made.
 
-## Contextual ranking v3 (latest local experiment)
+## Contextual ranking v3 (published model)
 
 A 13.65M-parameter ranker transfers its backbone from our own from-scratch
 generator and trains on 24,000 contexts, half varied TinyStories excerpts.
@@ -27,6 +27,8 @@ python -m diffuthink.v2 serve --model runs/storypatch-13m/best --ranker runs/sto
 Select **Classement contextuel · expérimental**. Read the
 [complete results](reports/storypatch-context-v3/RESULTATS.md) and
 [reproduction guide](docs/STORYPATCH_CONTEXT_V3.md).
+The [v3 model and runnable bundle](https://huggingface.co/OthmaneW/StoryPatch-context-v3)
+are published on Hugging Face. The interactive demo currently runs locally.
 
 ## Earlier learned ranking experiment (v2)
 

@@ -130,7 +130,7 @@ see [DATA_LICENSE.md](DATA_LICENSE.md) and the pinned source revision in
 Development, experiments and documentation were substantially AI-assisted.
 Reproduction: [French protocol](docs/STORYPATCH_CONTEXT_V3.md).
 
-This is a local release candidate. Packaging does not publish it to a service.
+Published model: https://huggingface.co/OthmaneW/StoryPatch-context-v3
 ''',encoding='utf-8')
     checks={f.relative_to(out).as_posix():digest(f) for f in out.rglob('*') if f.is_file()}
     (out/'SHA256SUMS.json').write_text(json.dumps(checks,indent=2),encoding='utf-8');print(str(out))
